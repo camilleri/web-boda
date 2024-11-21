@@ -1,0 +1,9 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white; /* Text color */
+    padding: 10px 10px; /* Adjust padding */
+    z-index: 1000; /* Ensure the header stays above other content */
+}
