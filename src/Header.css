@@ -1,14 +1,17 @@
 header {
+    background-color: var(--color-dark-green);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     color: black; /* Text color */
     z-index: 1000; /* Ensure the header stays above other content */
+    min-height: 70px;
 }
 
 .header-div {
-    padding: 1em;
+    margin: 0.75em;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
