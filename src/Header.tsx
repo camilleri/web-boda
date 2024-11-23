@@ -1,5 +1,13 @@
 import "./Header.css";
+import Languages from "./Languages";
 
 export function Header() {
-  return <header>Header content</header>;
+  return (
+    <header>
+      <div className="header-div">
+        <div>Icono</div>
+        <Languages />
+      </div>
+    </header>
+  );
 }

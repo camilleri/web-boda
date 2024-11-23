@@ -1,0 +1,27 @@
+
+
+.ul-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-item {
+    list-style-type: none;  
+    padding: 0.5em;
+    width: 2em;
+    text-align: center;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 500;
+    font-family: Courier, monospace;
+}
+
+.unselected  {
+    color: white;
+}
+
+.selected {
+    color: var(--color-dark-green);
+    background-color: white;
+    border-radius: 8px;
+}

@@ -5,10 +5,6 @@ import { useTranslation } from "react-i18next";
 function App() {
   const { t } = useTranslation();
 
-  // const changeLanguage = (lng: string) => {
-  //   i18n.changeLanguage(lng);
-  // };
-
   return (
     <main>
       <Header />

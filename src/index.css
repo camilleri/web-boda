@@ -1,3 +1,12 @@
+
+:root {
+  --color-dark-green:  #667665; /* Store the color in a variable */
+  --color-light-green: #9EB1A5; /* Store the color in a variable */
+  --color-olive:  #88885A; /* Store the color in a variable */
+  --color-salmon:  #EBCCA3; /* Store the color in a variable */
+  --color-sand:  #D0C8BE; /* Store the color in a variable */
+}
+
 body {
   margin: 0;
   background: linear-gradient(180deg, #667665, #9EB1A5);
