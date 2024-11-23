@@ -3,11 +3,11 @@ import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+  // const changeLanguage = (lng: string) => {
+  //   i18n.changeLanguage(lng);
+  // };
 
   return (
     <main>
