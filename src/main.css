@@ -1,20 +1,20 @@
-
 :root {
-  --color-dark-green:  #667665; /* Store the color in a variable */
-  --color-light-green: #9EB1A5; /* Store the color in a variable */
-  --color-olive:  #88885A; /* Store the color in a variable */
-  --color-salmon:  #EBCCA3; /* Store the color in a variable */
-  --color-sand:  #D0C8BE; /* Store the color in a variable */
+  --color-dark-green: #667665; /* Store the color in a variable */
+  --color-light-green: #9eb1a5; /* Store the color in a variable */
+  --color-olive: #88885a; /* Store the color in a variable */
+  --color-salmon: #ebcca3; /* Store the color in a variable */
+  --color-sand: #d0c8be; /* Store the color in a variable */
 }
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #667665, #9EB1A5);
+  background: linear-gradient(180deg, #667665, #9eb1a5);
   display: flex;
-  font-family: Didot,Didot LT STD, Hoefler Text,Garamond,Times New Roman,serif; 
-  font-size: 24px; 
-  font-style: normal; 
-  font-variant: normal; 
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
   height: 100vh;
   width: 100vw;
 }
@@ -23,6 +23,12 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 56px;
+  }
 }
 
 button {
