@@ -6,8 +6,10 @@ import Spacer from "./style_components/Spacer";
 import styled from "styled-components";
 import Box from "./style_components/Box";
 
+import { Link } from "react-router-dom";
+
 // Define the styled link
-const FormLink = styled.a`
+const FormLink = styled(Link)`
   text-decoration: none; /* Remove the default underline */
   color: #fff; /* Set the text color */
   background-color: #667665;
@@ -35,7 +37,7 @@ const FormLink = styled.a`
   }
 `;
 
-function Info() {
+function FormSection() {
   const { t } = useTranslation();
 
   return (
@@ -57,13 +59,11 @@ function Info() {
       </Box>
       <Spacer top="1.5vh" />
       <div>
-        <FormLink href="#form" className="form-link">
-          {t("rsvp_form")}
-        </FormLink>
+        <FormLink to="/form">{t("rsvp_form")}</FormLink>
       </div>
       <Spacer top="6vh" />
     </FlexContainer>
   );
 }
 
-export default Info;
+export default FormSection;

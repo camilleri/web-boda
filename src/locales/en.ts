@@ -6,6 +6,7 @@ const en = {
       "In order to help with the organization we need you to fill in the RSVP form below.",
     thanks: "Thanks!",
     rsvp_form: "RSVP form",
+    date: "12 April 2025",
   },
 };
 

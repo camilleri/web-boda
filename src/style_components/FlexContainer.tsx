@@ -22,6 +22,7 @@ interface FlexContainerProps {
   gap?: string; // gap between flex items
   width?: string; // Optional width
   height?: string; // Optional height
+  flexGrow?: number; // Optional flex-grow
 }
 
 const FlexContainer = styled.div<FlexContainerProps>`
@@ -34,6 +35,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
   gap: ${(props) => props.gap || "0"};
   width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "auto"};
+  flex-grow: ${(props) => props.flexGrow || 0};
 `;
 
 export default FlexContainer;

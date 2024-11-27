@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { media } from "./Breakpoints";
 
 // Define the types for the text properties
 interface TextProps {
@@ -25,10 +24,10 @@ const Text = styled.p<TextProps>`
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
 
-  ${media.mobile`
+  @media (max-width: 768px) {
     font-size: ${(props: TextProps) =>
       props.fontSizeMobile || props.fontSize || "20px"};
-  `}
+  }
 `;
 
 export default Text;
