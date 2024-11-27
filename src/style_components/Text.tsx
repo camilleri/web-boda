@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { media } from "./Breakpoints";
 
 // Define the types for the text properties
 interface TextProps {
   fontSize?: string; // Font size (e.g., '16px', '1.5rem')
+  fontSizeMobile?: string; // Font size for mobile
   fontWeight?: string | number; // Font weight (e.g., 'normal', 'bold', 400)
   color?: string; // Text color (e.g., '#333', 'red')
   lineHeight?: string; // Line height (e.g., '1.5', '20px')
@@ -22,6 +24,11 @@ const Text = styled.p<TextProps>`
   text-transform: ${(props) => props.textTransform || "none"};
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
+
+  ${media.mobile`
+    font-size: ${(props: TextProps) =>
+      props.fontSizeMobile || props.fontSize || "20px"};
+  `}
 `;
 
 export default Text;

@@ -1,7 +1,6 @@
 header {
   /* background-color: var(--color-dark-green); */
   background-image: url("/vietnam.jpeg");
-  background-size: cover;
   background-position: center top; /* Horizontally and vertically center */
   position: fixed;
   top: 0;

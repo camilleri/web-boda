@@ -12,10 +12,10 @@ function Banner() {
         justifyContent="center"
         flexDirection="column"
       >
-        <Text fontSize="124px" fontWeight="600">
+        <Text fontSize="10vw" fontWeight="600">
           Maria + David
         </Text>
-        <Text fontSize="56px" fontWeight="600">
+        <Text fontSize="5vw" fontWeight="600">
           12 Abril 2024
         </Text>
       </FlexContainer>
