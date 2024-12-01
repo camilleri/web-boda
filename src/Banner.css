@@ -1,10 +1,12 @@
 .banner-img {
   background-image: url("/vietnam.jpeg");
   width: 100vw;
-  /* height: calc(100vh - 66px); */ /* Full viewport height minus header height */
+  /* height: calc(100vh - 66px); */
+  /* Full viewport height minus header height */
   height: 100vh;
   background-size: cover;
-  background-position: center center; /* Horizontally and vertically center */
+  background-position: center center;
+  /* Horizontally and vertically center */
   display: flex;
   align-items: center;
   justify-content: top;
@@ -13,7 +15,8 @@
 
 @media (max-width: 768px) {
   .banner-img {
-    /* height: calc(100vh - 56px); */ /* Full viewport height minus header height */
+    /* height: calc(100vh - 56px); */
+    /* Full viewport height minus header height */
     height: 100vh;
   }
 }

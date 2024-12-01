@@ -4,20 +4,20 @@ import styled from "styled-components";
 interface FlexContainerProps {
   flexDirection?: "row" | "column" | "row-reverse" | "column-reverse";
   justifyContent?:
-    | "flex-start"
-    | "flex-end"
-    | "center"
-    | "space-between"
-    | "space-around"
-    | "space-evenly";
+  | "flex-start"
+  | "flex-end"
+  | "center"
+  | "space-between"
+  | "space-around"
+  | "space-evenly";
   alignItems?: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
   alignContent?:
-    | "flex-start"
-    | "flex-end"
-    | "center"
-    | "space-between"
-    | "space-around"
-    | "stretch";
+  | "flex-start"
+  | "flex-end"
+  | "center"
+  | "space-between"
+  | "space-around"
+  | "stretch";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
   gap?: string; // gap between flex items
   width?: string; // Optional width
