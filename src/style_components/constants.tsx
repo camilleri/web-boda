@@ -3,7 +3,6 @@ export const headerHeight = "66px";
 
 export const colorGray = "#DADEEA";
 export const colorSelectedGray = "rgba(255, 255, 255, 0.25)";
-export const colorSelectedGrayOld = "rgba(196, 199, 210, 0.5)";
 export const colorDarkGreen = "#667665";
 export const colorSelectedDarkGreen = "#546153";
 export const colorLightGreen = "#9eb1a5";

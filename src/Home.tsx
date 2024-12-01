@@ -9,9 +9,9 @@ function Home() {
   return (
     <main>
       <Banner />
-      <FormSection />
       <VenueSection />
       <TransportSection />
+      <FormSection />
       <GiftSection />
       <LogoSection />
     </main>
