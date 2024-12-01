@@ -25,6 +25,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  align-items: center;
   /*padding-top: 70px; */
 }
 

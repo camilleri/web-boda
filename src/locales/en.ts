@@ -10,9 +10,12 @@ const en = {
     banner_title: "Maria & David",
     venue_title: "Venue",
     venue_message:
-      "The ceremony and celebration will take place at the Monastery of Sant Jeroni de Cotalba, in Alfauir (Valencia).",
+      "The ceremony and celebration will take place at the Monastery of Sant Jeroni de Cotalba, in Alfauir (Valencia).<br />",
     bus_message:
-      "There will be bus transportation from Oliva, Gandia and Sueca to the venue. Please let us know if you need a seat in the form.",
+      "There will be bus transportation from Oliva, Gandia and Sueca to the venue.<br />Please let us know if you need a seat in the form.",
+    gift_title: "Gifts",
+    gift_message:
+      "Your presence is the best gift we could ask for.<br />However, if you wish to give us something, we would appreciate your support.",
   },
 };
 

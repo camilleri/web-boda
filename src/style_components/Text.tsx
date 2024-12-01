@@ -25,6 +25,7 @@ const Text = styled.p<TextProps>`
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
   display: ${(props) => (props.inline ? "inline" : "block")};
+  font-family: ${(props) => props.fontFamily || "inherit"};
 
   @media (max-width: 768px) {
     font-size: ${(props: TextProps) =>

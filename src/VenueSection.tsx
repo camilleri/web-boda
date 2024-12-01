@@ -1,9 +1,20 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
 import Box from "./style_components/Box";
 import styled from "styled-components";
+import {
+  boxWidth,
+  boxWidthMobile,
+  innerSectionSpacer,
+  outerSectionSpacer,
+  textSize,
+  textSizeMobile,
+  titleSize,
+  titleSizeMobile,
+  titleWeight,
+} from "./style_components/constants";
 
 const VenueImage = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -25,26 +36,36 @@ function VenueSection() {
       justifyContent="center"
       flexDirection="column"
     >
-      <Spacer top="4vh" />
-      <Text fontSize="2.5vw" fontSizeMobile="5vw" fontWeight="600">
+      <Spacer top={outerSectionSpacer} />
+      <Text
+        fontSize={titleSize}
+        fontSizeMobile={titleSizeMobile}
+        fontWeight={titleWeight}
+      >
         {t("venue_title")}
       </Text>
-      <Spacer top="1.5vh" />
-      <Box width="50vw" widthMobile="80vw">
-        <Text fontSize="2vw" fontSizeMobile="4vw" textAlign="center">
+      <Spacer top={innerSectionSpacer} />
+      <Box width={boxWidth} widthMobile={boxWidthMobile}>
+        <Text
+          fontSize={textSize}
+          fontSizeMobile={textSizeMobile}
+          textAlign="center"
+        >
           {t("venue_message")}
-          <Spacer top="16px" />
+          <Spacer top={innerSectionSpacer} />
         </Text>
-        <Spacer top="1.5vh" />
+        <Spacer top={innerSectionSpacer} />
         <VenueImage src="/claustromudejar.jpg" alt="Venue" />
-        <Spacer top="1.5vh" />
-        <Text fontSize="2vw" fontSizeMobile="4vw" textAlign="center">
-          {t("bus_message")}
-          <Spacer top="16px" />
+        <Spacer top={innerSectionSpacer} />
+        <Text
+          fontSize={textSize}
+          fontSizeMobile={textSizeMobile}
+          textAlign="center"
+        >
+          <Trans i18nKey="bus_message" />
         </Text>
       </Box>
-      <Spacer top="1.5vh" />
-      <Spacer top="6vh" />
+      <Spacer top={innerSectionSpacer} />
     </FlexContainer>
   );
 }

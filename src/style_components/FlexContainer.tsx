@@ -23,6 +23,7 @@ interface FlexContainerProps {
   width?: string; // Optional width
   height?: string; // Optional height
   flexGrow?: number; // Optional flex-grow
+  maxWidth?: string; // Optional max-width
 }
 
 const FlexContainer = styled.div<FlexContainerProps>`
@@ -36,6 +37,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
   width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "auto"};
   flex-grow: ${(props) => props.flexGrow || 0};
+  max-width: ${(props) => props.maxWidth || "none"};
 `;
 
 export default FlexContainer;

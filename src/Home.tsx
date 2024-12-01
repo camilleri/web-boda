@@ -1,7 +1,8 @@
 import Banner from "./Banner";
-import Footer from "./LogoSection";
+import LogoSection from "./LogoSection";
 import FormSection from "./FormSection";
 import VenueSection from "./VenueSection";
+import GiftSection from "./GiftSection";
 
 function Home() {
   return (
@@ -9,7 +10,8 @@ function Home() {
       <Banner />
       <FormSection />
       <VenueSection />
-      <Footer />
+      <GiftSection />
+      <LogoSection />
     </main>
   );
 }

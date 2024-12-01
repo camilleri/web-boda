@@ -8,9 +8,18 @@ import Box from "./style_components/Box";
 
 import { Link } from "react-router-dom";
 import {
+  boxWidth,
+  boxWidthMobile,
   colorDarkGreen,
   colorGray,
   colorSelectedDarkGreen,
+  innerSectionSpacer,
+  outerSectionSpacer,
+  textSize,
+  textSizeMobile,
+  titleSize,
+  titleSizeMobile,
+  titleWeight,
 } from "./style_components/constants";
 
 // Define the styled link
@@ -35,10 +44,10 @@ const FormLink = styled(Link)`
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a custom focus shadow */
   }
 
-  font-size: 2vw; /* Set the font size */
+  font-size: ${textSize}; /* Set the font size */
 
   @media (max-width: 768px) {
-    font-size: 5vw; /* Set the font size for mobile */
+    font-size: ${textSizeMobile};
   }
 `;
 
@@ -51,22 +60,30 @@ function FormSection() {
       justifyContent="center"
       flexDirection="column"
     >
-      <Spacer top="4vh" />
-      <Text fontSize="2.5vw" fontSizeMobile="5vw" fontWeight="600">
+      <Spacer top={outerSectionSpacer} />
+      <Text
+        fontSize={titleSize}
+        fontSizeMobile={titleSizeMobile}
+        fontWeight={titleWeight}
+        textAlign="center"
+      >
         {t("confirm_assistance_title")}
       </Text>
-      <Spacer top="1.5vh" />
-      <Box width="50vw" widthMobile="80vw">
-        <Text fontSize="2vw" fontSizeMobile="4vw" textAlign="center">
+      <Spacer top={innerSectionSpacer} />
+      <Box width={boxWidth} widthMobile={boxWidthMobile}>
+        <Text
+          fontSize={textSize}
+          fontSizeMobile={textSizeMobile}
+          textAlign="center"
+        >
           {t("confirm_assistance_message")}
-          <Spacer top="16px" />
+          <Spacer top={innerSectionSpacer} />
         </Text>
       </Box>
-      <Spacer top="1.5vh" />
+      <Spacer top={innerSectionSpacer} />
       <div>
         <FormLink to="/form">{t("rsvp_form")}</FormLink>
       </div>
-      <Spacer top="6vh" />
     </FlexContainer>
   );
 }
