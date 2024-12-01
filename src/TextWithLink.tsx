@@ -16,6 +16,7 @@ type IconProps = {
 };
 const Icon = styled.img<IconProps>`
   height: ${(props) => props.iconSize};
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
 
   &:hover {
     transform: scale(1.05);

@@ -24,6 +24,7 @@ interface FlexContainerProps {
   height?: string; // Optional height
   flexGrow?: number; // Optional flex-grow
   maxWidth?: string; // Optional max-width
+  backgroundColor?: string; // Optional background color
 }
 
 const FlexContainer = styled.div<FlexContainerProps>`
@@ -38,6 +39,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
   height: ${(props) => props.height || "auto"};
   flex-grow: ${(props) => props.flexGrow || 0};
   max-width: ${(props) => props.maxWidth || "none"};
+  background-color: ${(props) => props.backgroundColor || "transparent"};
 `;
 
 export default FlexContainer;

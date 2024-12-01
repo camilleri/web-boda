@@ -17,10 +17,10 @@ const LanguageOption = styled.div`
   font-family: Courier, monospace;
   color: ${colorDarkGreen};
   border-radius: 8px;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
   &:hover {
     background-color: ${colorDarkGreen};
     transform: scale(1.05);
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
   }
 
   @media (max-width: 768px) {
