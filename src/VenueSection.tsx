@@ -56,84 +56,73 @@ function VenueSection() {
     window.open("https://maps.app.goo.gl/bgEtu2QTiFE16Pht7", "_blank");
   }
 
-  return (
-    <>
-      <Spacer top="50px" />
+  return (<FlexContainer
+    alignItems="center"
+    justifyContent="center"
+    flexDirection="column"
+    backgroundColor={colorSand}
+  >
+    <Spacer top={outerSectionSpacer} />
+    <Icon src={SectionIcon} size="4em" />
+    <Spacer bottom={innerSectionSpacer} />
+    <Text
+      fontSize={titleSize}
+      fontSizeMobile={titleSizeMobile}
+      fontWeight={titleWeight}>
+      {t("venue_title")}
+    </Text>
+    <Spacer top={innerSectionSpacer} />
+    <Box width={boxWidth} widthMobile={boxWidthMobile}>
       <FlexContainer
+        width="100%"
+        flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        flexDirection="column"
-        backgroundColor={colorSand}
       >
-        <Spacer top={outerSectionSpacer} />
-        <Icon src={SectionIcon} size="4em" />
-        <Spacer bottom={innerSectionSpacer} />
-        <Text
-          fontSize={titleSize}
-          fontSizeMobile={titleSizeMobile}
-          fontWeight={titleWeight}>
-          {t("venue_title")}
-        </Text>
-        <Spacer top={innerSectionSpacer} />
-        <Box width={boxWidth} widthMobile={boxWidthMobile}>
-          <FlexContainer
-            width="100%"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-          >
-            <VenueContainer
-              onClick={openGoogleMaps}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Icon isHovered={isHovered} src={LocationIcon} alt="Google Maps" />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="center"
-              >
-                <Trans i18nKey="venue_message" />
-              </Text>
-            </VenueContainer>
-            <FlexContainer>
-              <Icon src={CalendarIcon} alt="Calendar" />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="center"
-              >
-                <Trans i18nKey={"celebration_date"} />
-              </Text>
-            </FlexContainer>
-            <FlexContainer>
-              <Icon src={ClockIcon} alt="Calendar" />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="center"
-              >
-                <Trans i18nKey={"celebration_time"} />
-              </Text>
-            </FlexContainer>
-          </FlexContainer>
-          <Spacer top={innerSectionSpacer} />
-          <VenueImage src="/claustromudejar.jpg" alt="Venue" />
-          <Spacer top={innerSectionSpacer} />
+        <VenueContainer
+          onClick={openGoogleMaps}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Icon isHovered={isHovered} src={LocationIcon} alt="Google Maps" />
+          <Spacer left="8px" />
           <Text
             fontSize={textSize}
             fontSizeMobile={textSizeMobile}
             textAlign="center"
           >
-            <Trans i18nKey="bus_message" />
+            <Trans i18nKey="venue_message" />
           </Text>
-        </Box>
-        <Spacer top={innerSectionSpacer} />
+        </VenueContainer>
+        <FlexContainer>
+          <Icon src={CalendarIcon} alt="Calendar" />
+          <Spacer left="8px" />
+          <Text
+            fontSize={textSize}
+            fontSizeMobile={textSizeMobile}
+            textAlign="center"
+          >
+            <Trans i18nKey={"celebration_date"} />
+          </Text>
+        </FlexContainer>
+        <FlexContainer>
+          <Icon src={ClockIcon} alt="Calendar" />
+          <Spacer left="8px" />
+          <Text
+            fontSize={textSize}
+            fontSizeMobile={textSizeMobile}
+            textAlign="center"
+          >
+            <Trans i18nKey={"celebration_time"} />
+          </Text>
+        </FlexContainer>
       </FlexContainer>
-    </>
+      <Spacer top={innerSectionSpacer} />
+      <VenueImage src="/claustromudejar.jpg" alt="Venue" />
+      <Spacer top={innerSectionSpacer} />
+    </Box>
+    <Spacer top={outerSectionSpacer} />
+  </FlexContainer>
   );
 }
 

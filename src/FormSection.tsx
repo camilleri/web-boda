@@ -84,6 +84,7 @@ function FormSection() {
       <div>
         <FormLink to="/form">{t("rsvp_form")}</FormLink>
       </div>
+      <Spacer top={outerSectionSpacer} />
     </FlexContainer>
   );
 }
