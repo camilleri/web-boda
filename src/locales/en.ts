@@ -15,7 +15,7 @@ const en = {
       "There will be bus transportation from Oliva, Gandia and Sueca to the venue.<br />Please let us know if you need a seat in the form.",
     gift_title: "Gifts",
     gift_message:
-      "Your presence is the best gift we could ask for.<br />However, if you wish to give us something, we would appreciate your support.",
+      "Your presence is the best gift we could ask for.<br />However, if you wish to help us, we would appreciate your support.",
   },
 };
 
