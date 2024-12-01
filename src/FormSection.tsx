@@ -7,12 +7,17 @@ import styled from "styled-components";
 import Box from "./style_components/Box";
 
 import { Link } from "react-router-dom";
+import {
+  colorDarkGreen,
+  colorGray,
+  colorSelectedDarkGreen,
+} from "./style_components/constants";
 
 // Define the styled link
 const FormLink = styled(Link)`
   text-decoration: none; /* Remove the default underline */
-  color: #fff; /* Set the text color */
-  background-color: #667665;
+  color: ${colorGray}; /* Set the text color */
+  background-color: ${colorDarkGreen};
   padding: 10px 20px; /* Add padding for space around the text */
   border-radius: 5px; /* Round the corners */
   display: inline-block; /* Make it behave like a block but inline */
@@ -20,8 +25,8 @@ const FormLink = styled(Link)`
 
   /* Hover effect */
   &:hover {
-    background-color: #546153; /* Darker shade when hovered */
-    transform: scale(1.05); /* Slightly enlarge the link */
+    background-color: ${colorSelectedDarkGreen}; /* Darker shade when hovered */
+    transform: scale(1.05);
   }
 
   /* Focus effect */

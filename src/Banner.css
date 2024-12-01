@@ -1,5 +1,4 @@
 .banner-img {
-  background-color: blueviolet;
   background-image: url("/vietnam.jpeg");
   width: 100vw;
   /* height: calc(100vh - 66px); */ /* Full viewport height minus header height */

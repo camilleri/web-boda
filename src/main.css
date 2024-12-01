@@ -4,14 +4,16 @@
   --color-olive: #88885a; /* Store the color in a variable */
   --color-salmon: #ebcca3; /* Store the color in a variable */
   --color-sand: #d0c8be; /* Store the color in a variable */
+  --color-gray: #dadeea;
 }
 
 body {
   margin: 0;
-  background: var(--color-light-green);
+  background: var(--color-gray);
   display: flex;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
+  /* font-family: Courier, monospace; */
   font-size: 24px;
   font-style: normal;
   font-variant: normal;

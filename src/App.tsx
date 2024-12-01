@@ -6,15 +6,13 @@ import FormPage from "./FormPage";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/form" element={<FormPage />} />
-        </Routes>
-      </Router>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<FormPage />} />
+      </Routes>
+    </Router>
   );
 }
 

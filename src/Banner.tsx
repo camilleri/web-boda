@@ -16,10 +16,14 @@ function Banner() {
         justifyContent="center"
         flexDirection="column"
       >
-        <Text fontSize="8vh" fontWeight="600">
-          Maria + David
+        <Text
+          fontSize="8vh"
+          fontSizeMobile="clamp(2vh, 5vh, 6vh);"
+          fontWeight="600"
+        >
+          {t("banner_title")}
         </Text>
-        <Text fontSize="4vh" fontWeight="600">
+        <Text fontSize="4vh" fontSizeMobile="3vh" fontWeight="600">
           {t("date")}
         </Text>
       </FlexContainer>
