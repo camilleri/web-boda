@@ -3,6 +3,7 @@ import styled from "styled-components";
 // Define the types for the text properties
 interface TextProps {
   fontSize?: string; // Font size (e.g., '16px', '1.5rem')
+  fontSizeMobile?: string; // Font size for mobile
   fontWeight?: string | number; // Font weight (e.g., 'normal', 'bold', 400)
   color?: string; // Text color (e.g., '#333', 'red')
   lineHeight?: string; // Line height (e.g., '1.5', '20px')
@@ -11,6 +12,7 @@ interface TextProps {
   fontFamily?: string; // Font family (e.g., 'Arial', 'Helvetica')
   margin?: string; // Margin around the text
   padding?: string; // Padding around the text
+  inline?: boolean; // Display the text inline
 }
 
 const Text = styled.p<TextProps>`
@@ -22,6 +24,12 @@ const Text = styled.p<TextProps>`
   text-transform: ${(props) => props.textTransform || "none"};
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
+  display: ${(props) => (props.inline ? "inline" : "block")};
+
+  @media (max-width: 768px) {
+    font-size: ${(props: TextProps) =>
+      props.fontSizeMobile || props.fontSize || "20px"};
+  }
 `;
 
 export default Text;

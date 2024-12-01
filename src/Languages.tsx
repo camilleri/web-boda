@@ -1,29 +1,71 @@
-import { useEffect, useState } from "react";
-import "./Languages.css";
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+import {
+  colorDarkGreen,
+  colorLightGreen,
+  colorSelectedDarkGreen,
+} from "./style_components/constants";
+import FlexContainer from "./style_components/FlexContainer";
+import Spacer from "./style_components/Spacer";
 
-function Languages() {
+const LanguageOption = styled.div`
+  padding: 0.5em;
+  text-align: center;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 500;
+  font-family: Courier, monospace;
+  color: ${colorDarkGreen};
+  border-radius: 8px;
+  &:hover {
+    background-color: ${colorDarkGreen};
+    transform: scale(1.05);
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  }
+
+  @media (max-width: 768px) {
+  }
+`;
+
+const SelectedLanguageOption = styled(LanguageOption)`
+  color: ${colorSelectedDarkGreen};
+  background-color: ${colorLightGreen};
+`;
+
+type LanguageProps = {
+  language: string;
+};
+
+function Language(props: LanguageProps) {
   const { i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
-  useEffect(() => {
-    setSelectedLanguage(i18n.language);
-  }, [i18n.language]);
-
-  const getSelectedClass = (language: string) => {
-    return language === selectedLanguage ? "selected" : "unselected";
-  };
+  const currentLang = i18n.language;
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
+
+  return currentLang === props.language ? (
+    <SelectedLanguageOption>
+      {props.language.toUpperCase()}
+    </SelectedLanguageOption>
+  ) : (
+    <LanguageOption onClick={() => changeLanguage(props.language)}>
+      {props.language.toUpperCase()}
+    </LanguageOption>
+  );
+}
+
+function Languages() {
   return (
     <div>
-      <div className="ul-buttons">
-        <div className={`list-item ${getSelectedClass("val")}`} onClick={() => changeLanguage("val")}>VAL</div>
-        <div className={`list-item ${getSelectedClass("en")}`} onClick={() => changeLanguage("en")}>EN</div>
-        <div className={`list-item ${getSelectedClass("es")}`} onClick={() => changeLanguage("es")}>ES</div>
-      </div>
+      <FlexContainer>
+        <Language language="val" />
+        <Spacer right="4px" />
+        <Language language="en" />
+        <Spacer right="4px" />
+        <Language language="es" />
+      </FlexContainer>
     </div>
   );
 }

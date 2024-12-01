@@ -4,14 +4,16 @@
   --color-olive: #88885a; /* Store the color in a variable */
   --color-salmon: #ebcca3; /* Store the color in a variable */
   --color-sand: #d0c8be; /* Store the color in a variable */
+  --color-gray: #dadeea;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #eeffed, #deffea);
+  background: var(--color-gray);
   display: flex;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
+  /* font-family: Courier, monospace; */
   font-size: 24px;
   font-style: normal;
   font-variant: normal;
@@ -22,6 +24,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  width: 100vw;
   /*padding-top: 70px; */
 }
 
@@ -30,52 +33,3 @@ main {
     padding-top: 56px;
   }
 } */
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: white;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-ul {
-  padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin: 8px 0;
-  border: 1px solid black;
-  gap: 1px;
-  background-color: black;
-  border-radius: 8px;
-  overflow: auto;
-}
-
-li {
-  background-color: white;
-  padding: 8px;
-}
-
-li:hover {
-  background: #dadbf9;
-}
-
-a {
-  font-weight: 800;
-  text-decoration: none;
-}

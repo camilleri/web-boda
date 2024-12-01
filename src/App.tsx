@@ -1,23 +1,18 @@
-import Banner from "./Banner";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Header } from "./Header";
-
-import "./i18n"; // Import your i18n configuration file.
-import { useTranslation } from "react-i18next";
-import Info from "./Info";
+import "./App.css";
+import Home from "./Home";
+import FormPage from "./FormPage";
 
 function App() {
-  const { t } = useTranslation();
-
   return (
-    <>
+    <Router>
       <Header />
-      <main>
-        <Banner />
-        <Info />
-        <h1>{t("welcome")}</h1>
-        <p>Aso es un paragraph</p>
-      </main>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<FormPage />} />
+      </Routes>
+    </Router>
   );
 }
 
