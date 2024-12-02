@@ -40,7 +40,7 @@ function GiftSection() {
         fontWeight={titleWeight}
         textAlign="center"
       >
-        {t("gift_title")}
+        {t("support_title")}
       </Text>
       <Spacer top={innerSectionSpacer} />
       <Box width={boxWidth} widthMobile={boxWidthMobile}>

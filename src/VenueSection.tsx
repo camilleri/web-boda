@@ -22,6 +22,7 @@ import CalendarIcon from "/icons/calendar.svg";
 import ClockIcon from "/icons/clock.svg";
 import { useState } from "react";
 import Icon from "./style_components/Icon";
+// import Carrousel from "./carrousel/Carrousel";
 
 const VenueImage = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -33,7 +34,6 @@ const VenueImage = styled.img`
   @media (max-width: 768px) {
   }
 `;
-
 
 const VenueContainer = styled(FlexContainer)`
   cursor: pointer;
@@ -56,73 +56,79 @@ function VenueSection() {
     window.open("https://maps.app.goo.gl/bgEtu2QTiFE16Pht7", "_blank");
   }
 
-  return (<FlexContainer
-    alignItems="center"
-    justifyContent="center"
-    flexDirection="column"
-    backgroundColor={colorSand}
-  >
-    <Spacer top={outerSectionSpacer} />
-    <Icon src={SectionIcon} size="4em" />
-    <Spacer bottom={innerSectionSpacer} />
-    <Text
-      fontSize={titleSize}
-      fontSizeMobile={titleSizeMobile}
-      fontWeight={titleWeight}>
-      {t("venue_title")}
-    </Text>
-    <Spacer top={innerSectionSpacer} />
-    <Box width={boxWidth} widthMobile={boxWidthMobile}>
-      <FlexContainer
-        width="100%"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
+  return (
+    <FlexContainer
+      alignItems="center"
+      justifyContent="center"
+      flexDirection="column"
+      backgroundColor={colorSand}
+      width="100%"
+      transition="all 0.3s ease-in-out"
+    >
+      <Spacer top={outerSectionSpacer} />
+      <Icon src={SectionIcon} size="4em" />
+      <Spacer bottom={innerSectionSpacer} />
+      <Text
+        fontSize={titleSize}
+        fontSizeMobile={titleSizeMobile}
+        fontWeight={titleWeight}
       >
-        <VenueContainer
-          onClick={openGoogleMaps}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <Icon isHovered={isHovered} src={LocationIcon} alt="Google Maps" />
-          <Spacer left="8px" />
-          <Text
-            fontSize={textSize}
-            fontSizeMobile={textSizeMobile}
-            textAlign="center"
-          >
-            <Trans i18nKey="venue_message" />
-          </Text>
-        </VenueContainer>
-        <FlexContainer>
-          <Icon src={CalendarIcon} alt="Calendar" />
-          <Spacer left="8px" />
-          <Text
-            fontSize={textSize}
-            fontSizeMobile={textSizeMobile}
-            textAlign="center"
-          >
-            <Trans i18nKey={"celebration_date"} />
-          </Text>
-        </FlexContainer>
-        <FlexContainer>
-          <Icon src={ClockIcon} alt="Calendar" />
-          <Spacer left="8px" />
-          <Text
-            fontSize={textSize}
-            fontSizeMobile={textSizeMobile}
-            textAlign="center"
-          >
-            <Trans i18nKey={"celebration_time"} />
-          </Text>
-        </FlexContainer>
-      </FlexContainer>
+        {t("venue_title")}
+      </Text>
       <Spacer top={innerSectionSpacer} />
-      <VenueImage src="/claustromudejar.jpg" alt="Venue" />
-      <Spacer top={innerSectionSpacer} />
-    </Box>
-    <Spacer top={outerSectionSpacer} />
-  </FlexContainer>
+      <Box width={boxWidth} widthMobile={boxWidthMobile}>
+        <FlexContainer width="100%" flexDirection="column" alignItems="center">
+          <FlexContainer flexDirection="column" alignItems="flex-start">
+            <VenueContainer
+              onClick={openGoogleMaps}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Icon
+                isHovered={isHovered}
+                src={LocationIcon}
+                alt="Google Maps"
+              />
+              <Spacer left="8px" />
+              <Text
+                fontSize={textSize}
+                fontSizeMobile={textSizeMobile}
+                textAlign="center"
+              >
+                <Trans i18nKey="venue_message" />
+              </Text>
+            </VenueContainer>
+            <FlexContainer>
+              <Icon src={CalendarIcon} alt="Calendar" />
+              <Spacer left="8px" />
+              <Text
+                fontSize={textSize}
+                fontSizeMobile={textSizeMobile}
+                textAlign="center"
+              >
+                <Trans i18nKey={"celebration_date"} />
+              </Text>
+            </FlexContainer>
+            <FlexContainer>
+              <Icon src={ClockIcon} alt="Calendar" />
+              <Spacer left="8px" />
+              <Text
+                fontSize={textSize}
+                fontSizeMobile={textSizeMobile}
+                textAlign="center"
+              >
+                <Trans i18nKey={"celebration_time"} />
+              </Text>
+            </FlexContainer>
+          </FlexContainer>
+        </FlexContainer>
+        <Spacer top={innerSectionSpacer} />
+        <VenueImage src="/monasteri/mon-4.jpg" alt="Venue" />
+        {/* <Carrousel /> */}
+        <Spacer top={innerSectionSpacer} />
+      </Box>
+      <Spacer top={outerSectionSpacer} />
+    </FlexContainer>
   );
 }
 

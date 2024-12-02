@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
-import { Link } from "react-router-dom";
 import {
   colorDarkGreen,
   colorSelectedDarkGreen,
 } from "./style_components/constants";
+import { Trans } from "react-i18next";
 
-const MenuLink = styled(Link)`
+const MenuLink = styled.div`
   text-decoration: none; /* Remove the default underline */
   color: ${colorDarkGreen}; /* Set the text color */
   transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
@@ -38,13 +38,29 @@ function Menu() {
   return (
     <FlexContainer>
       <Spacer left="8px" right="8px">
-        <MenuLink to="/">Home</MenuLink>
+        <MenuLink>
+          <Trans i18nKey="home" />
+        </MenuLink>
       </Spacer>
       <Spacer left="8px" right="8px">
-        <MenuLink to="/form">RSVP</MenuLink>
+        <MenuLink>
+          <Trans i18nKey="venue_title" />
+        </MenuLink>
       </Spacer>
       <Spacer left="8px" right="8px">
-        <MenuLink to="/form">Venue</MenuLink>
+        <MenuLink>
+          <Trans i18nKey="transport_title" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="8px" right="8px">
+        <MenuLink>
+          <Trans i18nKey="RSVP" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="8px" right="8px">
+        <MenuLink>
+          <Trans i18nKey="support_title" />
+        </MenuLink>
       </Spacer>
     </FlexContainer>
   );

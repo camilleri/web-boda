@@ -12,6 +12,7 @@ import {
   boxWidthMobile,
   colorDarkGreen,
   colorGray,
+  colorOlive,
   colorSelectedDarkGreen,
   innerSectionSpacer,
   outerSectionSpacer,
@@ -59,6 +60,8 @@ function FormSection() {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
+      backgroundColor={colorOlive}
+      width="100%"
     >
       <Spacer top={outerSectionSpacer} />
       <Text

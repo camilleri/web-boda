@@ -4,20 +4,20 @@ import styled from "styled-components";
 interface FlexContainerProps {
   flexDirection?: "row" | "column" | "row-reverse" | "column-reverse";
   justifyContent?:
-  | "flex-start"
-  | "flex-end"
-  | "center"
-  | "space-between"
-  | "space-around"
-  | "space-evenly";
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-between"
+    | "space-around"
+    | "space-evenly";
   alignItems?: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
   alignContent?:
-  | "flex-start"
-  | "flex-end"
-  | "center"
-  | "space-between"
-  | "space-around"
-  | "stretch";
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-between"
+    | "space-around"
+    | "stretch";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
   gap?: string; // gap between flex items
   width?: string; // Optional width
@@ -25,6 +25,7 @@ interface FlexContainerProps {
   flexGrow?: number; // Optional flex-grow
   maxWidth?: string; // Optional max-width
   backgroundColor?: string; // Optional background color
+  transition?: string; // Optional transition
 }
 
 const FlexContainer = styled.div<FlexContainerProps>`
@@ -35,11 +36,12 @@ const FlexContainer = styled.div<FlexContainerProps>`
   align-content: ${(props) => props.alignContent || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   gap: ${(props) => props.gap || "0"};
-  width: ${(props) => props.width || "100%"};
+  width: ${(props) => props.width || null};
   height: ${(props) => props.height || "auto"};
   flex-grow: ${(props) => props.flexGrow || 0};
   max-width: ${(props) => props.maxWidth || "none"};
   background-color: ${(props) => props.backgroundColor || "transparent"};
+  transition: ${(props) => props.transition || "none"};
 `;
 
 export default FlexContainer;
