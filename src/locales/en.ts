@@ -17,6 +17,12 @@ const en = {
     celebration_time: "In the morning (TBD)",
     transport_title: "Transport",
     transport_message: "There will be bus transportation from Oliva, Gandia and Sueca to the venue.<br />Please let us know if you need a seat in the form.",
+    days: "days",
+    minutes: "minutes",
+    seconds: "seconds",
+    hours: "hours",
+    day: "day",
+    time_left: "Time left",
   },
 };
 

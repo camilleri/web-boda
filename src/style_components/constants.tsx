@@ -26,3 +26,5 @@ export const boxWidthMobile = "80vw";
 
 export const iconSize = "2.5em";
 export const iconSizeMobile = "8vw";
+
+export const bannerImage = ""

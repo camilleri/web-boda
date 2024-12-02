@@ -13,6 +13,12 @@ const val = {
     gift_message: "La vostra presència és el millor regal que ens podeu fer.<br />Tanmateix, si voleu fer ajudar-nos, agraim el vostre suport.",
     transport_title: "Transport",
     transport_message: "Hi haurà transport en autobús des d'Oliva, Gandia i Sueca fins al lloc de l'esdeveniment. Si us plau, fes-nos saber si necessites una plaça al formulari.",
+    days: "dies",
+    day: "dia",
+    minutes: "minuts",
+    seconds: "segons",
+    hours: "hores",
+    time_left: "Falten",
   },
 };
 
