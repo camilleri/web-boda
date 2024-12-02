@@ -10,7 +10,6 @@ import {
   boxWidth,
   boxWidthMobile,
   colorDarkGreen,
-  colorGray,
   colorSelectedDarkGreen,
   innerSectionSpacer,
   outerSectionSpacer,
@@ -21,11 +20,13 @@ import {
   titleWeight,
 } from "./style_components/constants";
 import Section from "./style_components/Section";
+import FormIcon from "/icons/form.svg";
+import Icon from "./style_components/Icon";
 
 // Define the styled link
 const FormLink = styled(Link)`
   text-decoration: none; /* Remove the default underline */
-  color: ${colorGray}; /* Set the text color */
+  color: white; /* Set the text color */
   background-color: ${colorDarkGreen};
   padding: 10px 20px; /* Add padding for space around the text */
   border-radius: 5px; /* Round the corners */
@@ -64,6 +65,7 @@ function FormSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
+      <Icon src={FormIcon} size="4em" />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}

@@ -1,7 +1,6 @@
 export const mobileHeaderHeight = "56px";
 export const headerHeight = "66px";
 
-export const colorGray = "#DADEEA";
 export const colorSelectedGray = "rgba(255, 255, 255, 0.25)";
 export const colorDarkGreen = "#667665";
 export const colorSelectedDarkGreen = "#546153";
@@ -27,10 +26,3 @@ export const iconSize = "2.5em";
 export const iconSizeMobile = "8vw";
 
 export const bannerImage = "";
-
-// the other palette
-export const darkGreen = "#546142";
-export const midGreen = "#728062";
-export const lightGreen = "#AAB4A6";
-export const salmon = "#EBD3C5";
-export const sand = "#E6D3D7";

@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { colorDarkGreen } from "./style_components/constants";
+import {
+  colorDarkGreen,
+  colorSelectedDarkGreen,
+} from "./style_components/constants";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 
@@ -25,7 +28,7 @@ const LanguageOption = styled.div`
 
 const SelectedLanguageOption = styled(LanguageOption)`
   color: white;
-  background-color: ${colorDarkGreen};
+  background-color: ${colorSelectedDarkGreen};
 `;
 
 type LanguageProps = {
@@ -54,7 +57,7 @@ function Language(props: LanguageProps) {
 
 function Languages() {
   return (
-    <div>
+    <Spacer right="16px" mobileRight="0px">
       <FlexContainer>
         <Language language="val" />
         <Spacer right="4px" />
@@ -62,7 +65,7 @@ function Languages() {
         <Spacer right="4px" />
         <Language language="es" />
       </FlexContainer>
-    </div>
+    </Spacer>
   );
 }
 

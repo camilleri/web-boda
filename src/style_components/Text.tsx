@@ -30,16 +30,16 @@ const Text = styled.p<TextProps>`
   padding: ${(props) => props.padding || "0"};
   display: ${(props) => (props.inline ? "inline" : "block")};
   font-family: ${(props) => props.fontFamily || "inherit"};
-  background-color: ${(props) => props.backgroundColor || null};
+  background-color: ${(props) => props.backgroundColor || "transparent"};
   border-radius: ${(props) => props.borderRadius || "0"};
-  width: ${(props) => props.width || null};
-  text-shadow: ${(props) => props.textShadow || "none"};
+  width: ${(props) => props.width || "auto"};
 
   @media (max-width: 768px) {
-    font-size: ${(props: TextProps) =>
-      props.fontSizeMobile || props.fontSize || "20px"};
-    width: ${(props) => props.widthMobile || props.width || null};
+    font-size: ${(props) => props.fontSizeMobile || props.fontSize || "20px"};
+    width: ${(props) => props.widthMobile || props.width || "auto"};
   }
+
+  text-shadow: ${(props) => props.textShadow || "none"};
 `;
 
 export default Text;

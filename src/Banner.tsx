@@ -23,7 +23,7 @@ function Banner(props: Props) {
         <FlexContainer alignItems="center" flexDirection="column">
           <Text
             fontSize="8vh"
-            fontSizeMobile="clamp(2vh, 4vh, 5vh)"
+            fontSizeMobile="clamp(2vh, 5vh, 6vh)"
             fontWeight="600"
             color="white"
             textShadow={`2px 2px 4px black};`}

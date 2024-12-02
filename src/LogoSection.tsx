@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import Section from "./style_components/Section";
 import CountdownTimer from "./countdown/CountdownTimer";
+import Box from "./style_components/Box";
+import {
+  boxWidth,
+  boxWidthMobile,
+  innerSectionSpacer,
+  outerSectionSpacer,
+} from "./style_components/constants";
+import FlexContainer from "./style_components/FlexContainer";
+import Spacer from "./style_components/Spacer";
 
 const LogoImage = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -19,8 +28,19 @@ type Props = {
 function LogoSection(props: Props) {
   return (
     <Section backgroundColor={props.backgroundColor}>
-      <LogoImage src="/logo_circular_color.png" />
-      <CountdownTimer targetDate="2025-04-12" />
+      <Box width={boxWidth} widthMobile={boxWidthMobile}>
+        <FlexContainer
+          flexDirection="column"
+          width="100%"
+          justifyContent="center"
+        >
+          <Spacer top={outerSectionSpacer} />
+          <LogoImage src="/logo_circular_color.png" />
+          <Spacer top={innerSectionSpacer} />
+          <CountdownTimer targetDate="2025-04-12" />
+          <Spacer top={outerSectionSpacer} />
+        </FlexContainer>
+      </Box>
     </Section>
   );
 }

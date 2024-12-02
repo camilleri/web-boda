@@ -19,6 +19,7 @@ import LocationIcon from "/icons/location.svg";
 import SectionIcon from "/icons/venue-section.svg";
 import CalendarIcon from "/icons/calendar.svg";
 import ClockIcon from "/icons/clock.svg";
+import BeerICon from "/icons/beer.svg";
 import { useState } from "react";
 import Icon from "./style_components/Icon";
 import Section from "./style_components/Section";
@@ -83,41 +84,69 @@ function VenueSection(props: Props) {
               onClick={openGoogleMaps}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              alignItems="center"
             >
               <Icon
                 isHovered={isHovered}
                 src={LocationIcon}
                 alt="Google Maps"
+                mobileSize="4vh"
               />
               <Spacer left="8px" />
               <Text
                 fontSize={textSize}
                 fontSizeMobile={textSizeMobile}
-                textAlign="center"
+                textAlign="left"
               >
                 <Trans i18nKey="venue_message" />
               </Text>
             </VenueContainer>
-            <FlexContainer>
-              <Icon src={CalendarIcon} alt="Calendar" />
+            <FlexContainer alignItems="center">
+              <Icon src={CalendarIcon} alt="Calendar" mobileSize="4vh" />
               <Spacer left="8px" />
               <Text
                 fontSize={textSize}
                 fontSizeMobile={textSizeMobile}
-                textAlign="center"
+                textAlign="left"
               >
                 <Trans i18nKey={"celebration_date"} />
               </Text>
             </FlexContainer>
-            <FlexContainer>
-              <Icon src={ClockIcon} alt="Calendar" />
+            <FlexContainer alignItems="center">
+              <Icon src={ClockIcon} alt="Clock" mobileSize="4vh" />
               <Spacer left="8px" />
               <Text
                 fontSize={textSize}
                 fontSizeMobile={textSizeMobile}
-                textAlign="center"
+                textAlign="left"
               >
                 <Trans i18nKey={"celebration_time"} />
+              </Text>
+            </FlexContainer>
+            <Spacer top={innerSectionSpacer} />
+            <FlexContainer
+              width="100%"
+              flexDirection="column"
+              alignItems="center"
+            >
+              <Text
+                fontSize={titleSize}
+                fontSizeMobile={titleSizeMobile}
+                fontWeight={titleWeight}
+              >
+                {t("prewedding_title")}
+              </Text>
+            </FlexContainer>
+            <Spacer top={innerSectionSpacer} />
+            <FlexContainer alignItems="center">
+              <Icon src={BeerICon} alt="Beer" mobileSize="4vh" />
+              <Spacer left="8px" />
+              <Text
+                fontSize={textSize}
+                fontSizeMobile={textSizeMobile}
+                textAlign="left"
+              >
+                <Trans i18nKey="prewedding" />
               </Text>
             </FlexContainer>
           </FlexContainer>

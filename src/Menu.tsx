@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
-import { colorSelectedDarkGreen } from "./style_components/constants";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import useIsMobile from "./hooks/useIsMobile";
+import { colorDarkGreen } from "./style_components/constants";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const MenuLink = styled.div`
-  text-decoration: none; /* Remove the default underline */
   color: white; /* Set the text color */
   font-size: 24px;
   font-family: Didot, monospace;
   cursor: pointer;
+  text-shadow: 4px 4px 8px ${colorDarkGreen};
 
   /* Hover effect */
   &:hover {
@@ -18,12 +21,10 @@ const MenuLink = styled.div`
 
   /* Focus effect */
   &:focus {
-    color: ${colorSelectedDarkGreen};
     font-weight: 700;
   }
 
   @media (max-width: 768px) {
-    visibility: hidden;
   }
 `;
 
@@ -36,39 +37,66 @@ type Props = {
   supportRef: React.RefObject<HTMLDivElement>;
 };
 function Menu(props: Props) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isMobile = useIsMobile();
+  useTranslation();
+
+  const [pendingScroll, setPendingScroll] =
+    useState<React.RefObject<HTMLDivElement> | null>(null);
+
   // Function to handle scroll
   const scrollToSection = (sectionRef: any) => {
-    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/");
+      setPendingScroll(sectionRef);
+    } else {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
+  useEffect(() => {
+    if (pendingScroll && pendingScroll?.current && location.pathname === "/") {
+      pendingScroll.current.scrollIntoView({ behavior: "smooth" });
+      setPendingScroll(null);
+    }
+    // Wait for the location change and then scroll
+    const targetElement = document.getElementById("target-section");
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [pendingScroll, location]); // Trigger this effect when the location changes
+
   return (
-    <FlexContainer>
-      <Spacer left="8px" right="8px">
-        <MenuLink onClick={() => scrollToSection(props.homeRef)}>
-          <Trans i18nKey="home" />
-        </MenuLink>
-      </Spacer>
-      <Spacer left="8px" right="8px">
-        <MenuLink onClick={() => scrollToSection(props.venueRef)}>
-          <Trans i18nKey="venue_title" />
-        </MenuLink>
-      </Spacer>
-      <Spacer left="8px" right="8px">
-        <MenuLink onClick={() => scrollToSection(props.transportRef)}>
-          <Trans i18nKey="transport_title" />
-        </MenuLink>
-      </Spacer>
-      <Spacer left="8px" right="8px">
-        <MenuLink onClick={() => scrollToSection(props.formRef)}>
-          <Trans i18nKey="RSVP" />
-        </MenuLink>
-      </Spacer>
-      <Spacer left="8px" right="8px">
-        <MenuLink onClick={() => scrollToSection(props.supportRef)}>
-          <Trans i18nKey="support_title" />
-        </MenuLink>
-      </Spacer>
-    </FlexContainer>
+    !isMobile && (
+      <FlexContainer>
+        <Spacer left="16px">
+          <MenuLink onClick={() => scrollToSection(props.homeRef)}>
+            <Trans i18nKey="home" />
+          </MenuLink>
+        </Spacer>
+        <Spacer left="24px">
+          <MenuLink onClick={() => scrollToSection(props.venueRef)}>
+            <Trans i18nKey="venue_title" />
+          </MenuLink>
+        </Spacer>
+        <Spacer left="24px">
+          <MenuLink onClick={() => scrollToSection(props.transportRef)}>
+            <Trans i18nKey="transport_title" />
+          </MenuLink>
+        </Spacer>
+        <Spacer left="24px">
+          <MenuLink onClick={() => scrollToSection(props.formRef)}>
+            <Trans i18nKey="rsvp_form" />
+          </MenuLink>
+        </Spacer>
+        <Spacer left="24px">
+          <MenuLink onClick={() => scrollToSection(props.supportRef)}>
+            <Trans i18nKey="support_title" />
+          </MenuLink>
+        </Spacer>
+      </FlexContainer>
+    )
   );
 }
 

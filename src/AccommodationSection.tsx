@@ -1,4 +1,4 @@
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
 import {
@@ -22,6 +22,8 @@ type Props = {
   reference: React.RefObject<HTMLDivElement>;
 };
 function AccommodationSection(props: Props) {
+  useTranslation();
+
   return (
     <Section
       backgroundColor={props.backgroundColor}

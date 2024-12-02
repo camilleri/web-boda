@@ -4,6 +4,7 @@ import Menu from "./Menu";
 import FlexContainer from "./style_components/FlexContainer";
 import { colorOlive } from "./style_components/constants";
 import { useEffect, useState } from "react";
+import useIsMobile from "./hooks/useIsMobile";
 
 const HeaderBar = styled.header<{ showHeader: boolean }>`
   background-position: center top; /* Horizontally and vertically center */
@@ -38,7 +39,7 @@ type Props = {
 export function Header(props: Props) {
   const [scrollPosition, setScrollPosition] = useState(0); // Tracks the previous scroll position
   const [isScrollingUp, setIsScrollingUp] = useState(false); // Tracks the scroll direction
-  const [showHeader, setShowHeader] = useState(true); // Tracks the scroll direction
+  const [showHeader, setShowHeader] = useState(false); // Tracks the scroll direction
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,10 +74,12 @@ export function Header(props: Props) {
     }
   }, [isScrollingUp]);
 
+  const isMobile = useIsMobile();
+
   return (
     <HeaderBar showHeader={showHeader}>
       <FlexContainer
-        justifyContent="space-between"
+        justifyContent={isMobile ? "flex-end" : "space-between"}
         alignItems="center"
         height="100%"
         width="100%"

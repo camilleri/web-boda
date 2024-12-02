@@ -20,6 +20,8 @@ import PayPalIcon from "/icons/paypal.svg";
 import TextWithIcon from "./TextWithIcon";
 import TextWithLink from "./TextWithLink";
 import Section from "./style_components/Section";
+import GiftIcon from "/icons/gift.svg";
+import Icon from "./style_components/Icon";
 
 type Props = {
   backgroundColor: string;
@@ -38,6 +40,7 @@ function GiftSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
+      <Icon src={GiftIcon} size="4em" />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}
@@ -76,7 +79,7 @@ function GiftSection(props: Props) {
           />
         </FlexContainer>
       </Box>
-      <Spacer top={innerSectionSpacer} />
+      <Spacer top={outerSectionSpacer} />
     </Section>
   );
 }

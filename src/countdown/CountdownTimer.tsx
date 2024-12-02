@@ -43,21 +43,12 @@ const CountdownTimer = (props: Props) => {
   }, [props.targetDate]);
 
   return (
-    <div>
-      {/* <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="center"
-                color="white">
-                <Trans i18nKey="time_left" />
-            </Text> */}
-      <FlexContainer>
-        <CountdownElement count={timeLeft.days} textKey="days" />
-        <CountdownElement count={timeLeft.hours} textKey="hours" />
-        <CountdownElement count={timeLeft.minutes} textKey="minutes" />
-        <CountdownElement count={timeLeft.seconds} textKey="seconds" />
-      </FlexContainer>
-    </div>
+    <FlexContainer justifyContent="center">
+      <CountdownElement count={timeLeft.days} textKey="days" />
+      <CountdownElement count={timeLeft.hours} textKey="hours" />
+      <CountdownElement count={timeLeft.minutes} textKey="minutes" />
+      <CountdownElement count={timeLeft.seconds} textKey="seconds" />
+    </FlexContainer>
   );
 };
 
