@@ -7,7 +7,7 @@ const en = {
     thanks: "Thanks!",
     rsvp_form: "RSVP form",
     date: "12 April 2025",
-    banner_title: "Maria & David",
+    banner_title: "Maria + David",
     venue_title: "Celebration",
     venue_message: "Monestir de Sant Jeroni de Cotalba",
     support_title: "Support",
@@ -16,7 +16,11 @@ const en = {
     celebration_date: "12 April 2025",
     celebration_time: "In the morning (TBD)",
     transport_title: "Transport",
-    transport_message: "There will be bus transportation from Oliva, Gandia and Sueca to the venue.<br />Please let us know if you need a seat in the form.",
+    transport_message:
+      "There will be bus transportation the day of the wedding from Oliva, Gandia and Sueca to the venue. The bus will depart in the morning and come back around midnight when the party ends. Please let us know if you need a seat in the form.<br />For the rest of the days keep in mind there is very limited public transportation, so having a car to move around is recommended if possible.",
+    accommodation_title: "Accommodation",
+    accommodation_message:
+      "We recommend people look for accomodation in either Oliva or Gandia.<br />If staying in Oliva take into account the beach is around 2km from the city and there is a pedestrian path, but Oliva Nova is 7km away from the city center so not within walkeable distance.",
     days: "days",
     minutes: "minutes",
     seconds: "seconds",

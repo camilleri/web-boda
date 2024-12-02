@@ -26,4 +26,11 @@ export const boxWidthMobile = "80vw";
 export const iconSize = "2.5em";
 export const iconSizeMobile = "8vw";
 
-export const bannerImage = ""
+export const bannerImage = "";
+
+// the other palette
+export const darkGreen = "#546142";
+export const midGreen = "#728062";
+export const lightGreen = "#AAB4A6";
+export const salmon = "#EBD3C5";
+export const sand = "#E6D3D7";

@@ -2,12 +2,12 @@ import styled from "styled-components";
 import Languages from "./Languages";
 import Menu from "./Menu";
 import FlexContainer from "./style_components/FlexContainer";
-import { colorGray } from "./style_components/constants";
+import { colorOlive } from "./style_components/constants";
 import { useEffect, useState } from "react";
 
 const HeaderBar = styled.header<{ showHeader: boolean }>`
   background-position: center top; /* Horizontally and vertically center */
-  background-color: ${colorGray};
+  background-color: ${colorOlive};
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +27,15 @@ const HeaderBar = styled.header<{ showHeader: boolean }>`
   }
 `;
 
-export function Header() {
+type Props = {
+  homeRef: React.RefObject<HTMLDivElement>;
+  venueRef: React.RefObject<HTMLDivElement>;
+  transportRef: React.RefObject<HTMLDivElement>;
+  accommodationRef: React.RefObject<HTMLDivElement>;
+  formRef: React.RefObject<HTMLDivElement>;
+  supportRef: React.RefObject<HTMLDivElement>;
+};
+export function Header(props: Props) {
   const [scrollPosition, setScrollPosition] = useState(0); // Tracks the previous scroll position
   const [isScrollingUp, setIsScrollingUp] = useState(false); // Tracks the scroll direction
   const [showHeader, setShowHeader] = useState(true); // Tracks the scroll direction
@@ -73,7 +81,14 @@ export function Header() {
         height="100%"
         width="100%"
       >
-        <Menu />
+        <Menu
+          homeRef={props.homeRef}
+          venueRef={props.venueRef}
+          transportRef={props.transportRef}
+          accommodationRef={props.accommodationRef}
+          formRef={props.formRef}
+          supportRef={props.supportRef}
+        />
         <Languages />
       </FlexContainer>
     </HeaderBar>

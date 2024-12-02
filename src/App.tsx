@@ -3,13 +3,41 @@ import { Header } from "./Header";
 import "./App.css";
 import Home from "./Home";
 import FormPage from "./FormPage";
+import { useRef } from "react";
 
 function App() {
+  // Create refs for scrolling
+  const homeRef = useRef(null);
+  const venueRef = useRef(null);
+  const transportRef = useRef(null);
+  const accommodationRef = useRef(null);
+  const formRef = useRef(null);
+  const supportRef = useRef(null);
+
   return (
     <Router>
-      <Header />
+      <Header
+        homeRef={homeRef}
+        venueRef={venueRef}
+        transportRef={transportRef}
+        accommodationRef={accommodationRef}
+        formRef={formRef}
+        supportRef={supportRef}
+      />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              homeRef={homeRef}
+              venueRef={venueRef}
+              transportRef={transportRef}
+              accommodationRef={accommodationRef}
+              formRef={formRef}
+              supportRef={supportRef}
+            />
+          }
+        />
         <Route path="/form" element={<FormPage />} />
       </Routes>
     </Router>

@@ -4,32 +4,42 @@ import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
-import CountdownTimer from "./countdown/CountdownTimer";
 
-function Banner() {
+type Props = {
+  reference: React.RefObject<HTMLDivElement>;
+};
+function Banner(props: Props) {
   const { t } = useTranslation();
 
   return (
-    <div className="banner-img">
+    <div className="banner-img" ref={props.reference}>
       <Spacer top="88px" />
       <FlexContainer
-        alignItems="center"
+        alignItems="flex-end"
         justifyContent="space-between"
         flexDirection="column"
-        height="100%">
-        <FlexContainer
-          alignItems="center"
-          flexDirection="column">
+        height="100%"
+      >
+        <FlexContainer alignItems="center" flexDirection="column">
           <Text
             fontSize="8vh"
             fontSizeMobile="clamp(2vh, 5vh, 6vh);"
-            fontWeight="600">
+            fontWeight="600"
+            color="white"
+            textShadow={`4px 4px 8px black};`}
+          >
             {t("banner_title")}
           </Text>
-          <Text fontSize="4vh" fontSizeMobile="3vh" fontWeight="600">
+          <Text
+            fontSize="4vh"
+            fontSizeMobile="3vh"
+            fontWeight="600"
+            color="white"
+            textShadow={`4px 4px 8px black;`}
+          >
             {t("date")}
-          </Text></FlexContainer>
-        <CountdownTimer targetDate="2025-04-12" />
+          </Text>
+        </FlexContainer>
       </FlexContainer>
     </div>
   );

@@ -1,4 +1,3 @@
-import FlexContainer from "./style_components/FlexContainer";
 import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
@@ -12,7 +11,6 @@ import {
   boxWidthMobile,
   colorDarkGreen,
   colorGray,
-  colorOlive,
   colorSelectedDarkGreen,
   innerSectionSpacer,
   outerSectionSpacer,
@@ -22,6 +20,7 @@ import {
   titleSizeMobile,
   titleWeight,
 } from "./style_components/constants";
+import Section from "./style_components/Section";
 
 // Define the styled link
 const FormLink = styled(Link)`
@@ -52,16 +51,17 @@ const FormLink = styled(Link)`
   }
 `;
 
-function FormSection() {
+type Props = {
+  backgroundColor: string;
+  reference: React.RefObject<HTMLDivElement>;
+};
+function FormSection(props: Props) {
   const { t } = useTranslation();
 
   return (
-    <FlexContainer
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
-      backgroundColor={colorOlive}
-      width="100%"
+    <Section
+      backgroundColor={props.backgroundColor}
+      reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
       <Text
@@ -88,7 +88,7 @@ function FormSection() {
         <FormLink to="/form">{t("rsvp_form")}</FormLink>
       </div>
       <Spacer top={outerSectionSpacer} />
-    </FlexContainer>
+    </Section>
   );
 }
 

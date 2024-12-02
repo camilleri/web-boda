@@ -1,5 +1,6 @@
 .banner-img {
-  background-image: url("/vietnam.jpeg");
+  background: linear-gradient(rgba(39, 64, 67, 0.649), rgba(0, 0, 0, 0)),
+    url("/japo.jpg");
   width: 100vw;
   /* height: calc(100vh - 66px); */
   /* Full viewport height minus header height */

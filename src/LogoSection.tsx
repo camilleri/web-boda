@@ -1,9 +1,6 @@
 import styled from "styled-components";
-
-const LogoDiv = styled.div`
-  height: auto;
-  width: 100vw;
-`;
+import Section from "./style_components/Section";
+import CountdownTimer from "./countdown/CountdownTimer";
 
 const LogoImage = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -16,11 +13,15 @@ const LogoImage = styled.img`
   }
 `;
 
-function LogoSection() {
+type Props = {
+  backgroundColor: string;
+};
+function LogoSection(props: Props) {
   return (
-    <LogoDiv>
+    <Section backgroundColor={props.backgroundColor}>
       <LogoImage src="/logo_circular_color.png" />
-    </LogoDiv>
+      <CountdownTimer targetDate="2025-04-12" />
+    </Section>
   );
 }
 

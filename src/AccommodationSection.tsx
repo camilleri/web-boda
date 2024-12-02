@@ -12,7 +12,7 @@ import {
   titleSizeMobile,
   titleWeight,
 } from "./style_components/constants";
-import TransportIcon from "/icons/bus.svg";
+import HotelIcon from "/icons/hotel.svg";
 import Icon from "./style_components/Icon";
 import Box from "./style_components/Box";
 import Section from "./style_components/Section";
@@ -21,21 +21,21 @@ type Props = {
   backgroundColor: string;
   reference: React.RefObject<HTMLDivElement>;
 };
-function TransportSection(props: Props) {
+function AccommodationSection(props: Props) {
   return (
     <Section
       backgroundColor={props.backgroundColor}
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={TransportIcon} size="4em" />
+      <Icon src={HotelIcon} size="4em" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}
         fontWeight={titleWeight}
       >
-        <Trans i18nKey={"transport_title"} />
+        <Trans i18nKey={"accommodation_title"} />
       </Text>
       <Spacer top={innerSectionSpacer} />
       <Box width={boxWidth} widthMobile={boxWidthMobile}>
@@ -44,7 +44,7 @@ function TransportSection(props: Props) {
           fontSizeMobile={textSizeMobile}
           textAlign="center"
         >
-          <Trans i18nKey={"transport_message"} />
+          <Trans i18nKey={"accommodation_message"} />
         </Text>
       </Box>
       <Spacer top={outerSectionSpacer} />
@@ -52,4 +52,4 @@ function TransportSection(props: Props) {
   );
 }
 
-export default TransportSection;
+export default AccommodationSection;

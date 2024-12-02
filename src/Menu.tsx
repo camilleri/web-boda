@@ -1,21 +1,18 @@
 import styled from "styled-components";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
-import {
-  colorDarkGreen,
-  colorSelectedDarkGreen,
-} from "./style_components/constants";
+import { colorSelectedDarkGreen } from "./style_components/constants";
 import { Trans } from "react-i18next";
 
 const MenuLink = styled.div`
   text-decoration: none; /* Remove the default underline */
-  color: ${colorDarkGreen}; /* Set the text color */
-  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-  letter-spacing: 1px; /* Add space between letters */
+  color: white; /* Set the text color */
+  font-size: 24px;
+  font-family: Didot, monospace;
+  cursor: pointer;
 
   /* Hover effect */
   &:hover {
-    color: ${colorSelectedDarkGreen}; /* Darker shade when hovered */
     transform: scale(1.05); /* Slightly enlarge the link */
   }
 
@@ -25,40 +22,49 @@ const MenuLink = styled.div`
     font-weight: 700;
   }
 
-  font-size: large;
-  font-weight: 500;
-  font-family: Courier, monospace;
-
   @media (max-width: 768px) {
-    font-size: 5vw; /* Set the font size for mobile */
+    visibility: hidden;
   }
 `;
 
-function Menu() {
+type Props = {
+  homeRef: React.RefObject<HTMLDivElement>;
+  venueRef: React.RefObject<HTMLDivElement>;
+  transportRef: React.RefObject<HTMLDivElement>;
+  accommodationRef: React.RefObject<HTMLDivElement>;
+  formRef: React.RefObject<HTMLDivElement>;
+  supportRef: React.RefObject<HTMLDivElement>;
+};
+function Menu(props: Props) {
+  // Function to handle scroll
+  const scrollToSection = (sectionRef: any) => {
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <FlexContainer>
       <Spacer left="8px" right="8px">
-        <MenuLink>
+        <MenuLink onClick={() => scrollToSection(props.homeRef)}>
           <Trans i18nKey="home" />
         </MenuLink>
       </Spacer>
       <Spacer left="8px" right="8px">
-        <MenuLink>
+        <MenuLink onClick={() => scrollToSection(props.venueRef)}>
           <Trans i18nKey="venue_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="8px" right="8px">
-        <MenuLink>
+        <MenuLink onClick={() => scrollToSection(props.transportRef)}>
           <Trans i18nKey="transport_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="8px" right="8px">
-        <MenuLink>
+        <MenuLink onClick={() => scrollToSection(props.formRef)}>
           <Trans i18nKey="RSVP" />
         </MenuLink>
       </Spacer>
       <Spacer left="8px" right="8px">
-        <MenuLink>
+        <MenuLink onClick={() => scrollToSection(props.supportRef)}>
           <Trans i18nKey="support_title" />
         </MenuLink>
       </Spacer>

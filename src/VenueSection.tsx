@@ -7,7 +7,6 @@ import styled from "styled-components";
 import {
   boxWidth,
   boxWidthMobile,
-  colorSand,
   innerSectionSpacer,
   outerSectionSpacer,
   textSize,
@@ -22,6 +21,7 @@ import CalendarIcon from "/icons/calendar.svg";
 import ClockIcon from "/icons/clock.svg";
 import { useState } from "react";
 import Icon from "./style_components/Icon";
+import Section from "./style_components/Section";
 // import Carrousel from "./carrousel/Carrousel";
 
 const VenueImage = styled.img`
@@ -39,7 +39,11 @@ const VenueContainer = styled(FlexContainer)`
   cursor: pointer;
 `;
 
-function VenueSection() {
+type Props = {
+  backgroundColor: string;
+  reference: React.RefObject<HTMLDivElement>;
+};
+function VenueSection(props: Props) {
   const { t } = useTranslation();
 
   const [isHovered, setIsHovered] = useState(false);
@@ -57,13 +61,9 @@ function VenueSection() {
   }
 
   return (
-    <FlexContainer
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
-      backgroundColor={colorSand}
-      width="100%"
-      transition="all 0.3s ease-in-out"
+    <Section
+      backgroundColor={props.backgroundColor}
+      reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
       <Icon src={SectionIcon} size="4em" />
@@ -128,7 +128,7 @@ function VenueSection() {
         <Spacer top={innerSectionSpacer} />
       </Box>
       <Spacer top={outerSectionSpacer} />
-    </FlexContainer>
+    </Section>
   );
 }
 

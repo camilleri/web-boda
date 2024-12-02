@@ -16,6 +16,7 @@ interface TextProps {
   borderRadius?: string;
   width?: string;
   widthMobile?: string;
+  textShadow?: string;
 }
 
 const Text = styled.p<TextProps>`
@@ -32,9 +33,11 @@ const Text = styled.p<TextProps>`
   background-color: ${(props) => props.backgroundColor || null};
   border-radius: ${(props) => props.borderRadius || "0"};
   width: ${(props) => props.width || null};
+  text-shadow: ${(props) => props.textShadow || "none"};
 
   @media (max-width: 768px) {
-    font-size: ${(props: TextProps) => props.fontSizeMobile || props.fontSize || "20px"};
+    font-size: ${(props: TextProps) =>
+      props.fontSizeMobile || props.fontSize || "20px"};
     width: ${(props) => props.widthMobile || props.width || null};
   }
 `;

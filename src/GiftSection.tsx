@@ -19,8 +19,13 @@ import RevolutIcon from "/icons/revolut_text.svg";
 import PayPalIcon from "/icons/paypal.svg";
 import TextWithIcon from "./TextWithIcon";
 import TextWithLink from "./TextWithLink";
+import Section from "./style_components/Section";
 
-function GiftSection() {
+type Props = {
+  backgroundColor: string;
+  reference: React.RefObject<HTMLDivElement>;
+};
+function GiftSection(props: Props) {
   const { t } = useTranslation();
 
   const bankIban = "ES09 1583 0001 1191 1115 3998";
@@ -28,10 +33,9 @@ function GiftSection() {
   const revolut = "https://revolut.me/mmarcoterraes";
 
   return (
-    <FlexContainer
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
+    <Section
+      backgroundColor={props.backgroundColor}
+      reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
       <Text
@@ -73,7 +77,7 @@ function GiftSection() {
         </FlexContainer>
       </Box>
       <Spacer top={innerSectionSpacer} />
-    </FlexContainer>
+    </Section>
   );
 }
 
