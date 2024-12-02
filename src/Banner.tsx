@@ -13,7 +13,7 @@ function Banner(props: Props) {
 
   return (
     <div className="banner-img" ref={props.reference}>
-      <Spacer top="88px" />
+      <Spacer top="30vh" />
       <FlexContainer
         alignItems="flex-end"
         justifyContent="space-between"
@@ -23,10 +23,10 @@ function Banner(props: Props) {
         <FlexContainer alignItems="center" flexDirection="column">
           <Text
             fontSize="8vh"
-            fontSizeMobile="clamp(2vh, 5vh, 6vh);"
+            fontSizeMobile="clamp(2vh, 4vh, 5vh)"
             fontWeight="600"
             color="white"
-            textShadow={`4px 4px 8px black};`}
+            textShadow={`2px 2px 4px black};`}
           >
             {t("banner_title")}
           </Text>
@@ -35,7 +35,7 @@ function Banner(props: Props) {
             fontSizeMobile="3vh"
             fontWeight="600"
             color="white"
-            textShadow={`4px 4px 8px black;`}
+            textShadow={`2px 2px 4px black;`}
           >
             {t("date")}
           </Text>
