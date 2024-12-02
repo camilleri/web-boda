@@ -22,6 +22,7 @@ import CalendarIcon from "/icons/calendar.svg";
 import ClockIcon from "/icons/clock.svg";
 import { useState } from "react";
 import Icon from "./style_components/Icon";
+// import Carrousel from "./carrousel/Carrousel";
 
 const VenueImage = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -123,6 +124,7 @@ function VenueSection() {
         </FlexContainer>
         <Spacer top={innerSectionSpacer} />
         <VenueImage src="/monasteri/mon-4.jpg" alt="Venue" />
+        {/* <Carrousel /> */}
         <Spacer top={innerSectionSpacer} />
       </Box>
       <Spacer top={outerSectionSpacer} />
