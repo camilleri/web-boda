@@ -13,6 +13,8 @@ interface TextProps {
   margin?: string; // Margin around the text
   padding?: string; // Padding around the text
   inline?: boolean; // Display the text inline
+  backgroundColor?: string;
+  borderRadius?: string;
 }
 
 const Text = styled.p<TextProps>`
@@ -26,10 +28,12 @@ const Text = styled.p<TextProps>`
   padding: ${(props) => props.padding || "0"};
   display: ${(props) => (props.inline ? "inline" : "block")};
   font-family: ${(props) => props.fontFamily || "inherit"};
+  background-color: ${(props) => props.backgroundColor || null};
+  border-radius: ${(props) => props.borderRadius || "0"};
 
   @media (max-width: 768px) {
     font-size: ${(props: TextProps) =>
-      props.fontSizeMobile || props.fontSize || "20px"};
+    props.fontSizeMobile || props.fontSize || "20px"};
   }
 `;
 
