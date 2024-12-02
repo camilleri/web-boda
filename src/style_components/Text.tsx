@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Define the types for the text properties
 interface TextProps {
   fontSize?: string; // Font size (e.g., '16px', '1.5rem')
   fontSizeMobile?: string; // Font size for mobile
@@ -15,6 +14,8 @@ interface TextProps {
   inline?: boolean; // Display the text inline
   backgroundColor?: string;
   borderRadius?: string;
+  width?: string;
+  widthMobile?: string;
 }
 
 const Text = styled.p<TextProps>`
@@ -30,10 +31,11 @@ const Text = styled.p<TextProps>`
   font-family: ${(props) => props.fontFamily || "inherit"};
   background-color: ${(props) => props.backgroundColor || null};
   border-radius: ${(props) => props.borderRadius || "0"};
+  width: ${(props) => props.width || null};
 
   @media (max-width: 768px) {
-    font-size: ${(props: TextProps) =>
-    props.fontSizeMobile || props.fontSize || "20px"};
+    font-size: ${(props: TextProps) => props.fontSizeMobile || props.fontSize || "20px"};
+    width: ${(props) => props.widthMobile || props.width || null};
   }
 `;
 

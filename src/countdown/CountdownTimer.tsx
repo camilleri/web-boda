@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CountdownElement from './CountdownElement';
 import FlexContainer from '../style_components/FlexContainer';
 import Text from '../style_components/Text';

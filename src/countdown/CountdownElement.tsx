@@ -20,7 +20,8 @@ function CountdownElement(props: LanguageProps) {
                 color="white"
                 backgroundColor={colorOlive}
                 borderRadius='50%'
-                padding='2px'>
+                padding='10px'
+                width='1.5em'>
                 {props.count}
             </Text>
             <Text fontSize="1em"
