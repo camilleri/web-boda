@@ -11,7 +11,7 @@ const en = {
     venue_title: "Celebration",
     venue_message: "Monestir de Sant Jeroni de Cotalba",
     support_title: "Support",
-    gift_message:
+    support_message:
       "Your presence is the best gift we could ask for.<br />However, if you wish to help us, we would appreciate your support.",
     celebration_date: "12 April 2025",
     celebration_time: "In the morning (TBD)",

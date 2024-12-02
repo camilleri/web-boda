@@ -49,7 +49,7 @@ function GiftSection() {
           fontSizeMobile={textSizeMobile}
           textAlign="center"
         >
-          <Trans i18nKey="gift_message" />
+          <Trans i18nKey="support_message" />
         </Text>
         <Spacer top={innerSectionSpacer} bottom={innerSectionSpacer} />
         <FlexContainer width="100%" justifyContent="center">
