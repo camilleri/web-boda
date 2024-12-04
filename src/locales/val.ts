@@ -7,7 +7,6 @@ const val = {
     thanks: "Gràcies!",
     rsvp_form: "Formulari d'assistència",
     date: "12 d'abril de 2025",
-    banner_title: "Maria + David",
     venue_title: "Cerimònia",
     venue_message: "Monestir de Sant Jeroni de Cotalba",
     support_title: "Regal",

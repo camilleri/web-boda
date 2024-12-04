@@ -2,24 +2,29 @@ import styled from "styled-components";
 import Languages from "./Languages";
 import Menu from "./Menu";
 import FlexContainer from "./style_components/FlexContainer";
-import { colorOlive } from "./style_components/constants";
+import { colorBanner, headerHeight } from "./style_components/constants";
 import { useEffect, useState } from "react";
 import useIsMobile from "./hooks/useIsMobile";
 
-const HeaderBar = styled.header<{ showHeader: boolean }>`
+const HeaderBar = styled.header<{
+  showHeader: boolean;
+  showBackground: boolean;
+}>`
   background-position: center top; /* Horizontally and vertically center */
-  background-color: ${colorOlive};
+  background-color: ${(props) =>
+    props.showBackground ? colorBanner : "transparent"};
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; /* Ensure the header stays above other content */
-  height: 66px;
+  height: ${headerHeight}px;
   padding: 0 8px;
   box-sizing: border-box; /* Ensures padding doesn't affect width */
   transition: transform 0.5s ease;
   transform: translateY(${(props) => (props.showHeader ? "0" : "-100%")});
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: ${(props) =>
+    props.showBackground ? "0 2px 5px rgba(0, 0, 0, 0.1)" : "none"};
 
   /* Adjust for smaller screens (mobile) */
   @media (max-width: 768px) {
@@ -37,9 +42,10 @@ type Props = {
   supportRef: React.RefObject<HTMLDivElement>;
 };
 export function Header(props: Props) {
-  const [scrollPosition, setScrollPosition] = useState(0); // Tracks the previous scroll position
-  const [isScrollingUp, setIsScrollingUp] = useState(false); // Tracks the scroll direction
-  const [showHeader, setShowHeader] = useState(false); // Tracks the scroll direction
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,10 +80,18 @@ export function Header(props: Props) {
     }
   }, [isScrollingUp]);
 
+  useEffect(() => {
+    if (scrollPosition > headerHeight) {
+      setShowBackground(true);
+    } else {
+      setShowBackground(false);
+    }
+  }, [scrollPosition]);
+
   const isMobile = useIsMobile();
 
   return (
-    <HeaderBar showHeader={showHeader}>
+    <HeaderBar showHeader={showHeader} showBackground={showBackground}>
       <FlexContainer
         justifyContent={isMobile ? "flex-end" : "space-between"}
         alignItems="center"

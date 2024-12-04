@@ -1,5 +1,13 @@
 .banner-img {
-  background: linear-gradient(rgba(128, 128, 128, 0.2), rgba(0, 0, 0, 0)),
+  background: linear-gradient(
+      rgba(161, 172, 132, 1),
+      rgba(161, 172, 132, 0.95),
+      rgba(161, 172, 132, 0.9),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(208, 200, 190, 0),
+      rgba(208, 200, 190, 0.4)
+    ),
     url("/japo.jpg");
   width: 100vw;
   /* height: calc(100vh - 66px); */

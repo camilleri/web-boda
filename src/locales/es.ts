@@ -7,7 +7,6 @@ const es = {
     thanks: "¡Gracias!",
     rsvp_form: "Formulario de asistencia",
     date: "12 de abril de 2025",
-    banner_title: "Maria + David",
     venue_title: "Celebración",
     venue_message: "Monasterio de San Jerónimo de Cotalba",
     support_title: "Apoyo",

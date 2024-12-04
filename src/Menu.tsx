@@ -3,7 +3,6 @@ import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import { Trans, useTranslation } from "react-i18next";
 import useIsMobile from "./hooks/useIsMobile";
-import { colorDarkGreen } from "./style_components/constants";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -12,7 +11,6 @@ const MenuLink = styled.div`
   font-size: 24px;
   font-family: Didot, monospace;
   cursor: pointer;
-  text-shadow: 4px 4px 8px ${colorDarkGreen};
 
   /* Hover effect */
   &:hover {

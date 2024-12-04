@@ -4,6 +4,14 @@ import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+import { colorSand } from "./style_components/constants";
+
+const Rama = styled.img`
+  background-position: center top; /* Horizontally and vertically center */
+  height: 20vh;
+  object-fit: contain;
+`;
 
 type Props = {
   reference: React.RefObject<HTMLDivElement>;
@@ -13,7 +21,7 @@ function Banner(props: Props) {
 
   return (
     <div className="banner-img" ref={props.reference}>
-      <Spacer top="30vh" />
+      <Spacer top="3vh" />
       <FlexContainer
         alignItems="flex-end"
         justifyContent="space-between"
@@ -21,22 +29,36 @@ function Banner(props: Props) {
         height="100%"
       >
         <FlexContainer alignItems="center" flexDirection="column">
-          <Text
-            fontSize="8vh"
-            fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-            fontWeight="600"
-            color="white"
-            textShadow={`2px 2px 4px black};`}
-          >
-            {t("banner_title")}
-          </Text>
-          <Text
-            fontSize="4vh"
-            fontSizeMobile="3vh"
-            fontWeight="600"
-            color="white"
-            textShadow={`2px 2px 4px black;`}
-          >
+          <Rama src="/rama_color.png" />
+          <FlexContainer>
+            <Text
+              fontSize="6vh"
+              fontSizeMobile="clamp(2vh, 5vh, 6vh)"
+              fontWeight="600"
+              color="white"
+            >
+              MARIA
+            </Text>
+            <Spacer left="0.5em" />
+            <Text
+              fontSize="6vh"
+              fontSizeMobile="clamp(2vh, 5vh, 6vh)"
+              fontWeight="600"
+              color={colorSand}
+            >
+              +
+            </Text>
+            <Spacer left="0.5em" />
+            <Text
+              fontSize="6vh"
+              fontSizeMobile="clamp(2vh, 5vh, 6vh)"
+              fontWeight="600"
+              color="white"
+            >
+              DAVID
+            </Text>
+          </FlexContainer>
+          <Text fontSize="2.5vh" fontSizeMobile="3vh" color="white">
             {t("date")}
           </Text>
         </FlexContainer>

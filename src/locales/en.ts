@@ -7,7 +7,6 @@ const en = {
     thanks: "Thanks!",
     rsvp_form: "RSVP",
     date: "12 April 2025",
-    banner_title: "Maria + David",
     venue_title: "Celebration",
     venue_message: "Monestir de Sant Jeroni de Cotalba",
     support_title: "Support",
