@@ -44,8 +44,10 @@ type Props = {
 export function Header(props: Props) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrollingUp, setIsScrollingUp] = useState(false);
-  const [showHeader, setShowHeader] = useState(false);
-  const [showBackground, setShowBackground] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [showBackground, setShowBackground] = useState(
+    window.scrollY > headerHeight
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,8 +56,14 @@ export function Header(props: Props) {
       // Determine if scrolling up
       if (currentPosition < scrollPosition) {
         setIsScrollingUp(true);
-      } else {
+      } else if (currentPosition != scrollPosition) {
         setIsScrollingUp(false);
+      }
+
+      if (currentPosition > 0) {
+        setShowBackground(true);
+      } else {
+        setShowBackground(false);
       }
 
       // Update the scroll position
@@ -74,19 +82,11 @@ export function Header(props: Props) {
   useEffect(() => {
     if (isScrollingUp) {
       setShowHeader(true);
-    } else {
+    } else if (scrollPosition > headerHeight) {
       const timer = setTimeout(() => setShowHeader(false), 300); // Delay hiding the header
       return () => clearTimeout(timer);
     }
-  }, [isScrollingUp]);
-
-  useEffect(() => {
-    if (scrollPosition > headerHeight) {
-      setShowBackground(true);
-    } else {
-      setShowBackground(false);
-    }
-  }, [scrollPosition]);
+  }, [isScrollingUp, scrollPosition]);
 
   const isMobile = useIsMobile();
 

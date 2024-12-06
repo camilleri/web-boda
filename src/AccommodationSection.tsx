@@ -30,7 +30,7 @@ function AccommodationSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={HotelIcon} size="4em" />
+      <Icon src={HotelIcon} size="4em" mobileSize="6vh" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}

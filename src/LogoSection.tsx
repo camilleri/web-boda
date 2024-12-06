@@ -5,7 +5,6 @@ import Box from "./style_components/Box";
 import {
   boxWidth,
   boxWidthMobile,
-  innerSectionSpacer,
   outerSectionSpacer,
 } from "./style_components/constants";
 import FlexContainer from "./style_components/FlexContainer";
@@ -34,9 +33,7 @@ function LogoSection(props: Props) {
           width="100%"
           justifyContent="center"
         >
-          <Spacer top={outerSectionSpacer} />
-          <LogoImage src="/logo_circular_color.png" />
-          <Spacer top={innerSectionSpacer} />
+          <LogoImage src="/logo_circular_color.svg" />
           <CountdownTimer targetDate="2025-04-12" />
           <Spacer top={outerSectionSpacer} />
         </FlexContainer>

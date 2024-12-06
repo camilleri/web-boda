@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 const MenuLink = styled.div`
   color: white; /* Set the text color */
   font-size: 24px;
-  font-family: Didot, monospace;
   cursor: pointer;
 
   /* Hover effect */

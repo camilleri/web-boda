@@ -5,12 +5,16 @@ import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { colorSand } from "./style_components/constants";
+import { colorOliveBanner } from "./style_components/constants";
 
 const Rama = styled.img`
   background-position: center top; /* Horizontally and vertically center */
   height: 20vh;
   object-fit: contain;
+
+  @media (max-width: 768px) {
+    height: 15vh;
+  }
 `;
 
 type Props = {
@@ -29,31 +33,34 @@ function Banner(props: Props) {
         height="100%"
       >
         <FlexContainer alignItems="center" flexDirection="column">
-          <Rama src="/rama_color.png" />
+          <Spacer mobileTop="46px" left="20px">
+            <Rama src="/rama_blanc.svg" />
+          </Spacer>
           <FlexContainer>
             <Text
               fontSize="6vh"
               fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-              fontWeight="600"
               color="white"
+              fontWeight="300"
             >
               MARIA
             </Text>
             <Spacer left="0.5em" />
             <Text
+              fontFamily="Cormorant Garamond"
               fontSize="6vh"
               fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-              fontWeight="600"
-              color={colorSand}
+              color={colorOliveBanner}
+              fontWeight="300"
             >
-              +
+              &
             </Text>
             <Spacer left="0.5em" />
             <Text
               fontSize="6vh"
               fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-              fontWeight="600"
               color="white"
+              fontWeight="300"
             >
               DAVID
             </Text>

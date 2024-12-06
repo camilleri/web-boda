@@ -67,7 +67,7 @@ function VenueSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={SectionIcon} size="4em" />
+      <Icon src={SectionIcon} size="4em" mobileSize="5vh" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}
@@ -90,7 +90,7 @@ function VenueSection(props: Props) {
                 isHovered={isHovered}
                 src={LocationIcon}
                 alt="Google Maps"
-                mobileSize="4vh"
+                mobileSize="3vh"
               />
               <Spacer left="8px" />
               <Text
@@ -102,7 +102,7 @@ function VenueSection(props: Props) {
               </Text>
             </VenueContainer>
             <FlexContainer alignItems="center">
-              <Icon src={CalendarIcon} alt="Calendar" mobileSize="4vh" />
+              <Icon src={CalendarIcon} alt="Calendar" mobileSize="3vh" />
               <Spacer left="8px" />
               <Text
                 fontSize={textSize}
@@ -113,7 +113,7 @@ function VenueSection(props: Props) {
               </Text>
             </FlexContainer>
             <FlexContainer alignItems="center">
-              <Icon src={ClockIcon} alt="Clock" mobileSize="4vh" />
+              <Icon src={ClockIcon} alt="Clock" mobileSize="3vh" />
               <Spacer left="8px" />
               <Text
                 fontSize={textSize}
@@ -139,7 +139,7 @@ function VenueSection(props: Props) {
             </FlexContainer>
             <Spacer top={innerSectionSpacer} />
             <FlexContainer alignItems="center">
-              <Icon src={BeerICon} alt="Beer" mobileSize="4vh" />
+              <Icon src={BeerICon} alt="Beer" mobileSize="3vh" />
               <Spacer left="8px" />
               <Text
                 fontSize={textSize}

@@ -6,9 +6,8 @@ import GiftSection from "./GiftSection";
 import TransportSection from "./TransportSection";
 import AccommodationSection from "./AccommodationSection";
 import {
-  colorLightGreen,
-  colorSalmon,
-  colorSand,
+  colorTostatClaret,
+  colorTostatObscur,
 } from "./style_components/constants";
 
 type Props = {
@@ -24,18 +23,31 @@ function Home(props: Props) {
   return (
     <main>
       <Banner reference={props.homeRef} />
-      <VenueSection reference={props.venueRef} backgroundColor={colorSand} />
+      <VenueSection
+        reference={props.venueRef}
+        backgroundColor={colorTostatClaret}
+      />
       <TransportSection
         reference={props.transportRef}
-        backgroundColor={colorSalmon}
+        backgroundColor={colorTostatObscur}
       />
       <AccommodationSection
         reference={props.accommodationRef}
-        backgroundColor={colorLightGreen}
+        backgroundColor={colorTostatClaret}
       />
-      <FormSection reference={props.formRef} backgroundColor={colorSand} />
-      <GiftSection reference={props.supportRef} backgroundColor={colorSalmon} />
-      <LogoSection backgroundColor={colorLightGreen} />
+      <FormSection
+        reference={props.formRef}
+        backgroundColor={colorTostatObscur}
+      />
+      <GiftSection
+        reference={props.supportRef}
+        backgroundColor={colorTostatClaret}
+      />
+      <FormSection
+        reference={props.formRef}
+        backgroundColor={colorTostatObscur}
+      />
+      <LogoSection backgroundColor={colorTostatClaret} />
     </main>
   );
 }

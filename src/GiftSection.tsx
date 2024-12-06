@@ -40,7 +40,7 @@ function GiftSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={GiftIcon} size="4em" />
+      <Icon src={GiftIcon} size="4em" mobileSize="6vh" />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}

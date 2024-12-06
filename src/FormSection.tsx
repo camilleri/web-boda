@@ -65,7 +65,7 @@ function FormSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={FormIcon} size="4em" />
+      <Icon src={FormIcon} size="4em" mobileSize="6vh" />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}
