@@ -10,11 +10,11 @@ import ArrowAnimation from "./ArrowAnimation";
 
 const Rama = styled.img`
   background-position: center top; /* Horizontally and vertically center */
-  height: 20vh;
+  height: 13vh;
   object-fit: contain;
 
   @media (max-width: 768px) {
-    height: 15vh;
+    height: 12vh;
   }
 `;
 
@@ -27,7 +27,7 @@ function Banner(props: Props) {
 
   return (
     <div className="banner-img" ref={props.reference}>
-      <Spacer top="3vh" />
+      <Spacer top="4vh" mobileTop="1vh" />
       <FlexContainer
         alignItems="center"
         justifyContent="space-between"

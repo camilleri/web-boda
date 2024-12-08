@@ -11,7 +11,10 @@ export const colorBanner = "#a1ac84";
 export const colorOrange = "#EBC7A0";
 export const colorTostatClaret = "rgb(252, 244, 230)";
 export const colorTostatObscur = "#FDECCD";
-export const colorBlanc = "#FFFFFF";
+
+
+export const colorVerdClaretBanner = "rgb(161, 172, 153)";
+export const colorVerdOscurBanner = "rgb(97, 112, 88)";
 
 export const pinterestGreen = "rgb(212, 218, 214)";
 export const pinterestWhite = "rgb(243, 240, 239)";
