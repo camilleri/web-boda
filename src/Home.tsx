@@ -22,7 +22,7 @@ type Props = {
 function Home(props: Props) {
   return (
     <main>
-      <Banner reference={props.homeRef} />
+      <Banner reference={props.homeRef} venueReference={props.venueRef} />
       <VenueSection
         reference={props.venueRef}
         backgroundColor={colorTostatClaret}

@@ -5,7 +5,8 @@ import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { colorOliveBanner } from "./style_components/constants";
+import { colorOliveBanner, innerSectionSpacer } from "./style_components/constants";
+import ArrowAnimation from "./ArrowAnimation";
 
 const Rama = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -19,6 +20,7 @@ const Rama = styled.img`
 
 type Props = {
   reference: React.RefObject<HTMLDivElement>;
+  venueReference: React.RefObject<HTMLDivElement>;
 };
 function Banner(props: Props) {
   const { t } = useTranslation();
@@ -27,7 +29,7 @@ function Banner(props: Props) {
     <div className="banner-img" ref={props.reference}>
       <Spacer top="3vh" />
       <FlexContainer
-        alignItems="flex-end"
+        alignItems="center"
         justifyContent="space-between"
         flexDirection="column"
         height="100%"
@@ -68,8 +70,13 @@ function Banner(props: Props) {
           <Text fontSize="2.5vh" fontSizeMobile="3vh" color="white">
             {t("date")}
           </Text>
+
         </FlexContainer>
+        <Spacer bottom={innerSectionSpacer}>
+          <ArrowAnimation venueReference={props.venueReference} />
+        </Spacer>
       </FlexContainer>
+
     </div>
   );
 }

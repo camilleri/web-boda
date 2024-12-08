@@ -3,8 +3,9 @@ import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import { Trans, useTranslation } from "react-i18next";
 import useIsMobile from "./hooks/useIsMobile";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import useScrollToSection from "./hooks/useScrollToSection";
 
 const MenuLink = styled.div`
   color: white; /* Set the text color */
@@ -34,23 +35,11 @@ type Props = {
   supportRef: React.RefObject<HTMLDivElement>;
 };
 function Menu(props: Props) {
-  const navigate = useNavigate();
   const location = useLocation();
   const isMobile = useIsMobile();
   useTranslation();
 
-  const [pendingScroll, setPendingScroll] =
-    useState<React.RefObject<HTMLDivElement> | null>(null);
-
-  // Function to handle scroll
-  const scrollToSection = (sectionRef: any) => {
-    if (location.pathname !== "/") {
-      navigate("/");
-      setPendingScroll(sectionRef);
-    } else {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const [pendingScroll, setPendingScroll, scrollToSection] = useScrollToSection();
 
   useEffect(() => {
     if (pendingScroll && pendingScroll?.current && location.pathname === "/") {
@@ -62,7 +51,7 @@ function Menu(props: Props) {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
-  }, [pendingScroll, location]); // Trigger this effect when the location changes
+  }, [setPendingScroll, pendingScroll, location]); // Trigger this effect when the location changes
 
   return (
     !isMobile && (
