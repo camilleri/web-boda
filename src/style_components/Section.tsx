@@ -1,4 +1,8 @@
+import styled from "styled-components";
 import FlexContainer from "./FlexContainer";
+
+const SectionStyle = styled(FlexContainer)`
+  `
 
 type SectionProps = {
   backgroundColor: string;
@@ -7,7 +11,7 @@ type SectionProps = {
 };
 function Section(props: SectionProps) {
   return (
-    <FlexContainer
+    <SectionStyle
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
@@ -16,7 +20,7 @@ function Section(props: SectionProps) {
       ref={props.reference}
     >
       {props.children}
-    </FlexContainer>
+    </SectionStyle>
   );
 }
 

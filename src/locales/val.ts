@@ -24,11 +24,14 @@ const val = {
     hours: "hores",
     time_left: "Falten",
     home: "Inici",
-    prewedding: "Berenar el dia d'abans de la boda",
+    prewedding: "Tardeo el dia d'abans de la boda",
     accommodation_title: "Allotjament",
     accommodation_message:
       "Recomanem que la gent busque allotjament a Oliva o Gandia.<br />Si et quedes a Oliva, tingues en compte que la platja està a uns 2 km de la ciutat i hi ha un camí per a vianants. Però Oliva Nova està a 7 km del centre de la ciutat, així que massa lluny per anar a peu.",
     prewedding_title: "Preboda",
+    footer_designed: "Disseny web i desenvolupament",
+    footer_aknowledgement: "En col.laboració amb",
+
   },
 };
 

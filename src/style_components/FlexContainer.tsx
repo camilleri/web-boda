@@ -27,6 +27,7 @@ interface FlexContainerProps {
   backgroundColor?: string; // Optional background color
   transition?: string; // Optional transition
   animation?: string;
+  fontFamily?: string;
 }
 
 const FlexContainer = styled.div<FlexContainerProps>`
@@ -44,6 +45,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
   background-color: ${(props) => props.backgroundColor || "transparent"};
   transition: ${(props) => props.transition || "none"};
   animation: ${(props) => props.animation || "none"};
+  font-family: ${(props) => props.fontFamily || "inherit"};
 `;
 
 export default FlexContainer;

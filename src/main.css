@@ -1,9 +1,14 @@
 :root {
-  --color-dark-green: #667665; /* Store the color in a variable */
-  --color-light-green: #9eb1a5; /* Store the color in a variable */
-  --color-olive: #88885a; /* Store the color in a variable */
-  --color-salmon: #ebcca3; /* Store the color in a variable */
-  --color-sand: #d0c8be; /* Store the color in a variable */
+  --color-dark-green: #667665;
+  /* Store the color in a variable */
+  --color-light-green: #9eb1a5;
+  /* Store the color in a variable */
+  --color-olive: #88885a;
+  /* Store the color in a variable */
+  --color-salmon: #ebcca3;
+  /* Store the color in a variable */
+  --color-sand: #d0c8be;
+  /* Store the color in a variable */
   --color-gray: #dadeea;
 }
 
@@ -18,7 +23,8 @@ body {
   font-variant: normal;
   height: 100vh;
   width: 100vw;
-  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-behavior: smooth;
+  /* Smooth scrolling */
 }
 
 main {

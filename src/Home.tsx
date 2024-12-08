@@ -6,9 +6,11 @@ import GiftSection from "./GiftSection";
 import TransportSection from "./TransportSection";
 import AccommodationSection from "./AccommodationSection";
 import {
-  colorTostatClaret,
-  colorTostatObscur,
+  pinterestBeige,
+  pinterestGreen,
+  pinterestWhite,
 } from "./style_components/constants";
+import FooterSection from "./FooterSection";
 
 type Props = {
   homeRef: React.RefObject<HTMLDivElement>;
@@ -25,29 +27,26 @@ function Home(props: Props) {
       <Banner reference={props.homeRef} venueReference={props.venueRef} />
       <VenueSection
         reference={props.venueRef}
-        backgroundColor={colorTostatClaret}
+        backgroundColor={pinterestWhite}
       />
       <TransportSection
         reference={props.transportRef}
-        backgroundColor={colorTostatObscur}
+        backgroundColor={pinterestGreen}
       />
       <AccommodationSection
         reference={props.accommodationRef}
-        backgroundColor={colorTostatClaret}
+        backgroundColor={pinterestBeige}
       />
       <FormSection
         reference={props.formRef}
-        backgroundColor={colorTostatObscur}
+        backgroundColor={pinterestGreen}
       />
       <GiftSection
         reference={props.supportRef}
-        backgroundColor={colorTostatClaret}
+        backgroundColor={pinterestWhite}
       />
-      <FormSection
-        reference={props.formRef}
-        backgroundColor={colorTostatObscur}
-      />
-      <LogoSection backgroundColor={colorTostatClaret} />
+      <LogoSection backgroundColor="white" />
+      <FooterSection backgroundColor={pinterestWhite} />
     </main>
   );
 }

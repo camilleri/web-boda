@@ -5,7 +5,7 @@ import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { colorOliveBanner, innerSectionSpacer } from "./style_components/constants";
+import { colorOrange, innerSectionSpacer } from "./style_components/constants";
 import ArrowAnimation from "./ArrowAnimation";
 
 const Rama = styled.img`
@@ -52,7 +52,7 @@ function Banner(props: Props) {
               fontFamily="Cormorant Garamond"
               fontSize="6vh"
               fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-              color={colorOliveBanner}
+              color={colorOrange}
               fontWeight="300"
             >
               &

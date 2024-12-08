@@ -9,8 +9,10 @@ import useScrollToSection from "./hooks/useScrollToSection";
 
 const MenuLink = styled.div`
   color: white; /* Set the text color */
-  font-size: 24px;
+  font-size: 0.8em;
   cursor: pointer;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 300;
 
   /* Hover effect */
   &:hover {

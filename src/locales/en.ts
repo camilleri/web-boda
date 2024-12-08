@@ -29,6 +29,8 @@ const en = {
     home: "Home",
     prewedding: "Food & drinks on the day before in the evening",
     prewedding_title: "Pre-wedding",
+    footer_designed: "Designed & developed by <a href='https://www.linkedin.com/in/maria-marco-terraes-9148b54b/' target='_blank'>Maria</a> & <a href='https://www.linkedin.com/in/david-palacios-piqueres-a3386835/' target='_blank'>David</a>",
+    footer_aknowledgement: "Special thanks",
   },
 };
 

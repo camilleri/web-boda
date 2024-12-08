@@ -36,21 +36,6 @@ const IconContainer = styled.div`
   position: relative;
 `;
 
-// Feedback text when the text is copied
-// const FeedbackText = styled.span`
-//   font-size: 0.8em;
-//   position: absolute;
-//   left: 150%;
-//   padding-left: 8px;
-//   padding-right: 8px;
-//   background-color: ${colorSelectedGray};
-//   border-radius: 5px;
-
-//   @media (max-width: 768px) {
-//     visibility: hidden;
-//   }
-// `;
-
 const TextWithIconStyle = styled.div`
   display: inline-flex;
   align-items: center;

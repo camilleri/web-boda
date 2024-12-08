@@ -8,9 +8,14 @@ export const colorOlive = "#88885a";
 export const colorSalmon = "#ebcca3";
 export const colorSand = "#d0c8be";
 export const colorBanner = "#a1ac84";
-export const colorOliveBanner = "#EBC7A0";
+export const colorOrange = "#EBC7A0";
 export const colorTostatClaret = "rgb(252, 244, 230)";
 export const colorTostatObscur = "#FDECCD";
+export const colorBlanc = "#FFFFFF";
+
+export const pinterestGreen = "rgb(212, 218, 214)";
+export const pinterestWhite = "rgb(243, 240, 239)";
+export const pinterestBeige = "rgb(229, 225, 220)"
 
 export const titleSize = "1.8em";
 export const titleSizeMobile = "7vw";

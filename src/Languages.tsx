@@ -8,12 +8,13 @@ import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 
 const LanguageOption = styled.div`
+  font-size: 1em;
   padding: 0.5em;
   text-align: center;
   cursor: pointer;
   font-size: medium;
   font-weight: 500;
-  font-family: Courier, monospace;
+  font-family: Roboto Flex, sans-serif;
   color: white;
   border-radius: 8px;
   transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
