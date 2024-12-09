@@ -28,6 +28,7 @@ export const textSize = "1.5em";
 export const textSizeMobile = "4vw";
 
 export const innerSectionSpacer = "1.5vh";
+export const middleSectionSpacer = "3.5vh";
 export const outerSectionSpacer = "6vh";
 
 export const boxWidth = "50vw";

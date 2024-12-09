@@ -4,7 +4,9 @@ import Text from "./style_components/Text";
 import {
   boxWidth,
   boxWidthMobile,
+  colorVerdClaretBanner,
   innerSectionSpacer,
+  middleSectionSpacer,
   outerSectionSpacer,
   textSize,
   textSizeMobile,
@@ -16,6 +18,18 @@ import HotelIcon from "/icons/hotel.svg";
 import Icon from "./style_components/Icon";
 import Box from "./style_components/Box";
 import Section from "./style_components/Section";
+import styled from "styled-components";
+
+
+const StyledA = styled.a`
+  color: black;
+  text-decoration: underline ${colorVerdClaretBanner};
+  font-weight: 500;
+
+   &:hover {
+    transform: scale(1.05);
+  }
+`;
 
 type Props = {
   backgroundColor: string;
@@ -37,19 +51,20 @@ function AccommodationSection(props: Props) {
         fontSizeMobile={titleSizeMobile}
         fontWeight={titleWeight}
       >
-        <Trans i18nKey={"accommodation_title"} />
+        <Trans i18nKey={"accommodation_title"}/>
       </Text>
       <Spacer top={innerSectionSpacer} />
       <Box width={boxWidth} widthMobile={boxWidthMobile}>
         <Text
           fontSize={textSize}
           fontSizeMobile={textSizeMobile}
-          textAlign="center"
-        >
-          <Trans i18nKey={"accommodation_message"} />
+          textAlign="center">
+          <Trans i18nKey={"accommodation_message"}>
+          </Trans>
+          <StyledA href='https://olivaturismo.com/oliva/web_php/index.php?contenido=subapartados_coconut&id_boto=4077&title=dnde-dormir' target='_blank'><Trans i18nKey={"accommodation_web"}/></StyledA>
         </Text>
       </Box>
-      <Spacer top={outerSectionSpacer} />
+      <Spacer top={middleSectionSpacer} />
     </Section>
   );
 }

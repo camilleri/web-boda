@@ -27,7 +27,8 @@ const val = {
     prewedding: "Tardeo el dia d'abans de la boda",
     accommodation_title: "Allotjament",
     accommodation_message:
-      "Recomanem que la gent busque allotjament a Oliva, la platja d'Oliva o Gandia. Si et quedes a la platja d'Oliva, tingues en compte que està a uns 2 km de la ciutat i hi ha un camí per a vianants. En canvi, la zona d'Oliva Nova està a 7 km del centre de la ciutat, així que queda massa lluny per anar a peu.",
+      "Recomanem que la gent busque allotjament a Oliva, la platja d'Oliva o Gandia.<br/>Si et quedes a la platja d'Oliva, tingues en compte que està a uns 2 km de la ciutat i hi ha un camí per a vianants. En canvi, la zona d'Oliva Nova està a 7 km del centre de la ciutat, així que queda massa lluny per anar a peu.<br/><br/> Més info a la ",
+    accommodation_web: "web de turisme d'Oliva",
     prewedding_title: "Preboda",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
