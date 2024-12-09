@@ -1,0 +1,56 @@
+:root {
+  --color-dark-green: rgb(97, 112, 88);
+  --color-light-green: rgb(
+    161,
+    172,
+    153
+  ); /* Replace with the actual color value */
+}
+
+/* Hide the default slick dots (numbers and dots) */
+.slick-dots {
+  display: none !important; /* Hide default dots completely */
+}
+
+/* Custom styling for the dots container */
+.custom-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0px;
+  list-style: none;
+}
+
+/* Dots appearance */
+.custom-dots li {
+  margin: 5px 5px; /* Space between dots */
+  position: relative;
+}
+
+/* Dot buttons */
+.custom-dots li button {
+  width: 1px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-light-green);
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 0; /* Hide any numbers in the button */
+}
+
+/* Active dot style */
+.custom-dots li.slick-active button {
+  background-color: var(--color-dark-green);
+}
+
+/* Ensure no extra dots are selected */
+.custom-dots li button:focus {
+  outline: none;
+}
+
+/* Optional: Hide arrows (if needed) */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

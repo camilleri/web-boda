@@ -23,18 +23,11 @@ import BeerICon from "/icons/beer.svg";
 import { useState } from "react";
 import Icon from "./style_components/Icon";
 import Section from "./style_components/Section";
-// import Carrousel from "./carrousel/Carrousel";
 
-const VenueImage = styled.img`
-  background-position: center top; /* Horizontally and vertically center */
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-
-  /* Adjust for smaller screens (mobile) */
-  @media (max-width: 768px) {
-  }
-`;
+import React from "react";
+import SimpleCarousel from "./carrousel/SimpleCarousel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const VenueContainer = styled(FlexContainer)`
   cursor: pointer;
@@ -151,11 +144,11 @@ function VenueSection(props: Props) {
             </FlexContainer>
           </FlexContainer>
         </FlexContainer>
-        <Spacer top={innerSectionSpacer} />
-        <VenueImage src="/monasteri/mon-4.jpg" alt="Venue" />
-        {/* <Carrousel /> */}
-        <Spacer top={innerSectionSpacer} />
       </Box>
+      <Spacer top={outerSectionSpacer} />
+
+      <SimpleCarousel />
+
       <Spacer top={outerSectionSpacer} />
     </Section>
   );
