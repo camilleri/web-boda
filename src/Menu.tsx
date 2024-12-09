@@ -47,6 +47,7 @@ type Props = {
 function Menu(props: Props) {
   const location = useLocation();
   const isMobile = useIsMobile();
+  const isHome = location.pathname === "/";
   useTranslation();
 
   const [pendingScroll, setPendingScroll, scrollToSection] =
@@ -65,13 +66,17 @@ function Menu(props: Props) {
   }, [setPendingScroll, pendingScroll, location]); // Trigger this effect when the location changes
 
   return isMobile ? (
-    <FlexContainer>
-      <Spacer left="8px">
-        <FlexContainer onClick={() => scrollToSection(props.homeRef)}>
-          <IconContainer src={ArrowBackIcon} size="4em" mobileSize="1.5em" />
-        </FlexContainer>
-      </Spacer>
-    </FlexContainer>
+    isHome ? (
+      <div />
+    ) : (
+      <FlexContainer>
+        <Spacer left="8px">
+          <FlexContainer onClick={() => scrollToSection(props.homeRef)}>
+            <IconContainer src={ArrowBackIcon} size="4em" mobileSize="1.5em" />
+          </FlexContainer>
+        </Spacer>
+      </FlexContainer>
+    )
   ) : (
     <FlexContainer>
       <Spacer left="16px">

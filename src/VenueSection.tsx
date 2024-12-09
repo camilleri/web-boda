@@ -149,7 +149,7 @@ function VenueSection(props: Props) {
 
       <SimpleCarousel />
 
-      <Spacer top={outerSectionSpacer} />
+      <Spacer top={innerSectionSpacer} />
     </Section>
   );
 }
