@@ -44,7 +44,7 @@ const IconContainer = styled.div`
 //   white-space: nowrap; /* Prevent text from wrapping to a new line */
 //   padding-left: 8px;
 //   padding-right: 8px;
-//   background-color: ${colorDarkGreen};
+//   background-color: ${colorVerdOscurBanner};
 //   border-radius: 5px;
 // `;
 
@@ -92,7 +92,7 @@ function TextWithLink(props: Props) {
         {/* <IconStyle
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          stroke={colorDarkGreen}
+          stroke={colorVerdOscurBanner}
           fill="none"
           isHovered={isHovered}
         >

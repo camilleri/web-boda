@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import {
   colorDarkGreen,
-  colorSelectedDarkGreen,
 } from "./style_components/constants";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
@@ -29,7 +28,7 @@ const LanguageOption = styled.div`
 
 const SelectedLanguageOption = styled(LanguageOption)`
   color: white;
-  background-color: ${colorSelectedDarkGreen};
+  background-color: ${colorDarkGreen};
 `;
 
 type LanguageProps = {

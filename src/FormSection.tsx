@@ -10,7 +10,6 @@ import {
   boxWidth,
   boxWidthMobile,
   colorDarkGreen,
-  colorSelectedDarkGreen,
   innerSectionSpacer,
   outerSectionSpacer,
   textSize,
@@ -35,7 +34,7 @@ const FormLink = styled(Link)`
 
   /* Hover effect */
   &:hover {
-    background-color: ${colorSelectedDarkGreen}; /* Darker shade when hovered */
+    background-color: ${colorDarkGreen}; /* Darker shade when hovered */
     transform: scale(1.05);
   }
 

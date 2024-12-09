@@ -4,7 +4,7 @@ import Text from "./style_components/Text";
 import {
   boxWidth,
   boxWidthMobile,
-  colorVerdClaretBanner,
+  colorLightGreen,
   innerSectionSpacer,
   middleSectionSpacer,
   outerSectionSpacer,
@@ -23,7 +23,7 @@ import styled from "styled-components";
 
 const StyledA = styled.a`
   color: black;
-  text-decoration: underline ${colorVerdClaretBanner};
+  text-decoration: underline ${colorLightGreen};
   font-weight: 500;
 
    &:hover {
