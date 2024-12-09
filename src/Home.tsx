@@ -11,6 +11,7 @@ import {
   pinterestWhite,
 } from "./style_components/constants";
 import FooterSection from "./FooterSection";
+import PictureSection from "./style_components/Picture";
 
 type Props = {
   homeRef: React.RefObject<HTMLDivElement>;
@@ -37,6 +38,7 @@ function Home(props: Props) {
         reference={props.accommodationRef}
         backgroundColor={pinterestBeige}
       />
+      <PictureSection background={"url('https://www.olivaturismo.com/oliva/uploaded/Playas%20y%20dunas/Playa%20de%20Terranova/Terranova-3..jpg?1585210959187')"} />
       <FormSection
         reference={props.formRef}
         backgroundColor={pinterestGreen}

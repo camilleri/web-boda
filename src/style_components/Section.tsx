@@ -9,6 +9,7 @@ type SectionProps = {
   children: React.ReactNode;
   reference?: React.RefObject<HTMLDivElement>;
 };
+
 function Section(props: SectionProps) {
   return (
     <SectionStyle
