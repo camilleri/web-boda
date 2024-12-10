@@ -59,8 +59,14 @@ function AccommodationSection(props: Props) {
           fontSize={textSize}
           fontSizeMobile={textSizeMobile}
           textAlign="center">
-          <Trans i18nKey={"accommodation_message"}>
-          </Trans>
+          <Trans i18nKey={"accommodation_message"}/>
+          <Spacer top={innerSectionSpacer} />
+          <Trans i18nKey={"accommodation_airbnb"}/>
+          <StyledA href='https://www.airbnb.es/s/Oliva--Espa%C3%B1a/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-01-01&monthly_length=3&monthly_end_date=2025-04-01&price_filter_input_type=0&channel=EXPLORE&query=Oliva%2C%20Espa%C3%B1a&place_id=ChIJVcVFxyHkYQ0RYIoj126vAgQ&location_bb=QhvF%2FrzLG4dCG20CvichhQ%3D%3D&date_picker_type=calendar&checkin=2025-04-11&checkout=2025-04-13&source=structured_search_input_header&search_type=autocomplete_click' target='_blank'>Airbnb</StyledA>
+          <Trans i18nKey={"accommodation_o"}/>
+          <StyledA href='https://www.booking.com/searchresults.en-gb.html?ss=Oliva%2C+Valencia+Community%2C+Spain&efdco=1&label=en-es-booking-desktop-qYWoV_Fr*prpBspmirVxfgS652828998709%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1005542%3Ali%3Adec%3Adm&aid=2311236&lang=en-gb&sb=1&src_elem=sb&src=index&dest_id=-394413&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=7219432996740015&ac_meta=GhA3MjE5NDMyOTk2NzQwMDE1IAAoATICZW46BU9saXZhQABKAFAA&checkin=2025-04-11&checkout=2025-04-13&group_adults=2&no_rooms=1&group_children=0' target='_blank'>Booking</StyledA>
+          <Spacer top={innerSectionSpacer} />
+          <Trans i18nKey={"accommodation_info"}/>
           <StyledA href='https://olivaturismo.com/oliva/web_php/index.php?contenido=subapartados_coconut&id_boto=4077&title=dnde-dormir' target='_blank'><Trans i18nKey={"accommodation_web"}/></StyledA>
         </Text>
       </Box>
