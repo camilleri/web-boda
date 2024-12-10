@@ -6,6 +6,14 @@ import useIsMobile from "./hooks/useIsMobile";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import useScrollToSection from "./hooks/useScrollToSection";
+import Icon from "./style_components/Icon";
+import ArrowBackIcon from "/icons/arrow_back.svg";
+import { colorDarkGreen } from "./style_components/constants";
+
+const IconContainer = styled(Icon)`
+  background-color: ${colorDarkGreen};
+  border-radius: 8px;
+`;
 
 const MenuLink = styled.div`
   color: white; /* Set the text color */
@@ -39,9 +47,11 @@ type Props = {
 function Menu(props: Props) {
   const location = useLocation();
   const isMobile = useIsMobile();
+  const isHome = location.pathname === "/";
   useTranslation();
 
-  const [pendingScroll, setPendingScroll, scrollToSection] = useScrollToSection();
+  const [pendingScroll, setPendingScroll, scrollToSection] =
+    useScrollToSection();
 
   useEffect(() => {
     if (pendingScroll && pendingScroll?.current && location.pathname === "/") {
@@ -55,36 +65,46 @@ function Menu(props: Props) {
     }
   }, [setPendingScroll, pendingScroll, location]); // Trigger this effect when the location changes
 
-  return (
-    !isMobile && (
+  return isMobile ? (
+    isHome ? (
+      <div />
+    ) : (
       <FlexContainer>
-        <Spacer left="16px">
-          <MenuLink onClick={() => scrollToSection(props.homeRef)}>
-            <Trans i18nKey="home" />
-          </MenuLink>
-        </Spacer>
-        <Spacer left="24px">
-          <MenuLink onClick={() => scrollToSection(props.venueRef)}>
-            <Trans i18nKey="venue_title" />
-          </MenuLink>
-        </Spacer>
-        <Spacer left="24px">
-          <MenuLink onClick={() => scrollToSection(props.transportRef)}>
-            <Trans i18nKey="transport_title" />
-          </MenuLink>
-        </Spacer>
-        <Spacer left="24px">
-          <MenuLink onClick={() => scrollToSection(props.formRef)}>
-            <Trans i18nKey="rsvp_form" />
-          </MenuLink>
-        </Spacer>
-        <Spacer left="24px">
-          <MenuLink onClick={() => scrollToSection(props.supportRef)}>
-            <Trans i18nKey="support_title" />
-          </MenuLink>
+        <Spacer left="8px">
+          <FlexContainer onClick={() => scrollToSection(props.homeRef)}>
+            <IconContainer src={ArrowBackIcon} size="4em" mobileSize="1.5em" />
+          </FlexContainer>
         </Spacer>
       </FlexContainer>
     )
+  ) : (
+    <FlexContainer>
+      <Spacer left="16px">
+        <MenuLink onClick={() => scrollToSection(props.homeRef)}>
+          <Trans i18nKey="home" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => scrollToSection(props.venueRef)}>
+          <Trans i18nKey="venue_title" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => scrollToSection(props.transportRef)}>
+          <Trans i18nKey="transport_title" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => scrollToSection(props.formRef)}>
+          <Trans i18nKey="rsvp_form" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => scrollToSection(props.supportRef)}>
+          <Trans i18nKey="support_title" />
+        </MenuLink>
+      </Spacer>
+    </FlexContainer>
   );
 }
 

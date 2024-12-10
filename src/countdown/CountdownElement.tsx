@@ -1,7 +1,7 @@
 import { Trans } from "react-i18next";
 import Text from "../style_components/Text";
 import FlexContainer from "../style_components/FlexContainer";
-import { colorOlive } from "../style_components/constants";
+import { colorDarkGreen } from "../style_components/constants";
 
 type LanguageProps = {
   count: number;
@@ -16,7 +16,7 @@ function CountdownElement(props: LanguageProps) {
           fontSize="3em"
           fontSizeMobile="5vw"
           textAlign="center"
-          color={colorOlive}
+          color={colorDarkGreen}
           width="2em"
         >
           {props.count}
@@ -26,7 +26,7 @@ function CountdownElement(props: LanguageProps) {
           fontSizeMobile="3vw"
           textAlign="center"
           fontWeight="600"
-          color={colorOlive}
+          color={colorDarkGreen}
         >
           <Trans i18nKey={props.textKey} />
         </Text>

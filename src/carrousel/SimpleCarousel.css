@@ -23,20 +23,29 @@
 
 /* Dots appearance */
 .custom-dots li {
-  margin: 5px 5px; /* Space between dots */
+  margin: 20px 10px; /* Space between dots */
   position: relative;
+
+  @media (max-width: 768px) {
+    margin: 5px 5px;
+  }
 }
 
 /* Dot buttons */
 .custom-dots li button {
-  width: 1px;
-  height: 12px;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
   background-color: var(--color-light-green);
   border: none;
   transition: background-color 0.3s ease;
   cursor: pointer;
   font-size: 0; /* Hide any numbers in the button */
+
+  @media (max-width: 768px) {
+    height: 12px;
+    width: 12px;
+  }
 }
 
 /* Active dot style */
@@ -53,4 +62,16 @@
 .slick-prev,
 .slick-next {
   display: none !important;
+}
+
+.slick-slide {
+  div {
+    display: block !important;
+    border-radius: 16px;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+  border-radius: 16px;
 }

@@ -5,7 +5,11 @@ import Text from "./style_components/Text";
 import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { colorOrange, innerSectionSpacer } from "./style_components/constants";
+import {
+  colorOrange,
+  innerSectionSpacer,
+  outerSectionSpacer,
+} from "./style_components/constants";
 import ArrowAnimation from "./ArrowAnimation";
 
 const Rama = styled.img`
@@ -70,13 +74,11 @@ function Banner(props: Props) {
           <Text fontSize="2.5vh" fontSizeMobile="3vh" color="white">
             {t("date")}
           </Text>
-
         </FlexContainer>
-        <Spacer bottom={innerSectionSpacer}>
+        <Spacer bottom={innerSectionSpacer} mobileBottom={outerSectionSpacer}>
           <ArrowAnimation venueReference={props.venueReference} />
         </Spacer>
       </FlexContainer>
-
     </div>
   );
 }

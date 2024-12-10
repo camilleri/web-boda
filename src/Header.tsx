@@ -4,7 +4,6 @@ import Menu from "./Menu";
 import FlexContainer from "./style_components/FlexContainer";
 import { colorBanner, headerHeight } from "./style_components/constants";
 import { useEffect, useState } from "react";
-import useIsMobile from "./hooks/useIsMobile";
 
 const HeaderBar = styled.header<{
   showHeader: boolean;
@@ -88,12 +87,10 @@ export function Header(props: Props) {
     }
   }, [isScrollingUp, scrollPosition]);
 
-  const isMobile = useIsMobile();
-
   return (
     <HeaderBar showHeader={showHeader} showBackground={showBackground}>
       <FlexContainer
-        justifyContent={isMobile ? "flex-end" : "space-between"}
+        justifyContent="space-between"
         alignItems="center"
         height="100%"
         width="100%"
