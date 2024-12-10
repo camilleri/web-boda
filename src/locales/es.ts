@@ -20,6 +20,13 @@ const es = {
     accommodation_title: "Alojamiento",
     accommodation_message:
       "Recomendamos que las personas busquen alojamiento en Oliva o Gandia.<br />Si te quedas en Oliva, ten en cuenta que la playa está a unos 2 km de la ciudad y hay un camino peatonal. Pero Oliva Nova está a 7 km del centro de la ciudad, por lo que no está a una distancia como para ir a pié.",
+    accommodation_oliva:
+      "También podeis buscar alojamiento compartido en <airbnb /> o <booking />.<br />Para más información consulta la <oliva />.",
+    web_oliva_turisme: "web de turismo de Oliva",
+    music_title: "Música",
+    music_message:
+      "Queremos que formes parte de la fiesta, así que si tens alguna canción que te haga ilusión escuchar, añadela a la lista que hemos creado para la ocasión.",
+    music_list: "Lista de Spotify",
     days: "días",
     minutes: "minutos",
     seconds: "segundos",

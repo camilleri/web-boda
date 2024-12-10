@@ -27,17 +27,16 @@ const val = {
     prewedding: "Tardeo el dia d'abans de la boda",
     accommodation_title: "Allotjament",
     accommodation_message:
-      "Recomanem buscar allotjament a Oliva, la platja d'Oliva o Gandia.<br/>Si et quedes a la platja d'Oliva, tingues en compte que està a uns 2 km del centre de la ciutat i hi ha un camí habilitat per a vianants.<br/>D'altra banda, la zona d'Oliva Nova es troba a 7 km del centre, per la qual cosa queda massa lluny per anar-hi a peu.",
-    accommodation_airbnb:
-      "També podeu buscar opcions de cases compartides a ",
-    accommodation_o: " o ",
-    accommodation_info: "Per a més informació, consulta la",
-    accommodation_web: "web de turisme d'Oliva",
+      "Recomanem buscar allotjament a Oliva, la platja d'Oliva o Gandia.<br/>Si et quedes a la platja d'Oliva, tingues en compte que està a uns 2 km del centre de la ciutat i hi ha un camí habilitat per a vianants.<br/>D'altra banda, la zona d'Oliva Nova es troba a 7 km del centre, per la qual cosa queda massa lluny per anar a peu.",
+    accommodation_oliva:
+      "També podeu buscar opcions de cases compartides a <airbnb /> o <booking />.<br />Per a més informació consulta la <oliva />.",
+    web_oliva_turisme: "web de turisme d'Oliva",
     prewedding_title: "Preboda",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
     music_title: "Música",
-    music_message: "Volem que formes part de la festa, així que si tens alguna cançó que et fa especial il.lusió escoltar, afig-la a la llista que hem creat per a l'ocasió.",
+    music_message:
+      "Volem que formes part de la festa, així que si tens alguna cançó que et t'agradaria escoltar, afegix-la a la llista que hem creat per a l'ocasió.",
     music_list: "Llista de Spotify",
   },
 };
