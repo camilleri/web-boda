@@ -15,10 +15,10 @@ import {
   titleWeight,
 } from "./style_components/constants";
 import HotelIcon from "/icons/hotel.svg";
-import Icon from "./style_components/Icon";
 import Box from "./style_components/Box";
 import Section from "./style_components/Section";
 import styled from "styled-components";
+import RotatingIcon from "./RotatingIcon";
 
 const StyledA = styled.a`
   color: black;
@@ -43,7 +43,7 @@ function AccommodationSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={HotelIcon} size="4em" mobileSize="6vh" />
+      <RotatingIcon src={HotelIcon} size="4em" mobileSize="6vh" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}

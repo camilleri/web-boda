@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import FlexContainer from "./FlexContainer";
 
-const SectionStyle = styled(FlexContainer)`
-  `
+const SectionStyle = styled(FlexContainer)``;
 
 type SectionProps = {
   backgroundColor: string;

@@ -20,7 +20,7 @@ import {
 } from "./style_components/constants";
 import Section from "./style_components/Section";
 import FormIcon from "/icons/form.svg";
-import Icon from "./style_components/Icon";
+import RotatingIcon from "./RotatingIcon";
 
 // Define the styled link
 const FormLink = styled(Link)`
@@ -64,7 +64,8 @@ function FormSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={FormIcon} size="4em" mobileSize="6vh" />
+      <RotatingIcon src={FormIcon} size="4em" mobileSize="6vh" />
+      <Spacer top={innerSectionSpacer} />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}

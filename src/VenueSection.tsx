@@ -28,6 +28,7 @@ import React from "react";
 import SimpleCarousel from "./carrousel/SimpleCarousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import RotatingIcon from "./RotatingIcon";
 
 const VenueContainer = styled(FlexContainer)`
   cursor: pointer;
@@ -60,7 +61,7 @@ function VenueSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={SectionIcon} size="4em" mobileSize="5vh" />
+      <RotatingIcon src={SectionIcon} size="4em" mobileSize="5vh" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}

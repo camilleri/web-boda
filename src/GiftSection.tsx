@@ -21,7 +21,7 @@ import TextWithIcon from "./TextWithIcon";
 import TextWithLink from "./TextWithLink";
 import Section from "./style_components/Section";
 import GiftIcon from "/icons/gift.svg";
-import Icon from "./style_components/Icon";
+import RotatingIcon from "./RotatingIcon";
 
 type Props = {
   backgroundColor: string;
@@ -40,7 +40,8 @@ function GiftSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={GiftIcon} size="4em" mobileSize="6vh" />
+      <RotatingIcon src={GiftIcon} size="3.5em" mobileSize="6vh" />
+      <Spacer top={innerSectionSpacer} />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}

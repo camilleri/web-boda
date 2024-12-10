@@ -20,6 +20,7 @@ import SpotifyIcon from "/icons/spotify.svg";
 import Icon from "./style_components/Icon";
 import Section from "./style_components/Section";
 import React from "react";
+import RotatingIcon from "./RotatingIcon";
 
 const MusicContainer = styled(FlexContainer)`
   cursor: pointer;
@@ -50,7 +51,7 @@ function MusicSection(props: Props) {
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <Icon src={MusicIcon} size="4em" mobileSize="5vh" />
+      <RotatingIcon src={MusicIcon} size="4em" mobileSize="5vh" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}

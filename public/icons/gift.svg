@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 width="800px" height="800px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="800px" height="800px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+	xml:space="preserve">
 <g>
 	<path fill="#231F20" d="M60,13.999L47.279,14C48.944,12.534,50,10.393,50,8c0-4.418-3.582-8-8-8s-8,3.582-8,8v6h-4V8
 		c0-4.418-3.582-8-8-8s-8,3.582-8,8c0,2.393,1.056,4.534,2.721,6L4,13.999c-2.211,0-4,1.79-4,4v8c0,2.211,1.789,4,4,4v30
