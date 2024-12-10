@@ -13,6 +13,7 @@ function App() {
   const accommodationRef = useRef(null);
   const formRef = useRef(null);
   const supportRef = useRef(null);
+  const musicRef = useRef(null);
 
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
         accommodationRef={accommodationRef}
         formRef={formRef}
         supportRef={supportRef}
+        musicRef={musicRef}
       />
       <Routes>
         <Route
@@ -35,6 +37,7 @@ function App() {
               accommodationRef={accommodationRef}
               formRef={formRef}
               supportRef={supportRef}
+              musicRef={musicRef}
             />
           }
         />

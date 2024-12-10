@@ -39,6 +39,7 @@ type Props = {
   accommodationRef: React.RefObject<HTMLDivElement>;
   formRef: React.RefObject<HTMLDivElement>;
   supportRef: React.RefObject<HTMLDivElement>;
+  musicRef: React.RefObject<HTMLDivElement>;
 };
 export function Header(props: Props) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -102,6 +103,7 @@ export function Header(props: Props) {
           accommodationRef={props.accommodationRef}
           formRef={props.formRef}
           supportRef={props.supportRef}
+          musicRef={props.musicRef}
         />
         <Languages />
       </FlexContainer>

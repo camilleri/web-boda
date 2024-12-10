@@ -16,7 +16,7 @@ const val = {
     transport_message:
       "Hi haurà servei de transport en autobús fins al lloc de la celebració. Si us plau, fes-nos saber si utilitzaries bus al formulari per valorar les parades.",
     celebration_date: "12 d'abril de 2025",
-    celebration_time: "A migdia (hora per confirmar)",
+    celebration_time: "12:30pm",
     days: "dies",
     day: "dia",
     minutes: "minuts",
@@ -36,7 +36,9 @@ const val = {
     prewedding_title: "Preboda",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
-
+    music_title: "Música",
+    music_message: "Volem que formes part de la festa, així que si tens alguna cançó que et fa especial il.lusió escoltar, afig-la a la llista que hem creat per a l'ocasió.",
+    music_list: "Llista de Spotify",
   },
 };
 

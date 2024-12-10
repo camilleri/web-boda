@@ -116,10 +116,6 @@ function TextWithIcon(props: Props) {
             stroke-linejoin="round"
           />
         </CopyIconStyle>
-        {/* {isCopied && <FeedbackText>Copied!</FeedbackText>}
-        {isHovered && !isCopied && (
-          <FeedbackText>Copy to clipboard</FeedbackText>
-        )} */}
       </IconContainer>
     </TextWithIconStyle>
   );

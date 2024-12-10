@@ -12,6 +12,7 @@ import {
 } from "./style_components/constants";
 import FooterSection from "./FooterSection";
 import PictureSection from "./style_components/Picture";
+import MusicSection from "./MusicSection";
 
 type Props = {
   homeRef: React.RefObject<HTMLDivElement>;
@@ -20,6 +21,7 @@ type Props = {
   accommodationRef: React.RefObject<HTMLDivElement>;
   formRef: React.RefObject<HTMLDivElement>;
   supportRef: React.RefObject<HTMLDivElement>;
+  musicRef: React.RefObject<HTMLDivElement>;
 };
 
 function Home(props: Props) {
@@ -36,16 +38,20 @@ function Home(props: Props) {
       />
       <AccommodationSection
         reference={props.accommodationRef}
-        backgroundColor={pinterestBeige}
+        backgroundColor={pinterestWhite}
       />
       <PictureSection background={"url('https://www.olivaturismo.com/oliva/uploaded/Playas%20y%20dunas/Playa%20de%20Terranova/Terranova-3..jpg?1585210959187')"} />
       <FormSection
         reference={props.formRef}
-        backgroundColor={pinterestGreen}
+        backgroundColor={pinterestBeige}
+      />
+      <MusicSection
+        reference={props.musicRef}
+        backgroundColor={pinterestWhite}
       />
       <GiftSection
         reference={props.supportRef}
-        backgroundColor={pinterestWhite}
+        backgroundColor={pinterestGreen}
       />
       <LogoSection backgroundColor="white" />
       <FooterSection backgroundColor={pinterestWhite} />
