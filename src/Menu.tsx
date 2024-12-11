@@ -107,7 +107,7 @@ function Menu(props: Props) {
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.supportRef)}>
+        <MenuLink onClick={() => scrollToSection(props.picsRef)}>
           <Trans i18nKey="pics_title" />
         </MenuLink>
       </Spacer>

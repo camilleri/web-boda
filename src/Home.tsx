@@ -32,20 +32,20 @@ function Home(props: Props) {
       <Banner reference={props.homeRef} venueReference={props.venueRef} />
       <VenueSection
         reference={props.venueRef}
-        backgroundColor={pinterestGreen}
+        backgroundColor="white"
       />
       <TransportSection
         reference={props.transportRef}
-        backgroundColor={pinterestWhite}
+        backgroundColor={pinterestBeige}
       />
       <AccommodationSection
         reference={props.accommodationRef}
-        backgroundColor={pinterestBeige}
+        backgroundColor="white"
       />
       <PictureSection background={"url('https://www.olivaturismo.com/oliva/uploaded/Playas%20y%20dunas/Playa%20de%20Terranova/Terranova-3..jpg?1585210959187')"} />
       <FormSection
         reference={props.formRef}
-        backgroundColor={pinterestWhite}
+        backgroundColor="white" 
       />
       <MusicSection
         reference={props.musicRef}
@@ -53,14 +53,14 @@ function Home(props: Props) {
       />
       <PicsSection
         reference={props.picsRef}
-        backgroundColor={pinterestWhite}
+        backgroundColor="white" 
       />
       <GiftSection
         reference={props.supportRef}
-        backgroundColor={pinterestBeige}
+        backgroundColor={pinterestWhite}
       />
       <LogoSection backgroundColor="white" />
-      <FooterSection backgroundColor={pinterestWhite} />
+      <FooterSection backgroundColor={pinterestBeige} />
     </main>
   );
 }

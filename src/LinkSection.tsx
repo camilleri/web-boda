@@ -1,4 +1,4 @@
-import { Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
@@ -43,23 +43,24 @@ interface Props {
   messagekey: string;
   linkkey: string;
   linkaction: () => void;
+  children: React.ReactNode;
 }
 
 function LinkSection(props: Props) {
-
+  const { t } = useTranslation();
   return (
     <Section
       backgroundColor={props.backgroundColor}
       reference={props.reference}
     >
       <Spacer top={outerSectionSpacer} />
-      <RotatingIcon src={props.titleicon} size="4em" mobileSize="5vh" />
+      <RotatingIcon src={props.titleicon} size="4em" mobileSize="8vh" />
       <Spacer bottom={innerSectionSpacer} />
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}
         fontWeight={titleWeight}>
-        <Trans i18nKey={props.titlekey}/>
+          {t(props.titlekey)}
       </Text>
       <Spacer top={innerSectionSpacer} />
       <Box width={boxWidth} widthMobile={boxWidthMobile}>
@@ -68,7 +69,7 @@ function LinkSection(props: Props) {
           fontSizeMobile={textSizeMobile}
           textAlign="left"
         >
-          <Trans i18nKey={props.messagekey}/>
+          {t(props.messagekey)}
         </Text>
         <Spacer top={innerSectionSpacer} />
         <FlexContainer width="100%" justifyContent="center">
@@ -80,8 +81,9 @@ function LinkSection(props: Props) {
               fontSizeMobile={textSizeMobile}
               textAlign="left"
             >
-              <Trans i18nKey={props.linkkey} />
+              {t(props.linkkey)}
             </Text>
+            {props.children}
           </LinkContainer>
         </FlexContainer>
       </Box>

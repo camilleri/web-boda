@@ -28,6 +28,7 @@ function MusicSection(props: Props) {
       messagekey={"music_message"}
       linkkey={"music_list"}
       linkaction={openSpotify}
+      children={null}
     />
   );
 }
