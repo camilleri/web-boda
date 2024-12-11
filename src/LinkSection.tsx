@@ -21,13 +21,17 @@ import Section from "./style_components/Section";
 import React from "react";
 import RotatingIcon from "./RotatingIcon";
 
-const LinkContainer = styled(FlexContainer)`
+interface LinkContainerProps {
+  linkicon: string;
+}
+
+const LinkContainer = styled(FlexContainer)<LinkContainerProps>`
   cursor: pointer;
   align-items: center;
   background-color: ${colorSelectedGray};
-  border-radius: 12px;
-  padding-right: 8px;
-  padding-left: 8px;
+  ${(props) => (props.linkicon ? "border-radius:12px" : null)};
+  ${(props) => (props.linkicon ? "padding-right:8px" : null)};
+  ${(props) => (props.linkicon ? "padding-left:8px" : null)};
 
   &:hover {
     transform: scale(1.05);
@@ -59,8 +63,9 @@ function LinkSection(props: Props) {
       <Text
         fontSize={titleSize}
         fontSizeMobile={titleSizeMobile}
-        fontWeight={titleWeight}>
-          {t(props.titlekey)}
+        fontWeight={titleWeight}
+      >
+        {t(props.titlekey)}
       </Text>
       <Spacer top={innerSectionSpacer} />
       <Box width={boxWidth} widthMobile={boxWidthMobile}>
@@ -73,9 +78,9 @@ function LinkSection(props: Props) {
         </Text>
         <Spacer top={innerSectionSpacer} />
         <FlexContainer width="100%" justifyContent="center">
-          <LinkContainer onClick={props.linkaction}>
+          <LinkContainer onClick={props.linkaction} linkicon={props.linkicon}>
             <Icon src={props.linkicon} size="2em" mobileSize="5vh" />
-            <Spacer left="0.5em" />
+            {props.linkicon && <Spacer left="0.5em" />}
             <Text
               fontSize={textSize}
               fontSizeMobile={textSizeMobile}

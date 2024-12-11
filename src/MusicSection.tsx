@@ -8,9 +8,7 @@ type Props = {
   reference: React.RefObject<HTMLDivElement>;
 };
 
-
 function MusicSection(props: Props) {
-
   async function openSpotify() {
     window.open(
       "https://open.spotify.com/playlist/2ySxHhGeCxnUtt8UqMQxpn?si=b5d056412d5d4174",
@@ -22,7 +20,7 @@ function MusicSection(props: Props) {
     <LinkSection
       backgroundColor={props.backgroundColor}
       reference={props.reference}
-      titleicon={MusicIcon} 
+      titleicon={MusicIcon}
       linkicon={SpotifyIcon}
       titlekey={"music_title"}
       messagekey={"music_message"}
