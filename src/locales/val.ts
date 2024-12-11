@@ -1,9 +1,9 @@
 const val = {
   translation: {
     welcome: "Benvingudes",
-    confirm_assistance_title: "Confirma que véns!",
+    confirm_assistance_title: "Vens a la boda?",
     confirm_assistance_message:
-      "Per ajudar amb l'organització, necessitem que ompligues el formulari d'assistència d'avall",
+      "Per ajudar amb l'organització, necessitem que omplis el formulari d'assistència de més avall.",
     thanks: "Gràcies!",
     rsvp_form: "Formulari d'assistència",
     date: "12 d'abril de 2025",

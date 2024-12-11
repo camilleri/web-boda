@@ -53,7 +53,7 @@ function Home(props: Props) {
       />
       <PicsSection
         reference={props.picsRef}
-        backgroundColor="white" 
+        backgroundColor={pinterestBeige}
       />
       <GiftSection
         reference={props.supportRef}
