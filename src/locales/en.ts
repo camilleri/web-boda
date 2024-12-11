@@ -38,6 +38,9 @@ const en = {
     prewedding_title: "Pre-wedding",
     footer_designed: "Designed and developed by",
     footer_aknowledgement: "Special thanks to",
+    pics_title: "Photos",
+    pics_message: "We don’t want to forget a single moment of this special day. Download the Dots app in advance so you’re ready to share those unique moments you experience with us and the other guests during our day.",
+    pics_link: "Photo Album",
   },
 };
 

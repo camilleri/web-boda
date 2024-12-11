@@ -36,6 +36,9 @@ const es = {
     home: "Inicio",
     prewedding: "Comida y bebida el día anterior por la tarde",
     prewedding_title: "Preboda",
+    pics_title: "Fotos",
+    pics_message: "No queremos olvidar ni un solo minuto de este día tan especial. Descarga la aplicación Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
+    pics_link: "Álbum de fotos",
   },
 };
 

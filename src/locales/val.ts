@@ -40,8 +40,8 @@ const val = {
     music_list: "Llista de Spotify",
     pics_title: "Fotos",
     pics_message:
-      "No volem oblidar ni un sol minut d’aquest dia tan especial. Punxa en la càmera per a descarregar l’aplicació Dots i comparteix amb nosaltres i la resta d’asistents aquells moments únics que visques durant el nostre dia.",
-    pics_link: "Album de fotos",
+  "No volem oblidar ni un sol minut d’aquest dia tant especial. Descarrega l’aplicació Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
+    pics_link: "Àlbum de fotos",
   },
 };
 
