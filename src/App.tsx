@@ -14,6 +14,7 @@ function App() {
   const formRef = useRef(null);
   const supportRef = useRef(null);
   const musicRef = useRef(null);
+  const picsRef = useRef(null);
 
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
         formRef={formRef}
         supportRef={supportRef}
         musicRef={musicRef}
+        picsRef={picsRef}
       />
       <Routes>
         <Route
@@ -38,6 +40,7 @@ function App() {
               formRef={formRef}
               supportRef={supportRef}
               musicRef={musicRef}
+              picsRef={picsRef}
             />
           }
         />

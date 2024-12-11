@@ -38,6 +38,10 @@ const val = {
     music_message:
       "Volem que formes part de la festa, així que si tens alguna cançó que et t'agradaria escoltar, afegix-la a la llista que hem creat per a l'ocasió.",
     music_list: "Llista de Spotify",
+    pics_title: "Fotos",
+    pics_message:
+      "No volem oblidar ni un sol minut d’aquest dia tan especial. Punxa en la càmera per a descarregar l’aplicació Dots i comparteix amb nosaltres i la resta d’asistents aquells moments únics que visques durant el nostre dia.",
+    pics_link: "Album de fotos",
   },
 };
 

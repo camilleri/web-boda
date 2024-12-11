@@ -44,6 +44,7 @@ type Props = {
   formRef: React.RefObject<HTMLDivElement>;
   supportRef: React.RefObject<HTMLDivElement>;
   musicRef: React.RefObject<HTMLDivElement>;
+  picsRef: React.RefObject<HTMLDivElement>;
 };
 function Menu(props: Props) {
   const location = useLocation();
@@ -103,6 +104,11 @@ function Menu(props: Props) {
       <Spacer left="24px">
         <MenuLink onClick={() => scrollToSection(props.musicRef)}>
           <Trans i18nKey="music_title" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => scrollToSection(props.supportRef)}>
+          <Trans i18nKey="pics_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
