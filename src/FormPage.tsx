@@ -18,11 +18,11 @@ const FormPage = () => {
   const getTallySrc = () => {
     switch (language) {
       case "en":
-        return "https://tally.so/embed/mV9a6E?hideTitle=1&transparentBackground=1&dynamicHeight=1";
+        return "https://tally.so/embed/w2OJYg?hideTitle=1&transparentBackground=1&dynamicHeight=1";
       case "es":
         return "https://tally.so/embed/mV9a6E?hideTitle=1&transparentBackground=1&dynamicHeight=1";
       default:
-        return "https://tally.so/embed/w7Jaaz?hideTitle=1&transparentBackground=1&dynamicHeight=1";
+        return "https://tally.so/embed/3x9P7E?hideTitle=1&transparentBackground=1&dynamicHeight=1";
     }
   };
 
