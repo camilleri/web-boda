@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { Header } from "./Header";
 import "./App.css";
 import Home from "./Home";
@@ -47,6 +52,7 @@ function App() {
         />
         <Route path="/form" element={<FormPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
