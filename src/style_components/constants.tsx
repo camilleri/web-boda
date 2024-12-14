@@ -8,11 +8,10 @@ export const pinterestWhite = "rgb(243, 240, 239)";
 export const pinterestBeige = "rgb(229, 225, 220)";
 
 export const colorSelectedGray = "rgba(255, 255, 255, 0.25)";
-export const colorOlive = "#88885a";
 export const colorOrange = "#EBC7A0";
 
 export const colorBanner = colorLightGreen;
-
+export const colorBannerText = "white";
 
 export const titleSize = "1.8em";
 export const titleSizeMobile = "7vw";

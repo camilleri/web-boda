@@ -6,6 +6,7 @@ import GiftSection from "./GiftSection";
 import TransportSection from "./TransportSection";
 import AccommodationSection from "./AccommodationSection";
 import {
+  colorBannerText,
   colorLightGreen,
   pinterestBeige,
   pinterestGreen,
@@ -30,7 +31,11 @@ type Props = {
 function Home(props: Props) {
   return (
     <main>
-      <Banner reference={props.homeRef} venueReference={props.venueRef} />
+      <Banner
+        reference={props.homeRef}
+        venueReference={props.venueRef}
+        textColor={colorBannerText}
+      />
       <VenueSection
         reference={props.venueRef}
         backgroundColor={pinterestWhite}
@@ -58,10 +63,10 @@ function Home(props: Props) {
         reference={props.supportRef}
         backgroundColor={pinterestWhite}
       />
-      <LogoSection backgroundColor="white" />
       <PictureSection background={"url('/vietnam.jpeg')"} />
+      <LogoSection backgroundColor="white" />
       <FooterSection
-        backgroundColor={pinterestGreen}
+        backgroundColor={pinterestBeige}
         textColor="black"
         separationColor={colorLightGreen}
       />

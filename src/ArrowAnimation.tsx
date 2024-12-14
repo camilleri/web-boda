@@ -5,10 +5,13 @@ import styled from "styled-components";
 import FlexContainer from "./style_components/FlexContainer";
 import useScrollToSection from "./hooks/useScrollToSection";
 import { useEffect, useState } from "react";
+import { colorDarkGreen } from "./style_components/constants";
 
 const ArrowIcon = styled(Icon)`
   transform: rotate(180deg);
   cursor: pointer;
+  background-color: ${colorDarkGreen};
+  border-radius: 8px;
 `;
 
 type Props = {
@@ -40,7 +43,7 @@ const ArrowAnimation = (props: Props) => {
         onClick={() => scrollToSection(props.venueReference)}
         animation="bounce 1.5s infinite"
       >
-        <ArrowIcon src={Arrow} size="5.5em" mobileSize="9vh" />
+        <ArrowIcon src={Arrow} size="2em" mobileSize="5vh" />
       </FlexContainer>
     )
   );

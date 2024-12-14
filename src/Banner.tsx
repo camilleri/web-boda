@@ -25,6 +25,7 @@ const Rama = styled.img`
 type Props = {
   reference: React.RefObject<HTMLDivElement>;
   venueReference: React.RefObject<HTMLDivElement>;
+  textColor: string;
 };
 function Banner(props: Props) {
   const { t } = useTranslation();
@@ -46,7 +47,7 @@ function Banner(props: Props) {
             <Text
               fontSize="6vh"
               fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-              color="white"
+              color={props.textColor}
               fontWeight="300"
             >
               MARIA
@@ -65,13 +66,13 @@ function Banner(props: Props) {
             <Text
               fontSize="6vh"
               fontSizeMobile="clamp(2vh, 5vh, 6vh)"
-              color="white"
+              color={props.textColor}
               fontWeight="300"
             >
               DAVID
             </Text>
           </FlexContainer>
-          <Text fontSize="2.5vh" fontSizeMobile="3vh" color="white">
+          <Text fontSize="2.5vh" fontSizeMobile="3vh" color={props.textColor}>
             {t("date")}
           </Text>
         </FlexContainer>

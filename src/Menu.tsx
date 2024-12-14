@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import useScrollToSection from "./hooks/useScrollToSection";
 import Icon from "./style_components/Icon";
 import ArrowBackIcon from "/icons/arrow_back.svg";
-import { colorDarkGreen } from "./style_components/constants";
+import { colorBannerText, colorDarkGreen } from "./style_components/constants";
 
 const IconContainer = styled(Icon)`
   background-color: ${colorDarkGreen};
@@ -16,7 +16,7 @@ const IconContainer = styled(Icon)`
 `;
 
 const MenuLink = styled.div`
-  color: white; /* Set the text color */
+  color: ${colorBannerText};
   font-size: 0.8em;
   cursor: pointer;
   font-family: "Roboto Flex", sans-serif;
@@ -46,6 +46,7 @@ type Props = {
   musicRef: React.RefObject<HTMLDivElement>;
   picsRef: React.RefObject<HTMLDivElement>;
 };
+
 function Menu(props: Props) {
   const location = useLocation();
   const isMobile = useIsMobile();
