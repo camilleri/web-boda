@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Section from "./style_components/Section";
 import Text from "./style_components/Text";
-import { colorOlive, outerSectionSpacer } from "./style_components/constants";
+import { outerSectionSpacer } from "./style_components/constants";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import { Trans, useTranslation } from "react-i18next";
@@ -18,8 +18,10 @@ const LogoImage = styled.img`
   }
 `;
 
-const StyledA = styled.a`
-  color: black;
+const StyledA = styled.a<{
+  textColor: string;
+}>`
+  color: ${(props) => props.textColor || "black"};
   text-decoration: none;
   font-size: 2vh;
   font-weight: 500;
@@ -40,8 +42,10 @@ const Footer = styled.div`
   }
 `;
 
-const VerticalSeparation = styled.div`
-  border-right: 2px solid ${colorOlive};
+const VerticalSeparation = styled.div<{
+  textColor: string;
+}>`
+  border-right: 2px solid ${(props) => props.textColor || "black"};
   height: 2vh;
   margin-top: 4px;
   @media (max-width: 768px) {
@@ -52,6 +56,8 @@ const VerticalSeparation = styled.div`
 
 type Props = {
   backgroundColor: string;
+  textColor: string;
+  separationColor: string;
 };
 function FooterSection(props: Props) {
   useTranslation();
@@ -72,20 +78,22 @@ function FooterSection(props: Props) {
                 fontFamily="Roboto Flex, sans-serif"
                 fontSize="1.5vh"
                 fontSizeMobile="1.25vh"
-                color="black"
+                color={props.textColor}
               >
                 <Trans i18nKey="footer_designed" />
                 <FlexContainer alignContent="center">
                   <StyledA
+                    textColor={props.textColor}
                     href="https://www.linkedin.com/in/maria-marco-terraes-9148b54b/"
                     target="_blank"
                   >
                     Maria
                   </StyledA>
                   <Spacer left="0.5em" right="0.5em">
-                    <VerticalSeparation />
+                    <VerticalSeparation textColor={props.separationColor} />
                   </Spacer>
                   <StyledA
+                    textColor={props.textColor}
                     href="https://www.linkedin.com/in/david-palacios-piqueres-a3386835/"
                     target="_blank"
                   >
@@ -98,20 +106,22 @@ function FooterSection(props: Props) {
                 fontFamily="Roboto Flex, sans-serif"
                 fontSize="1.5vh"
                 fontSizeMobile="1.25vh"
-                color="black"
+                color={props.textColor}
               >
                 <Trans i18nKey="footer_aknowledgement" />
                 <FlexContainer alignContent="center">
                   <StyledA
+                    textColor={props.textColor}
                     href="https://www.instagram.com/anaiestudio/"
                     target="_blank"
                   >
                     anai estudio
                   </StyledA>
                   <Spacer left="0.5em" right="0.5em">
-                    <VerticalSeparation />
+                    <VerticalSeparation textColor={props.separationColor} />
                   </Spacer>
                   <StyledA
+                    textColor={props.textColor}
                     href="https://www.instagram.com/frankeywood/"
                     target="_blank"
                   >

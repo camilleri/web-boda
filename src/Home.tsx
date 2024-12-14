@@ -6,6 +6,7 @@ import GiftSection from "./GiftSection";
 import TransportSection from "./TransportSection";
 import AccommodationSection from "./AccommodationSection";
 import {
+  colorLightGreen,
   pinterestBeige,
   pinterestGreen,
   pinterestWhite,
@@ -59,7 +60,11 @@ function Home(props: Props) {
       />
       <LogoSection backgroundColor="white" />
       <PictureSection background={"url('/vietnam.jpeg')"} />
-      <FooterSection backgroundColor={pinterestBeige} />
+      <FooterSection
+        backgroundColor={pinterestGreen}
+        textColor="black"
+        separationColor={colorLightGreen}
+      />
     </main>
   );
 }
