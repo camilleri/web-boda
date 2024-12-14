@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./Home";
 import FormPage from "./FormPage";
 import { useRef } from "react";
+import AdminPage from "./AdminPage";
 
 function App() {
   // Create refs for scrolling
@@ -45,6 +46,7 @@ function App() {
           }
         />
         <Route path="/form" element={<FormPage />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </Router>
   );
