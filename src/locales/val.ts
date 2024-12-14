@@ -3,7 +3,7 @@ const val = {
     welcome: "Benvingudes",
     confirm_assistance_title: "Vens a la boda?",
     confirm_assistance_message:
-      "Per ajudar amb l'organització, necessitem que omplis el formulari d'assistència de més avall.",
+      "Per ajudar amb l'organització, necessitem que ompligues el formulari d'assistència de baix.",
     thanks: "Gràcies!",
     rsvp_form: "Formulari d'assistència",
     date: "12 d'abril de 2025",
@@ -36,7 +36,7 @@ const val = {
     footer_aknowledgement: "En col.laboració amb",
     music_title: "Música",
     music_message:
-      "Volem que formes part de la festa, així que si tens alguna cançó que et t'agradaria escoltar, afegix-la a la llista que hem creat per a l'ocasió.",
+      "Volem que formes part de la festa, així que si tens alguna cançó que t'agradaria escoltar, afegix-la a la llista que hem creat per a l'ocasió.",
     music_list: "Llista de Spotify",
     pics_title: "Fotos",
     pics_message:

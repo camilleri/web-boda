@@ -1,9 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { Header } from "./Header";
 import "./App.css";
 import Home from "./Home";
 import FormPage from "./FormPage";
 import { useRef } from "react";
+import AdminPage from "./AdminPage";
 
 function App() {
   // Create refs for scrolling
@@ -45,6 +51,8 @@ function App() {
           }
         />
         <Route path="/form" element={<FormPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
