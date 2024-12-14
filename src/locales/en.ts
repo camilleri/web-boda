@@ -13,7 +13,7 @@ const en = {
     support_message:
       "Your presence is the best gift we could ask for.<br />However, if you wish to help us, we would appreciate your support.",
     celebration_date: "12 April 2025",
-    celebration_time: "In the morning (TBD)",
+    celebration_time: "12:30 pm",
     transport_title: "Transport",
     transport_message:
       "There will be bus transportation the day of the wedding from Oliva, Gandia and Sueca to the venue. The bus will depart in the morning and come back around midnight when the party ends. Please let us know if you need a seat in the form.<br />For the rest of the days keep in mind there is very limited public transportation, so having a car to move around is recommended if possible.",
@@ -39,7 +39,8 @@ const en = {
     footer_designed: "Designed and developed by",
     footer_aknowledgement: "Special thanks to",
     pics_title: "Photos",
-    pics_message: "We don’t want to forget a single moment of this special day. Download the Dots app in advance so you’re ready to share those unique moments you experience with us and the other guests during our day.",
+    pics_message:
+      "We don’t want to forget a single moment of this special day. Download the Dots app in advance so you’re ready to share those unique moments you experience with us and the other guests during our day.",
     pics_link: "Photo Album",
   },
 };

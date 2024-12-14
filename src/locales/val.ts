@@ -3,7 +3,7 @@ const val = {
     welcome: "Benvingudes",
     confirm_assistance_title: "Vens a la boda?",
     confirm_assistance_message:
-      "Per ajudar amb l'organització, necessitem que omplis el formulari d'assistència de més avall.",
+      "Per ajudar amb l'organització, necessitem que ompligues el formulari d'assistència de baix.",
     thanks: "Gràcies!",
     rsvp_form: "Formulari d'assistència",
     date: "12 d'abril de 2025",
@@ -14,9 +14,9 @@ const val = {
       "La vostra presència és el millor regal que ens podeu fer.<br />Però si voleu ajudar-nos, agraim el vostre suport.",
     transport_title: "Transport",
     transport_message:
-      "Hi haurà servei de transport en autobús fins al lloc de la celebració. Si us plau, fes-nos saber si utilitzaries bus al formulari per valorar les parades.",
+      "Hi haurà servei de transport en autobús fins al lloc de la celebració. Per favor, fes-nos saber si utilitzaries bus al formulari per valorar les parades.",
     celebration_date: "12 d'abril de 2025",
-    celebration_time: "12:30pm",
+    celebration_time: "12:30 pm",
     days: "dies",
     day: "dia",
     minutes: "minuts",
@@ -27,7 +27,7 @@ const val = {
     prewedding: "Tardeo el dia d'abans de la boda",
     accommodation_title: "Allotjament",
     accommodation_message:
-      "Recomanem buscar allotjament a Oliva, la platja d'Oliva o Gandia.<br/>Si et quedes a la platja d'Oliva, tingues en compte que està a uns 2 km del centre de la ciutat i hi ha un camí habilitat per a vianants.<br/>D'altra banda, la zona d'Oliva Nova es troba a 7 km del centre, per la qual cosa queda massa lluny per anar a peu.",
+      "Recomanem buscar allotjament a Oliva, la platja d'Oliva o Gandia.<br/>Si et quedes a la platja d'Oliva, tingues en compte que està a uns 2 km del centre de la ciutat i hi ha un camí peatonal fins al centre.<br/>Però Oliva Nova es troba a 7 km del centre, per tant queda massa lluny per anar a peu.",
     accommodation_oliva:
       "També podeu buscar opcions de cases compartides a <airbnb /> o <booking />.<br />Per a més informació consulta la <oliva />.",
     web_oliva_turisme: "web de turisme d'Oliva",
@@ -36,11 +36,11 @@ const val = {
     footer_aknowledgement: "En col.laboració amb",
     music_title: "Música",
     music_message:
-      "Volem que formes part de la festa, així que si tens alguna cançó que et t'agradaria escoltar, afegix-la a la llista que hem creat per a l'ocasió.",
+      "Volem que formes part de la festa, així que si tens alguna cançó que t'agradaria escoltar, afegix-la a la llista que hem creat per a l'ocasió.",
     music_list: "Llista de Spotify",
     pics_title: "Fotos",
     pics_message:
-  "No volem oblidar ni un sol minut d’aquest dia tant especial. Descarrega l’aplicació Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
+      "No volem oblidar ni un sol minut d’aquest dia tant especial. Descarrega l’aplicació Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
     pics_link: "Àlbum de fotos",
   },
 };

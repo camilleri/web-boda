@@ -9,23 +9,23 @@ const es = {
     date: "12 de abril de 2025",
     venue_title: "Celebración",
     venue_message: "Monasterio de San Jerónimo de Cotalba",
-    support_title: "Apoyo",
+    support_title: "Regalo",
     support_message:
       "Tu presencia es el mejor regalo que podríamos pedir.<br />Sin embargo, si deseas ayudarnos, agradeceríamos tu apoyo.",
     celebration_date: "12 de abril de 2025",
-    celebration_time: "Por la mañana (por determinar)",
+    celebration_time: "12:30 pm",
     transport_title: "Transporte",
     transport_message:
-      "Habrá transporte en autobús el día de la boda desde Oliva, Gandia y Sueca hasta el lugar de celebración. El autobús saldrá por la mañana y regresará alrededor de la medianoche, cuando termine la fiesta. Por favor, indícanos si necesitas un asiento en el formulario.<br />Para el resto de los días, ten en cuenta que hay transporte público muy limitado, por lo que se recomienda tener coche para moverse si es posible.",
+      "Habrá transporte en autobús el día de la boda hasta el lugar de celebración. Por favor, indícanos si utilizarás el bus en el formulario para valorar las paradas.",
     accommodation_title: "Alojamiento",
     accommodation_message:
-      "Recomendamos que las personas busquen alojamiento en Oliva o Gandia.<br />Si te quedas en Oliva, ten en cuenta que la playa está a unos 2 km de la ciudad y hay un camino peatonal. Pero Oliva Nova está a 7 km del centro de la ciudad, por lo que no está a una distancia como para ir a pié.",
+      "Recomendamos que las personas busquen alojamiento en Oliva o Gandia.<br />Si te quedas en Oliva, ten en cuenta que la playa está a unos 2 km de la ciudad y hay un camino peatonal hasta el centro. Pero Oliva Nova está a 7 km del centro de la ciudad, por lo que no está a una distancia como para ir a pié.",
     accommodation_oliva:
       "También podeis buscar alojamiento compartido en <airbnb /> o <booking />.<br />Para más información consulta la <oliva />.",
     web_oliva_turisme: "web de turismo de Oliva",
     music_title: "Música",
     music_message:
-      "Queremos que formes parte de la fiesta, así que si tens alguna canción que te haga ilusión escuchar, añadela a la lista que hemos creado para la ocasión.",
+      "Queremos que formes parte de la fiesta, así que si hay alguna canción que gustaría escuchar, añadela a la lista que hemos creado para la ocasión.",
     music_list: "Lista de Spotify",
     days: "días",
     minutes: "minutos",
@@ -37,8 +37,11 @@ const es = {
     prewedding: "Comida y bebida el día anterior por la tarde",
     prewedding_title: "Preboda",
     pics_title: "Fotos",
-    pics_message: "No queremos olvidar ni un solo minuto de este día tan especial. Descarga la aplicación Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
+    pics_message:
+      "No queremos olvidar ni un solo minuto de este día tan especial. Descarga la aplicación Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
     pics_link: "Álbum de fotos",
+    footer_designed: "Diseño web y dessarrollo",
+    footer_aknowledgement: "En colaboración con",
   },
 };
 
