@@ -32,34 +32,33 @@ function Home(props: Props) {
       <Banner reference={props.homeRef} venueReference={props.venueRef} />
       <VenueSection
         reference={props.venueRef}
-        backgroundColor="white"
+        backgroundColor={pinterestWhite}
       />
       <TransportSection
         reference={props.transportRef}
-        backgroundColor={pinterestBeige}
+        backgroundColor={pinterestGreen}
       />
       <AccommodationSection
         reference={props.accommodationRef}
         backgroundColor="white"
       />
-      <PictureSection background={"url('https://www.olivaturismo.com/oliva/uploaded/Playas%20y%20dunas/Playa%20de%20Terranova/Terranova-3..jpg?1585210959187')"} />
-      <FormSection
-        reference={props.formRef}
-        backgroundColor="white" 
+      <PictureSection
+        background={
+          "url('https://www.olivaturismo.com/oliva/uploaded/Playas%20y%20dunas/Playa%20de%20Terranova/Terranova-3..jpg?1585210959187')"
+        }
       />
+      <FormSection reference={props.formRef} backgroundColor={pinterestGreen} />
       <MusicSection
         reference={props.musicRef}
-        backgroundColor={pinterestGreen}
+        backgroundColor={pinterestWhite}
       />
-      <PicsSection
-        reference={props.picsRef}
-        backgroundColor={pinterestBeige}
-      />
+      <PicsSection reference={props.picsRef} backgroundColor={pinterestBeige} />
       <GiftSection
         reference={props.supportRef}
         backgroundColor={pinterestWhite}
       />
       <LogoSection backgroundColor="white" />
+      <PictureSection background={"url('/vietnam.jpeg')"} />
       <FooterSection backgroundColor={pinterestBeige} />
     </main>
   );

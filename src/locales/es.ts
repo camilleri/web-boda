@@ -13,13 +13,13 @@ const es = {
     support_message:
       "Tu presencia es el mejor regalo que podríamos pedir.<br />Sin embargo, si deseas ayudarnos, agradeceríamos tu apoyo.",
     celebration_date: "12 de abril de 2025",
-    celebration_time: "Por la mañana (por determinar)",
+    celebration_time: "12:30 p.m.",
     transport_title: "Transporte",
     transport_message:
-      "Habrá transporte en autobús el día de la boda desde Oliva, Gandia y Sueca hasta el lugar de celebración. El autobús saldrá por la mañana y regresará alrededor de la medianoche, cuando termine la fiesta. Por favor, indícanos si necesitas un asiento en el formulario.<br />Para el resto de los días, ten en cuenta que hay transporte público muy limitado, por lo que se recomienda tener coche para moverse si es posible.",
+      "Habrá servicio de transporte en autobús hasta el lugar de la celebración. El autobús saldrá por la mañana y regresará alrededor de la medianoche, cuando termine la fiesta. Por favor, indícanos si necesitas un asiento en el formulario para valorar las paradas.<br/>Para el resto de los días, ten en cuenta que el transporte público es muy limitado, por lo que se recomienda tener coche para moverse si es posible.",
     accommodation_title: "Alojamiento",
     accommodation_message:
-      "Recomendamos que las personas busquen alojamiento en Oliva o Gandia.<br />Si te quedas en Oliva, ten en cuenta que la playa está a unos 2 km de la ciudad y hay un camino peatonal. Pero Oliva Nova está a 7 km del centro de la ciudad, por lo que no está a una distancia como para ir a pié.",
+      "Recomendamos buscar alojamiento en Oliva, la playa de Oliva o Gandía.<br />Si te quedas en la playa de Oliva, ten en cuenta que está a unos 2 km del centro de la ciudad y hay un camino habilitado para peatones. Por otro lado, la zona de Oliva Nova está a 7 km del centro.",
     accommodation_oliva:
       "También podeis buscar alojamiento compartido en <airbnb /> o <booking />.<br />Para más información consulta la <oliva />.",
     web_oliva_turisme: "web de turismo de Oliva",
@@ -34,10 +34,10 @@ const es = {
     day: "día",
     time_left: "Tiempo restante",
     home: "Inicio",
-    prewedding: "Comida y bebida el día anterior por la tarde",
+    prewedding: "Tardeo el día antes de la boda",
     prewedding_title: "Preboda",
     pics_title: "Fotos",
-    pics_message: "No queremos olvidar ni un solo minuto de este día tan especial. Descarga la aplicación Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
+    pics_message: "No queremos olvidar ni un solo minuto de este día. Descarga la aplicación Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
     pics_link: "Álbum de fotos",
   },
 };

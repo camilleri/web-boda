@@ -33,8 +33,8 @@
 
 /* Dot buttons */
 .custom-dots li button {
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
   background-color: var(--color-light-green);
   border: none;
