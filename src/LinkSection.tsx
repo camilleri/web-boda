@@ -72,7 +72,7 @@ function LinkSection(props: Props) {
         <Text
           fontSize={textSize}
           fontSizeMobile={textSizeMobile}
-          textAlign="left"
+          textAlign="center"
         >
           {t(props.messagekey)}
         </Text>
@@ -84,7 +84,7 @@ function LinkSection(props: Props) {
             <Text
               fontSize={textSize}
               fontSizeMobile={textSizeMobile}
-              textAlign="left"
+              textAlign="center"
             >
               {t(props.linkkey)}
             </Text>
