@@ -25,7 +25,7 @@ const es = {
     web_oliva_turisme: "web de turismo de Oliva",
     music_title: "Música",
     music_message:
-      "Queremos que formes parte de la fiesta, así que si hay alguna canción que gustaría escuchar, añadela a la lista que hemos creado para la ocasión.",
+      "Queremos que formes parte de la fiesta, así que si hay alguna canción que gustaría escuchar, añádela a la lista que hemos creado para la ocasión.",
     music_list: "Lista de Spotify",
     days: "días",
     minutes: "minutos",
@@ -37,7 +37,7 @@ const es = {
     prewedding: "Tardeo el día antes de la boda",
     prewedding_title: "Preboda",
     pics_title: "Fotos",
-    pics_message: "No queremos olvidar ni un solo minuto de este día. Descarga la aplicación Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
+    pics_message: "No queremos olvidar ni un solo minuto de este día. Descarga la app Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
     pics_link: "Álbum de fotos",
     footer_designed: "Diseño web y dessarrollo",
     footer_aknowledgement: "En colaboración con",

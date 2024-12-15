@@ -14,7 +14,7 @@ const val = {
       "La vostra presència és el millor regal que ens podeu fer.<br />Però si voleu ajudar-nos, agraïm el vostre suport.",
     transport_title: "Transport",
     transport_message:
-      "Hi haurà servei de transport en autobús fins al lloc de la celebració. L'autobús eixirà al matí i tornarà al voltant de mitjanit, quan acabe la festa. Si us plau, fes-nos saber si necessites un seient al formulari per valorar les parades.<br/>Per a la resta dels dies, tingueu en compte que el transport públic és molt limitat, per la qual cosa es recomana tenir cotxe per desplaçar-se si és possible.",
+      "Hi haurà servei de transport en autobús fins al lloc de la celebració. L'autobús eixirà al matí i tornarà al voltant de mitjanit, quan acabe la festa. Per favor, fes-nos saber si necessites un seient al formulari per valorar les parades.<br/>Per a la resta dels dies, tingueu en compte que el transport públic és molt limitat, per la qual cosa es recomana tenir cotxe per desplaçar-se si és possible.",
     celebration_date: "12 d'abril de 2025",
     celebration_time: "12:30 h.",
     days: "dies",
@@ -40,7 +40,7 @@ const val = {
     music_list: "Llista de Spotify",
     pics_title: "Fotos",
     pics_message:
-  "No volem oblidar ni un sol minut d’aquest dia. Descarrega l’aplicació Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
+  "No volem oblidar ni un sol minut d’aquest dia. Descarrega l'app Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
     pics_link: "Àlbum de fotos",
   },
 };
