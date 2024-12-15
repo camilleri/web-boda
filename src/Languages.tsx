@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import {
-  colorDarkGreen,
-} from "./style_components/constants";
+import { colorDarkGreen, colorMenuText } from "./style_components/constants";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 
@@ -14,7 +12,7 @@ const LanguageOption = styled.div`
   font-size: medium;
   font-weight: 500;
   font-family: Roboto Flex, sans-serif;
-  color: white;
+  color: ${colorMenuText};
   border-radius: 8px;
   transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
   &:hover {

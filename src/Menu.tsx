@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import useScrollToSection from "./hooks/useScrollToSection";
 import Icon from "./style_components/Icon";
 import ArrowBackIcon from "/icons/arrow_back.svg";
-import { colorBannerText, colorDarkGreen } from "./style_components/constants";
+import { colorMenuText, colorDarkGreen } from "./style_components/constants";
 
 const IconContainer = styled(Icon)`
   background-color: ${colorDarkGreen};
@@ -16,7 +16,7 @@ const IconContainer = styled(Icon)`
 `;
 
 const MenuLink = styled.div`
-  color: ${colorBannerText};
+  color: ${colorMenuText};
   font-size: 0.8em;
   cursor: pointer;
   font-family: "Roboto Flex", sans-serif;

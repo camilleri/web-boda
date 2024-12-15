@@ -1,4 +1,3 @@
-import "./Banner.css";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
@@ -6,11 +5,37 @@ import "./i18n"; // Import your i18n configuration file.
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import {
+  bannerImage,
+  colorDarkGreen,
   colorOrange,
   innerSectionSpacer,
   outerSectionSpacer,
+  colorBanner,
 } from "./style_components/constants";
 import ArrowAnimation from "./ArrowAnimation";
+import { RgbToRgba } from "./RgbToRgba";
+
+const BannerStyle = styled.div`
+  background: linear-gradient(
+      ${colorBanner} 0%,
+      ${RgbToRgba(colorDarkGreen, 0.85)} 30%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(${bannerImage});
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+`;
 
 const Rama = styled.img`
   background-position: center top; /* Horizontally and vertically center */
@@ -31,7 +56,7 @@ function Banner(props: Props) {
   const { t } = useTranslation();
 
   return (
-    <div className="banner-img" ref={props.reference}>
+    <BannerStyle ref={props.reference}>
       <Spacer top="4vh" mobileTop="1vh" />
       <FlexContainer
         alignItems="center"
@@ -80,7 +105,7 @@ function Banner(props: Props) {
           <ArrowAnimation venueReference={props.venueReference} />
         </Spacer>
       </FlexContainer>
-    </div>
+    </BannerStyle>
   );
 }
 

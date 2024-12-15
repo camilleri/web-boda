@@ -36,21 +36,18 @@ function Home(props: Props) {
         venueReference={props.venueRef}
         textColor={colorBannerText}
       />
-      <VenueSection
-        reference={props.venueRef}
-        backgroundColor={pinterestWhite}
-      />
+      <VenueSection reference={props.venueRef} backgroundColor="white" />
       <TransportSection
         reference={props.transportRef}
         backgroundColor={pinterestGreen}
       />
       <AccommodationSection
         reference={props.accommodationRef}
-        backgroundColor="white"
+        backgroundColor={pinterestWhite}
       />
       <PictureSection
         background={
-          "url('https://www.olivaturismo.com/oliva/uploaded/Playas%20y%20dunas/Playa%20de%20Terranova/Terranova-3..jpg?1585210959187')"
+          "url('https://multimedia.comunitatvalenciana.com/836BFED6D19A4D4BB12AE8389B122BFA/img/0822774A672E47C3B74527A1B88EF404/1610621677483playa-urbana-oliva3630179073402443691.jpg?responsive')"
         }
       />
       <FormSection reference={props.formRef} backgroundColor={pinterestGreen} />

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #a1ac99;
+  background: var(--background-color);
   display: flex;
   font-family: Cormorant Garamond, Garamond, Times New Roman, serif;
   font-size: 24px;

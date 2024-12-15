@@ -5,12 +5,12 @@ import styled from "styled-components";
 import FlexContainer from "./style_components/FlexContainer";
 import useScrollToSection from "./hooks/useScrollToSection";
 import { useEffect, useState } from "react";
-import { colorDarkGreen } from "./style_components/constants";
+import { colorContrast } from "./style_components/constants";
 
 const ArrowIcon = styled(Icon)`
   transform: rotate(180deg);
   cursor: pointer;
-  background-color: ${colorDarkGreen};
+  background-color: ${colorContrast};
   border-radius: 8px;
 `;
 

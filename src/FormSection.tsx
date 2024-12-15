@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import {
   boxWidth,
   boxWidthMobile,
-  colorDarkGreen,
+  colorContrast,
   innerSectionSpacer,
   outerSectionSpacer,
   textSize,
@@ -26,7 +26,7 @@ import RotatingIcon from "./RotatingIcon";
 const FormLink = styled(Link)`
   text-decoration: none; /* Remove the default underline */
   color: white; /* Set the text color */
-  background-color: ${colorDarkGreen};
+  background-color: ${colorContrast};
   padding: 10px 20px; /* Add padding for space around the text */
   border-radius: 5px; /* Round the corners */
   display: inline-block; /* Make it behave like a block but inline */
@@ -34,7 +34,7 @@ const FormLink = styled(Link)`
 
   /* Hover effect */
   &:hover {
-    background-color: ${colorDarkGreen}; /* Darker shade when hovered */
+    background-color: ${colorContrast}; /* Darker shade when hovered */
     transform: scale(1.05);
   }
 

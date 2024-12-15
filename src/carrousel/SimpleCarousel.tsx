@@ -3,6 +3,7 @@ import Slider from "react-slick";
 // import "slick-carousel/slick/slick-theme.css";
 import "./SimpleCarousel.css";
 import styled from "styled-components";
+import { colorLightGreen, pinterestGreen } from "../style_components/constants";
 
 const images = [
   "./monasteri/mon-1.jpg",
@@ -39,6 +40,15 @@ const CarouselStyle = styled.div`
 const ImageContainer = styled.div`
   overflow: hidden;
 `;
+
+document.documentElement.style.setProperty(
+  "--color-dark-green",
+  colorLightGreen
+);
+document.documentElement.style.setProperty(
+  "--color-light-green",
+  pinterestGreen
+);
 
 const SimpleCarousel = () => {
   const settings = {
