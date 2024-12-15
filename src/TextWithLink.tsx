@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Spacer from "./style_components/Spacer";
+import { colorSelectedGray } from "./style_components/constants";
 
 // type IconStyleProps = {
 //   isHovered: boolean;
@@ -33,25 +34,13 @@ const IconContainer = styled.div`
   position: relative;
 `;
 
-// // Feedback text when the text is copied
-// const FeedbackText = styled.span`
-//   color: white;
-//   font-size: 0.7em;
-//   position: absolute;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   bottom: 120%;
-//   white-space: nowrap; /* Prevent text from wrapping to a new line */
-//   padding-left: 8px;
-//   padding-right: 8px;
-//   background-color: ${colorVerdOscurBanner};
-//   border-radius: 5px;
-// `;
-
 const TextWithLinkStyle = styled.div`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  background-color: ${colorSelectedGray};
+  border-radius: 12px;
+  padding-left: 16px;
 `;
 
 type Props = {

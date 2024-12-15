@@ -11,7 +11,7 @@ type Props = {
 function MusicSection(props: Props) {
   async function openSpotify() {
     window.open(
-      "https://open.spotify.com/playlist/2ySxHhGeCxnUtt8UqMQxpn?si=b5d056412d5d4174",
+      "https://open.spotify.com/playlist/2ySxHhGeCxnUtt8UqMQxpn?si=ef406d484622474b&pt=68ab9afb2d43c7ce9a4d8efbe4b51c73",
       "_blank"
     );
   }

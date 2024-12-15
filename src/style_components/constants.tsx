@@ -8,7 +8,7 @@ export const pinterestGreen = "#e0e3dd";
 export const pinterestWhite = "rgb(243, 240, 239)";
 export const pinterestBeige = "rgb(229, 225, 220)";
 
-export const colorSelectedGray = "rgba(255, 255, 255, 0.25)";
+export const colorSelectedGray = "rgb(255, 255, 255, 0.6)";
 export const colorOrange = "#EBC7A0";
 
 export const colorBanner = colorLightGreen;

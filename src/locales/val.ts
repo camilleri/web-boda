@@ -11,7 +11,7 @@ const val = {
     venue_message: "Monestir de Sant Jeroni de Cotalba",
     support_title: "Regal",
     support_message:
-      "La vostra presència és el millor regal que ens podeu fer.<br />Però si voleu ajudar-nos, agraim el vostre suport.",
+      "La vostra presència és el millor regal que ens podeu fer.<br />Però si voleu ajudar-nos, agraïm el vostre suport.",
     transport_title: "Transport",
     transport_message:
       "Hi haurà servei de transport en autobús fins al lloc de la celebració. L'autobús eixirà al matí i tornarà al voltant de mitjanit, quan acabe la festa. Si us plau, fes-nos saber si necessites un seient al formulari per valorar les parades.<br/>Per a la resta dels dies, tingueu en compte que el transport públic és molt limitat, per la qual cosa es recomana tenir cotxe per desplaçar-se si és possible.",
