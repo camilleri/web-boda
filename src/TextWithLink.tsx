@@ -3,14 +3,6 @@ import styled from "styled-components";
 import Spacer from "./style_components/Spacer";
 import { colorSelectedGray } from "./style_components/constants";
 
-// type IconStyleProps = {
-//   isHovered: boolean;
-// };
-// const IconStyle = styled.svg<IconStyleProps>`
-//   height: 1.5em;
-//   ${(props) => (props.isHovered ? `transform: scale(1.05);` : null)}
-// `;
-
 type IconProps = {
   iconSize: string;
   iconSizeMobile: string;

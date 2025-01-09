@@ -6,7 +6,7 @@ type PictureProps = {
 
 const PictureStyle = styled.div<PictureProps>`
   background: ${(props) => props.background};
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   width: 100%;
   background-position: center center;

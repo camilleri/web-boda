@@ -16,7 +16,7 @@ const val = {
     transport_message:
       "Hi haurà servei de transport en autobús fins al lloc de la celebració. L'autobús eixirà al matí i tornarà al voltant de mitjanit, quan acabe la festa. Per favor, fes-nos saber si necessites un seient al formulari per valorar les parades.<br/>Per a la resta dels dies, tingueu en compte que el transport públic és molt limitat, per la qual cosa es recomana tenir cotxe per desplaçar-se si és possible.",
     celebration_date: "12 d'abril de 2025",
-    celebration_time: "12:30 h.",
+    celebration_time: "12:30 p.m.",
     days: "dies",
     day: "dia",
     minutes: "minuts",
@@ -32,6 +32,9 @@ const val = {
       "També podeu buscar opcions de cases compartides a <airbnb /> o <booking />.<br />Per a més informació consulta la <oliva />.",
     web_oliva_turisme: "web de turisme d'Oliva",
     prewedding_title: "Preboda",
+    prewedding_location: "Restaurant Club de Tenis Oliva",
+    prewedding_date: "11 d'april de 2025",
+    prewedding_time: "8:00 p.m.",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
     music_title: "Música",

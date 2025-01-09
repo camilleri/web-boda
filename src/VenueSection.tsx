@@ -19,7 +19,6 @@ import LocationIcon from "/icons/location.svg";
 import SectionIcon from "/icons/venue-section.svg";
 import CalendarIcon from "/icons/calendar.svg";
 import ClockIcon from "/icons/clock.svg";
-import BeerICon from "/icons/beer.svg";
 import { useState } from "react";
 import Icon from "./style_components/Icon";
 import Section from "./style_components/Section";
@@ -32,6 +31,7 @@ import RotatingIcon from "./RotatingIcon";
 
 const VenueContainer = styled(FlexContainer)`
   cursor: pointer;
+  align-items: center;
 `;
 
 type Props = {
@@ -41,19 +41,38 @@ type Props = {
 function VenueSection(props: Props) {
   const { t } = useTranslation();
 
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  const [isHoveredClubDeTenis, setIsHoveredClubDeTenis] = useState(false);
+  const [isHoveredGoogleMaps, setIsHoveredGoogleMaps] = useState(false);
 
   async function openGoogleMaps() {
     window.open("https://maps.app.goo.gl/bgEtu2QTiFE16Pht7", "_blank");
   }
+
+  async function openClubDeTenis() {
+    window.open("https://maps.app.goo.gl/M6H5z248AFcMiCYr9", "_blank");
+  }
+
+  const EventDetails = ({
+    iconSrc,
+    textKey,
+    isHovered,
+  }: {
+    iconSrc: string;
+    textKey: string;
+    isHovered?: boolean;
+  }) => (
+    <FlexContainer alignItems="center">
+      <Icon src={iconSrc} alt="Icon" mobileSize="3vh" isHovered={isHovered} />
+      <Spacer left="8px" />
+      <Text
+        fontSize={textSize}
+        fontSizeMobile={textSizeMobile}
+        textAlign="left"
+      >
+        <Trans i18nKey={textKey} />
+      </Text>
+    </FlexContainer>
+  );
 
   return (
     <Section
@@ -68,55 +87,26 @@ function VenueSection(props: Props) {
         fontSizeMobile={titleSizeMobile}
         fontWeight={titleWeight}
       >
-        {t("venue_title")}
+        {t("prewedding_title")}
       </Text>
       <Spacer top={innerSectionSpacer} />
       <Box width={boxWidth} widthMobile={boxWidthMobile}>
         <FlexContainer width="100%" flexDirection="column" alignItems="center">
           <FlexContainer flexDirection="column" alignItems="flex-start">
             <VenueContainer
-              onClick={openGoogleMaps}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              alignItems="center"
+              onClick={openClubDeTenis}
+              onMouseEnter={() => setIsHoveredClubDeTenis(true)}
+              onMouseLeave={() => setIsHoveredClubDeTenis(false)}
             >
-              <Icon
-                isHovered={isHovered}
-                src={LocationIcon}
-                alt="Google Maps"
-                mobileSize="3vh"
+              <EventDetails
+                isHovered={isHoveredClubDeTenis}
+                iconSrc={LocationIcon}
+                textKey="prewedding_location"
               />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="left"
-              >
-                <Trans i18nKey="venue_message" />
-              </Text>
             </VenueContainer>
-            <FlexContainer alignItems="center">
-              <Icon src={CalendarIcon} alt="Calendar" mobileSize="3vh" />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="left"
-              >
-                <Trans i18nKey={"celebration_date"} />
-              </Text>
-            </FlexContainer>
-            <FlexContainer alignItems="center">
-              <Icon src={ClockIcon} alt="Clock" mobileSize="3vh" />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="left"
-              >
-                <Trans i18nKey={"celebration_time"} />
-              </Text>
-            </FlexContainer>
+
+            <EventDetails iconSrc={CalendarIcon} textKey="prewedding_date" />
+            <EventDetails iconSrc={ClockIcon} textKey="prewedding_time" />
             <Spacer top={innerSectionSpacer} />
             <FlexContainer
               width="100%"
@@ -128,21 +118,32 @@ function VenueSection(props: Props) {
                 fontSizeMobile={titleSizeMobile}
                 fontWeight={titleWeight}
               >
-                {t("prewedding_title")}
+                {t("venue_title")}
               </Text>
             </FlexContainer>
             <Spacer top={innerSectionSpacer} />
-            <FlexContainer alignItems="center">
-              <Icon src={BeerICon} alt="Beer" mobileSize="3vh" />
-              <Spacer left="8px" />
-              <Text
-                fontSize={textSize}
-                fontSizeMobile={textSizeMobile}
-                textAlign="left"
-              >
-                <Trans i18nKey="prewedding" />
-              </Text>
-            </FlexContainer>
+
+            <VenueContainer
+              onClick={openGoogleMaps}
+              onMouseEnter={() => setIsHoveredGoogleMaps(true)}
+              onMouseLeave={() => setIsHoveredGoogleMaps(false)}
+            >
+              <EventDetails
+                iconSrc={LocationIcon}
+                textKey="venue_message"
+                isHovered={isHoveredGoogleMaps}
+              />
+            </VenueContainer>
+            <EventDetails
+              iconSrc={CalendarIcon}
+              textKey="celebration_date"
+              isHovered={false}
+            />
+            <EventDetails
+              iconSrc={ClockIcon}
+              textKey="celebration_time"
+              isHovered={false}
+            />
           </FlexContainer>
         </FlexContainer>
       </Box>
