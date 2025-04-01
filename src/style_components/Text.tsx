@@ -17,6 +17,7 @@ interface TextProps {
   width?: string;
   widthMobile?: string;
   textShadow?: string;
+  textWrap?: string;
 }
 
 const Text = styled.p<TextProps>`
@@ -26,6 +27,7 @@ const Text = styled.p<TextProps>`
   line-height: ${(props) => props.lineHeight || "1.5"};
   text-align: ${(props) => props.textAlign || "left"};
   text-transform: ${(props) => props.textTransform || "none"};
+  text-wrap: ${(props) => props.textWrap || "normal"};
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
   display: ${(props) => (props.inline ? "inline" : "block")};

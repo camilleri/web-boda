@@ -19,7 +19,7 @@ import LocationIcon from "/icons/location.svg";
 import SectionIcon from "/icons/venue-section.svg";
 import CalendarIcon from "/icons/calendar.svg";
 import ClockIcon from "/icons/clock.svg";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Icon from "./style_components/Icon";
 import Section from "./style_components/Section";
 
@@ -28,6 +28,7 @@ import SimpleCarousel from "./carrousel/SimpleCarousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RotatingIcon from "./RotatingIcon";
+import ExternalLinkIcon from "/icons/external-link.svg";
 
 const VenueContainer = styled(FlexContainer)`
   cursor: pointer;
@@ -56,10 +57,12 @@ function VenueSection(props: Props) {
     iconSrc,
     textKey,
     isHovered,
+    showExternalLink,
   }: {
     iconSrc: string;
     textKey: string;
     isHovered?: boolean;
+    showExternalLink?: ReactNode;
   }) => (
     <FlexContainer alignItems="center">
       <Icon src={iconSrc} alt="Icon" mobileSize="3vh" isHovered={isHovered} />
@@ -69,7 +72,23 @@ function VenueSection(props: Props) {
         fontSizeMobile={textSizeMobile}
         textAlign="left"
       >
-        <Trans i18nKey={textKey} />
+        <Trans
+          i18nKey={textKey}
+          components={
+            showExternalLink
+              ? {
+                  link: (
+                    <Icon
+                      src={ExternalLinkIcon}
+                      size="1em"
+                      mobileSize="2vh"
+                      verticalAlign="middle"
+                    />
+                  ),
+                }
+              : undefined
+          }
+        />
       </Text>
     </FlexContainer>
   );
@@ -102,6 +121,7 @@ function VenueSection(props: Props) {
                 isHovered={isHoveredClubDeTenis}
                 iconSrc={LocationIcon}
                 textKey="prewedding_location"
+                showExternalLink
               />
             </VenueContainer>
 
@@ -132,6 +152,7 @@ function VenueSection(props: Props) {
                 iconSrc={LocationIcon}
                 textKey="venue_message"
                 isHovered={isHoveredGoogleMaps}
+                showExternalLink
               />
             </VenueContainer>
             <EventDetails

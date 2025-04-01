@@ -8,15 +8,24 @@ const es = {
     rsvp_form: "Formulario de asistencia",
     date: "12 de abril de 2025",
     venue_title: "Celebración",
-    venue_message: "Monasterio de San Jerónimo de Cotalba",
+    venue_message: "Monasterio de San Jerónimo de Cotalba <link />",
     support_title: "Regalo",
     support_message:
       "Tu presencia es el mejor regalo que podríamos pedir.<br />Sin embargo, si deseas ayudarnos, agradeceríamos tu apoyo.",
     celebration_date: "12 de abril de 2025",
-    celebration_time: "12:30 p.m.",
+    celebration_time: "Recepción desde las 12:00 pm",
     transport_title: "Transporte",
     transport_message:
-      "Habrá servicio de transporte en autobús hasta el lugar de la celebración. El autobús saldrá por la mañana y regresará alrededor de la medianoche, cuando termine la fiesta. Por favor, indícanos si necesitas un asiento en el formulario para valorar las paradas.<br/>Para el resto de los días, ten en cuenta que el transporte público es muy limitado, por lo que se recomienda tener coche para moverse si es posible.",
+      "La llegada al Monasterio de Cotalba será sobre las 12:00 pm. Si vas a ir en coche planea llegar a esa hora. Si vas en bus abajo esta el horario con las salidas. ¡Por favor, sé puntual!",
+    oliva_beach: "Oliva playa",
+    parada_sueca: "Ronda España, 2. Al final de la calle Moro <link />",
+    parada_gandia:
+      "Calle del Legionario Bernabeu, 68. En el IES Ausiàs March <link />",
+    parada_oliva: "Avenida Sisteron S/N. En el IES Gregori Maians <link />",
+    parada_oliva_beach:
+      "Passeo Francisco Brines, 92. En el parking del Hotel Playa Oliva <link />",
+    return_message:
+      "Los buses de vuelta saldrán cuando termine la fiesta que sera sobre la medianoche.",
     accommodation_title: "Alojamiento",
     accommodation_message:
       "Recomendamos buscar alojamiento en Oliva, la playa de Oliva o Gandía.<br />Si te quedas en la playa de Oliva, ten en cuenta que está a unos 2 km del centro de la ciudad y hay un camino habilitado para peatones. Por otro lado, la zona de Oliva Nova está a 7 km del centro.",
@@ -36,11 +45,12 @@ const es = {
     home: "Inicio",
     prewedding: "Tardeo el día antes de la boda",
     prewedding_title: "Preboda",
-    prewedding_location: "Restaurant Club de Tenis Oliva",
+    prewedding_location: "Restaurant Club de Tenis Oliva <link />",
     prewedding_date: "11 de abril de 2025",
-    prewedding_time: "8:00 p.m.",
+    prewedding_time: "8:00 pm",
     pics_title: "Fotos",
-    pics_message: "No queremos olvidar ni un solo minuto de este día. Descarga la app Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
+    pics_message:
+      "No queremos olvidar ni un solo minuto de este día. Descarga la app Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
     pics_link: "Álbum de fotos",
     footer_designed: "Diseño web y dessarrollo",
     footer_aknowledgement: "En colaboración con",
