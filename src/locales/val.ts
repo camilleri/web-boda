@@ -14,7 +14,7 @@ const val = {
       "La vostra presència és el millor regal que ens podeu fer.<br />Però si voleu ajudar-nos, agraïm el vostre suport.",
     transport_title: "Transport",
     transport_message:
-      "L'arribada al Monestir de Cotalba serà sobre les 12:00 pm. Si vas a anar amb cotxe planetja arribar a eixa hora. Si vas amb bus avall esta l'horari amb les eixides. Per favor, sigues puntual!",
+      "L'arribada al Monestir de Cotalba serà sobre les 12:00 pm. Si vas a anar amb cotxe planeja arribar a eixa hora. Si vas amb bus avall esta l'horari amb les eixides. Per favor, sigues puntual!",
     oliva_beach: "Oliva platja",
     parada_sueca: "Ronda Espanya, 2. Al final del carrer Moro <link />",
     parada_gandia:
