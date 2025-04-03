@@ -43,7 +43,7 @@ const val = {
     prewedding_title: "Preboda",
     prewedding_location: "Restaurant Club de Tenis Oliva <link />",
     prewedding_date: "11 d'abril de 2025",
-    prewedding_time: "8:30 pm",
+    prewedding_time: "8:00 pm",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
     music_title: "Música",
