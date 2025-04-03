@@ -25,7 +25,7 @@ const val = {
     return_message:
       "Els busos de volta eixiran quan s'acabe la festa que serà sobre la mitjanit.",
     celebration_date: "12 d'abril de 2025",
-    celebration_time: "Recepció desde les 12:00 pm",
+    celebration_time: "Recepció des de les 12:00 pm",
     days: "dies",
     day: "dia",
     minutes: "minuts",
@@ -42,8 +42,8 @@ const val = {
     web_oliva_turisme: "web de turisme d'Oliva",
     prewedding_title: "Preboda",
     prewedding_location: "Restaurant Club de Tenis Oliva <link />",
-    prewedding_date: "11 d'april de 2025",
-    prewedding_time: "8:00 pm",
+    prewedding_date: "11 d'abril de 2025",
+    prewedding_time: "8:30 pm",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
     music_title: "Música",
@@ -52,7 +52,7 @@ const val = {
     music_list: "Llista de Spotify",
     pics_title: "Fotos",
     pics_message:
-      "No volem oblidar ni un sol minut d’aquest dia. Descarrega l'app Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
+      "No volem oblidar ni un sol minut d’aquest dia. Comparteix amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
     pics_link: "Àlbum de fotos",
   },
 };

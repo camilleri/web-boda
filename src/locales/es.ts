@@ -50,7 +50,7 @@ const es = {
     prewedding_time: "8:00 pm",
     pics_title: "Fotos",
     pics_message:
-      "No queremos olvidar ni un solo minuto de este día. Descarga la app Dots con antelación para tenerla lista y compartir con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
+      "No queremos olvidar ni un solo minuto de este día. Comparte con nosotros y el resto de asistentes esos momentos únicos que vivas durante nuestro día.",
     pics_link: "Álbum de fotos",
     footer_designed: "Diseño web y dessarrollo",
     footer_aknowledgement: "En colaboración con",

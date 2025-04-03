@@ -1,6 +1,6 @@
 import PicsIcon from "/icons/pics.svg";
 import DotsAppIcon from "/icons/dots.svg";
-import PicsQR from "/qr.jpeg";
+import PicsQR from "/qr.png";
 import React from "react";
 import LinkSection from "./LinkSection";
 import Icon from "./style_components/Icon";
@@ -11,34 +11,8 @@ type Props = {
 };
 
 function PicsSection(props: Props) {
-  function openDotsApp() {
-    const appLink = "https://onelifesocial.page.link/fpAv"; // Universal Link
-    const appStoreLink =
-      "https://apps.apple.com/es/app/unfiltered-v%C3%ADdeos-reales/id6449039420"; // iOS App Store URL
-    const playStoreLink =
-      "https://play.google.com/store/apps/details?id=social.onelife"; // Android Play Store URL
-    const fallbackPage = "https://dotstheapp.com/"; // Desktop fallback (e.g., QR code)
-
-    if (/android/i.test(navigator.userAgent)) {
-      // Android: Try to open the app
-      window.location.href = appLink;
-
-      // Fallback to Google Play
-      setTimeout(() => {
-        window.location.href = playStoreLink;
-      }, 2000);
-    } else if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-      // iOS: Try to open the app
-      window.location.href = appLink;
-
-      // Fallback to App Store
-      setTimeout(() => {
-        window.location.href = appStoreLink;
-      }, 2000);
-    } else {
-      // Desktop: Show fallback page
-      window.open(fallbackPage, "_blank");
-    }
+  function openGooglePhotos() {
+    window.open("https://qrco.de/bfsmRV", "_blank");
   }
 
   function isDesktop() {
@@ -78,7 +52,7 @@ function PicsSection(props: Props) {
       titlekey={"pics_title"}
       messagekey={"pics_message"}
       linkkey={getLinkTitle()}
-      linkaction={openDotsApp}
+      linkaction={openGooglePhotos}
       children={getQR()}
     />
   );
