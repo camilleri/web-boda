@@ -52,7 +52,7 @@ const en = {
     footer_aknowledgement: "Special thanks to",
     pics_title: "Photos",
     pics_message:
-      "We don’t want to forget a single moment of this day. Download the <wedshoots /> app in advance so you’re ready to share those unique moments you experience with us and the other guests during our day.",
+      "We don’t want to forget a single moment of this day. Download the Dots app in advance so you’re ready to share those unique moments you experience with us and the other guests during our day.",
     pics_link: "Photo Album",
   },
 };

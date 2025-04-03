@@ -42,7 +42,7 @@ const val = {
     web_oliva_turisme: "web de turisme d'Oliva",
     prewedding_title: "Preboda",
     prewedding_location: "Restaurant Club de Tenis Oliva <link />",
-    prewedding_date: "11 d'abril de 2025",
+    prewedding_date: "11 d'april de 2025",
     prewedding_time: "8:00 pm",
     footer_designed: "Disseny web i desenvolupament",
     footer_aknowledgement: "En col.laboració amb",
@@ -52,7 +52,7 @@ const val = {
     music_list: "Llista de Spotify",
     pics_title: "Fotos",
     pics_message:
-      "No volem oblidar ni un sol minut d’aquest dia. Descarrega l'app <wedshoots /> amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
+      "No volem oblidar ni un sol minut d’aquest dia. Descarrega l'app Dots amb antelació per tenir-la preparada i compartir amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
     pics_link: "Àlbum de fotos",
   },
 };

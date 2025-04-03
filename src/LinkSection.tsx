@@ -1,4 +1,4 @@
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import Text from "./style_components/Text";
@@ -15,7 +15,6 @@ import {
   titleSize,
   titleSizeMobile,
   titleWeight,
-  colorLightGreen,
 } from "./style_components/constants";
 import Icon from "./style_components/Icon";
 import Section from "./style_components/Section";
@@ -33,16 +32,6 @@ const LinkContainer = styled(FlexContainer)<LinkContainerProps>`
   ${(props) => (props.linkicon ? "border-radius:12px" : null)};
   ${(props) => (props.linkicon ? "padding-right:8px" : null)};
   ${(props) => (props.linkicon ? "padding-left:8px" : null)};
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-const StyledA = styled.a`
-  color: black;
-  text-decoration: underline ${colorLightGreen};
-  font-weight: 500;
 
   &:hover {
     transform: scale(1.05);
@@ -85,19 +74,7 @@ function LinkSection(props: Props) {
           fontSizeMobile={textSizeMobile}
           textAlign="center"
         >
-          <Trans
-            i18nKey={props.messagekey}
-            components={{
-              wedshoots: (
-                <StyledA
-                  href="http://www.wedshoots.com/download?albumId=ES24982e57"
-                  target="_blank"
-                >
-                  Wedshoots
-                </StyledA>
-              ),
-            }}
-          />
+          {t(props.messagekey)}
         </Text>
         <Spacer top={innerSectionSpacer} />
         <FlexContainer width="100%" justifyContent="center">
@@ -114,14 +91,6 @@ function LinkSection(props: Props) {
             {props.children}
           </LinkContainer>
         </FlexContainer>
-        <Text
-          fontSize={textSize}
-          fontSizeMobile={textSizeMobile}
-          textAlign="center"
-          fontWeight="500"
-        >
-          ES24982e57
-        </Text>
       </Box>
       <Spacer top={outerSectionSpacer} />
     </Section>
