@@ -102,7 +102,7 @@ function Banner(props: Props) {
           </Text>
         </FlexContainer>
         <Spacer bottom={innerSectionSpacer} mobileBottom={outerSectionSpacer}>
-          <ArrowAnimation venueReference={props.venueReference} />
+          <ArrowAnimation />
         </Spacer>
       </FlexContainer>
     </BannerStyle>

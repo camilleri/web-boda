@@ -20,7 +20,7 @@ export const titleSize = "1.8em";
 export const titleSizeMobile = "7vw";
 export const titleWeight = "600";
 
-export const textSize = "1.5em";
+export const textSize = "1.2em";
 export const textSizeMobile = "4vw";
 
 export const innerSectionSpacer = "1.5vh";

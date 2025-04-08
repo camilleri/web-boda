@@ -106,7 +106,7 @@ function TransportSection(props: Props) {
                   textAlign="left"
                   textWrap="nowrap"
                 >
-                  10:45 am
+                  10:45
                 </Text>
               </Cell>
               <Cell>
@@ -150,7 +150,7 @@ function TransportSection(props: Props) {
                   textAlign="left"
                   textWrap="nowrap"
                 >
-                  11:30 am
+                  11:30
                 </Text>
               </Cell>
               <Cell>
@@ -193,7 +193,7 @@ function TransportSection(props: Props) {
                   textAlign="left"
                   textWrap="nowrap"
                 >
-                  11:30 am
+                  11:30
                 </Text>
               </Cell>
               <Cell>
@@ -235,7 +235,7 @@ function TransportSection(props: Props) {
                   textAlign="left"
                   textWrap="nowrap"
                 >
-                  11:35 am
+                  11:35
                 </Text>
               </Cell>
               <Cell>

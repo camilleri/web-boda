@@ -3,9 +3,8 @@ import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import { Trans, useTranslation } from "react-i18next";
 import useIsMobile from "./hooks/useIsMobile";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import useScrollToSection from "./hooks/useScrollToSection";
 import Icon from "./style_components/Icon";
 import ArrowBackIcon from "/icons/arrow_back.svg";
 import { colorMenuText, colorDarkGreen } from "./style_components/constants";
@@ -53,20 +52,40 @@ function Menu(props: Props) {
   const isHome = location.pathname === "/";
   useTranslation();
 
-  const [pendingScroll, setPendingScroll, scrollToSection] =
-    useScrollToSection();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (pendingScroll && pendingScroll?.current && location.pathname === "/") {
-      pendingScroll.current.scrollIntoView({ behavior: "smooth" });
-      setPendingScroll(null);
+    if (location.hash === "#venue" && props.venueRef.current) {
+      props.venueRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    // Wait for the location change and then scroll
-    const targetElement = document.getElementById("target-section");
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
+    if (location.hash === "#transport" && props.transportRef.current) {
+      props.transportRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [setPendingScroll, pendingScroll, location]); // Trigger this effect when the location changes
+    if (location.hash === "#form" && props.formRef.current) {
+      props.formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#music" && props.musicRef.current) {
+      props.musicRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#pics" && props.picsRef.current) {
+      props.picsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#support" && props.supportRef.current) {
+      props.supportRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (!location.hash && props.homeRef.current) {
+      props.homeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [
+    location,
+    props.homeRef,
+    props.formRef,
+    props.musicRef,
+    props.picsRef,
+    props.supportRef,
+    props.transportRef,
+    props.venueRef,
+  ]);
 
   return isMobile ? (
     isHome ? (
@@ -74,7 +93,7 @@ function Menu(props: Props) {
     ) : (
       <FlexContainer>
         <Spacer left="8px">
-          <FlexContainer onClick={() => scrollToSection(props.homeRef)}>
+          <FlexContainer onClick={() => navigate("/#home")}>
             <IconContainer src={ArrowBackIcon} size="4em" mobileSize="1.5em" />
           </FlexContainer>
         </Spacer>
@@ -83,37 +102,37 @@ function Menu(props: Props) {
   ) : (
     <FlexContainer>
       <Spacer left="16px">
-        <MenuLink onClick={() => scrollToSection(props.homeRef)}>
+        <MenuLink onClick={() => navigate("/")}>
           <Trans i18nKey="home" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.venueRef)}>
+        <MenuLink onClick={() => navigate("/#venue")}>
           <Trans i18nKey="venue_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.transportRef)}>
+        <MenuLink onClick={() => navigate("/#transport")}>
           <Trans i18nKey="transport_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.formRef)}>
+        <MenuLink onClick={() => navigate("/#form")}>
           <Trans i18nKey="rsvp_form" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.musicRef)}>
+        <MenuLink onClick={() => navigate("/#music")}>
           <Trans i18nKey="music_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.picsRef)}>
+        <MenuLink onClick={() => navigate("/#pics")}>
           <Trans i18nKey="pics_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">
-        <MenuLink onClick={() => scrollToSection(props.supportRef)}>
+        <MenuLink onClick={() => navigate("/#support")}>
           <Trans i18nKey="support_title" />
         </MenuLink>
       </Spacer>
