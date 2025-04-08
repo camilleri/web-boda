@@ -18,7 +18,7 @@ const es = {
     transport_message:
       "La llegada al Monasterio de Cotalba será sobre las 12:00 pm. Si vas a ir en coche planea llegar a esa hora. Si vas en bus abajo esta el horario con las salidas. ¡Por favor, sé puntual!",
     oliva_beach: "Oliva playa",
-    parada_sueca: "Ronda España, 2. Al final de la calle Moro <link />",
+    parada_sueca: "Calle de la Raconada, 1. El parking de la feria <link />",
     parada_gandia:
       "Calle del Legionario Bernabeu, 68. En el IES Ausiàs March <link />",
     parada_oliva: "Avenida Sisteron S/N. En el IES Gregori Maians <link />",

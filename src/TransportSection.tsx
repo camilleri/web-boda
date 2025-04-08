@@ -31,11 +31,10 @@ const PLaceContainer = styled.tr`
 
 const Cell = styled.td`
   align-items: center;
-  padding-left: 1.5em;
-  padding-bottom: 0.5em;
+  padding: 16px 16px 16px 16px;
 
   @media (max-width: 768px) {
-    padding-left: 0.5em;
+    padding: 8px 8px 8px 8px;
   }
 `;
 
@@ -48,7 +47,7 @@ function TransportSection(props: Props) {
   const isMobile = useIsMobile();
 
   async function openParadaSueca() {
-    window.open("https://maps.app.goo.gl/VT9yTj9QERgj7HgW7", "_blank");
+    window.open("https://maps.app.goo.gl/udBg53sewTK8Z8cE7", "_blank");
   }
 
   async function openParadaOliva() {

@@ -18,7 +18,7 @@ const en = {
     transport_message:
       "Arrival at Monestir de Cotalba will be around 12:00 pm. If you are going by car aim to get there around that time. If you are taking the bus find below the bus departures. Please be on time!",
     oliva_beach: "Oliva beach",
-    parada_sueca: "Ronda Espanya, 2 <link />",
+    parada_sueca: "Carrer de la Raconada, 1 <link />",
     parada_gandia: "Carrer del Legionari Bernabeu, 68 <link />",
     parada_oliva:
       "Avinguda Sisteron. Next to the Gregori Maians high school <link />",
