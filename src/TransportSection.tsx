@@ -59,7 +59,7 @@ function TransportSection(props: Props) {
   }
 
   async function openParadaGandia() {
-    window.open("https://maps.app.goo.gl/jfqiUoBqvEpn96Sr9", "_blank");
+    window.open("https://maps.app.goo.gl/h1Lbtd2wXjr8ec38A", "_blank");
   }
 
   return (

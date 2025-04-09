@@ -18,7 +18,7 @@ const val = {
     oliva_beach: "Oliva platja",
     parada_sueca: "Carrer de la Raconada, 1. El parking de la fira <link />",
     parada_gandia:
-      "Carrer del Legionari Bernabeu, 68. Al IES Ausiàs March <link />",
+      "Estació d'autobús de Gandia (Renfe) <link />",
     parada_oliva: "Avinguda Sisteron S/N. Al IES Gregori Maians <link />",
     parada_oliva_beach:
       "Passeig Francisco Brines, 92. En el parking de l'Hotel Platja Oliva <link />",

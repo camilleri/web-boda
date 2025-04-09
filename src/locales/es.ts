@@ -20,7 +20,7 @@ const es = {
     oliva_beach: "Oliva playa",
     parada_sueca: "Calle de la Raconada, 1. El parking de la feria <link />",
     parada_gandia:
-      "Calle del Legionario Bernabeu, 68. En el IES Ausiàs March <link />",
+      "Estación de autobús de Gandía (Renfe)<link />",
     parada_oliva: "Avenida Sisteron S/N. En el IES Gregori Maians <link />",
     parada_oliva_beach:
       "Passeo Francisco Brines, 92. En el parking del Hotel Playa Oliva <link />",
