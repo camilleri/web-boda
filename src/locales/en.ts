@@ -61,7 +61,7 @@ const en = {
     timeline_lunch: "Lunch at the church",
     timeline_folk: "Folk",
     timeline_party: "Party",
-    timeline_resopo: "Late-nigh snack",
+    timeline_resopo: "Late-night snack",
     timeline_end: "Party ends",
   },
 };
