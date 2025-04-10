@@ -39,6 +39,7 @@ type Props = {
   homeRef: React.RefObject<HTMLDivElement>;
   venueRef: React.RefObject<HTMLDivElement>;
   transportRef: React.RefObject<HTMLDivElement>;
+  timelineRef: React.RefObject<HTMLDivElement>;
   accommodationRef: React.RefObject<HTMLDivElement>;
   formRef: React.RefObject<HTMLDivElement>;
   supportRef: React.RefObject<HTMLDivElement>;
@@ -60,6 +61,9 @@ function Menu(props: Props) {
     }
     if (location.hash === "#transport" && props.transportRef.current) {
       props.transportRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#timeline" && props.timelineRef.current) {
+      props.timelineRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (location.hash === "#form" && props.formRef.current) {
       props.formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -85,6 +89,7 @@ function Menu(props: Props) {
     props.supportRef,
     props.transportRef,
     props.venueRef,
+    props.timelineRef,
   ]);
 
   return isMobile ? (
@@ -114,6 +119,11 @@ function Menu(props: Props) {
       <Spacer left="24px">
         <MenuLink onClick={() => navigate("/#transport")}>
           <Trans i18nKey="transport_title" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => navigate("/#timeline")}>
+          <Trans i18nKey="timeline_title" />
         </MenuLink>
       </Spacer>
       <Spacer left="24px">

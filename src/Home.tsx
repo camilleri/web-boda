@@ -16,11 +16,13 @@ import FooterSection from "./FooterSection";
 import PictureSection from "./style_components/Picture";
 import MusicSection from "./MusicSection";
 import PicsSection from "./PicsSection";
+import TimelineSection from "./TimelineSection";
 
 type Props = {
   homeRef: React.RefObject<HTMLDivElement>;
   venueRef: React.RefObject<HTMLDivElement>;
   transportRef: React.RefObject<HTMLDivElement>;
+  timelineRef: React.RefObject<HTMLDivElement>;
   accommodationRef: React.RefObject<HTMLDivElement>;
   formRef: React.RefObject<HTMLDivElement>;
   supportRef: React.RefObject<HTMLDivElement>;
@@ -41,9 +43,14 @@ function Home(props: Props) {
         reference={props.transportRef}
         backgroundColor={pinterestGreen}
       />
+
+      <TimelineSection
+        reference={props.timelineRef}
+        backgroundColor={pinterestWhite}
+      />
       <AccommodationSection
         reference={props.accommodationRef}
-        backgroundColor={pinterestWhite}
+        backgroundColor={pinterestGreen}
       />
       <PictureSection
         background={

@@ -54,6 +54,15 @@ const es = {
     pics_link: "Álbum de fotos",
     footer_designed: "Diseño web y dessarrollo",
     footer_aknowledgement: "En colaboración con",
+    timeline_title: "Agenda",
+    timeline_reception: "Recepción en el monasterio",
+    timeline_ceremonia: "Ceremonia en los jardines",
+    timeline_cocktail: "Cóctel en los jardines",
+    timeline_lunch: "Comida en la isglésia",
+    timeline_folk: "Folk",
+    timeline_party: "Fiesta",
+    timeline_resopo: "Resopón",
+    timeline_end: "Fin de festa",
   },
 };
 

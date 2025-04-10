@@ -54,6 +54,15 @@ const en = {
     pics_message:
       "We don’t want to forget a single moment of this day. Share those unique moments you experience with us and the other guests during our day.",
     pics_link: "Photo Album",
+    timeline_title: "Timeline",
+    timeline_reception: "Reception at the monastery",
+    timeline_ceremonia: "Ceremony at the gardens",
+    timeline_cocktail: "Cocktail at the gardens",
+    timeline_lunch: "Lunch at the church",
+    timeline_folk: "Folk",
+    timeline_party: "Party",
+    timeline_resopo: "Late-nigh snack",
+    timeline_end: "Party ends",
   },
 };
 

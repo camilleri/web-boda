@@ -36,6 +36,7 @@ type Props = {
   homeRef: React.RefObject<HTMLDivElement>;
   venueRef: React.RefObject<HTMLDivElement>;
   transportRef: React.RefObject<HTMLDivElement>;
+  timelineRef: React.RefObject<HTMLDivElement>;
   accommodationRef: React.RefObject<HTMLDivElement>;
   formRef: React.RefObject<HTMLDivElement>;
   supportRef: React.RefObject<HTMLDivElement>;
@@ -101,6 +102,7 @@ export function Header(props: Props) {
           homeRef={props.homeRef}
           venueRef={props.venueRef}
           transportRef={props.transportRef}
+          timelineRef={props.timelineRef}
           accommodationRef={props.accommodationRef}
           formRef={props.formRef}
           supportRef={props.supportRef}

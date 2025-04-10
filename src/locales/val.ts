@@ -54,6 +54,15 @@ const val = {
     pics_message:
       "No volem oblidar ni un sol minut d’aquest dia. Comparteix amb nosaltres i la resta d’assistents aquells moments únics que visques durant el nostre dia.",
     pics_link: "Àlbum de fotos",
+    timeline_title: "Agenda",
+    timeline_reception: "Recepció al monestir",
+    timeline_ceremonia: "Ceremònia als jardins",
+    timeline_cocktail: "Còctel als jardins",
+    timeline_lunch: "Dinar a l'esglèsia",
+    timeline_folk: "Folk",
+    timeline_party: "Festa",
+    timeline_resopo: "Resopó",
+    timeline_end: "Fi de festa",
   },
 };
 

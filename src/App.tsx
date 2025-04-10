@@ -16,6 +16,7 @@ function App() {
   const homeRef = useRef(null);
   const venueRef = useRef(null);
   const transportRef = useRef(null);
+  const timelineRef = useRef(null);
   const accommodationRef = useRef(null);
   const formRef = useRef(null);
   const supportRef = useRef(null);
@@ -28,6 +29,7 @@ function App() {
         homeRef={homeRef}
         venueRef={venueRef}
         transportRef={transportRef}
+        timelineRef={timelineRef}
         accommodationRef={accommodationRef}
         formRef={formRef}
         supportRef={supportRef}
@@ -42,6 +44,7 @@ function App() {
               homeRef={homeRef}
               venueRef={venueRef}
               transportRef={transportRef}
+              timelineRef={timelineRef}
               accommodationRef={accommodationRef}
               formRef={formRef}
               supportRef={supportRef}
