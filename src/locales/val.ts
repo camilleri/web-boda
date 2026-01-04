@@ -63,6 +63,7 @@ const val = {
     timeline_party: "Festa",
     timeline_resopo: "Resopó",
     timeline_end: "Fi de festa",
+    video_title: "Vídeo",
   },
 };
 

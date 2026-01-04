@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Icon from "./style_components/Icon";
 import ArrowBackIcon from "/icons/arrow_back.svg";
 import { colorMenuText, colorDarkGreen } from "./style_components/constants";
+import { Link } from "react-router-dom";
 
 const IconContainer = styled(Icon)`
   background-color: ${colorDarkGreen};
@@ -144,6 +145,11 @@ function Menu(props: Props) {
       <Spacer left="24px">
         <MenuLink onClick={() => navigate("/#support")}>
           <Trans i18nKey="support_title" />
+        </MenuLink>
+      </Spacer>
+      <Spacer left="24px">
+        <MenuLink onClick={() => navigate("/video")}>
+          <Trans i18nKey="video_title" />
         </MenuLink>
       </Spacer>
     </FlexContainer>

@@ -52,11 +52,7 @@ function Home(props: Props) {
         reference={props.accommodationRef}
         backgroundColor={pinterestGreen}
       />
-      <PictureSection
-        background={
-          "url('https://multimedia.comunitatvalenciana.com/836BFED6D19A4D4BB12AE8389B122BFA/img/0822774A672E47C3B74527A1B88EF404/1610621677483playa-urbana-oliva3630179073402443691.jpg?responsive')"
-        }
-      />
+      <PictureSection background={"url('/playa-oliva.jpg')"} />
       <FormSection reference={props.formRef} backgroundColor={pinterestGreen} />
       <MusicSection
         reference={props.musicRef}

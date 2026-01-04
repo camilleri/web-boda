@@ -10,6 +10,7 @@ import Home from "./Home";
 import FormPage from "./FormPage";
 import { useRef } from "react";
 import AdminPage from "./AdminPage";
+import VideoPage from "./VideoPage";
 
 function App() {
   // Create refs for scrolling
@@ -55,6 +56,7 @@ function App() {
         />
         <Route path="/form" element={<FormPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/video" element={<VideoPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

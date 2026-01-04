@@ -63,6 +63,7 @@ const es = {
     timeline_party: "Fiesta",
     timeline_resopo: "Resopón",
     timeline_end: "Fin de festa",
+    video_title: "Video",
   },
 };
 
