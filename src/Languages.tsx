@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { colorDarkGreen, colorMenuText } from "./style_components/constants";
 import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
+import { useLocation } from "react-router-dom";
+import useIsMobile from "./hooks/useIsMobile";
 
 const LanguageOption = styled.div`
   font-size: 1em;
@@ -54,6 +56,15 @@ function Language(props: LanguageProps) {
 }
 
 function Languages() {
+  const location = useLocation();
+  const isMobile = useIsMobile();
+
+  const isVideo = location.pathname === "/video";
+  if (isVideo && isMobile) {
+    return null;
+  }
+
+
   return (
     <Spacer right="16px" mobileRight="0px">
       <FlexContainer>
