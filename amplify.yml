@@ -19,6 +19,14 @@ frontend:
       - .npm/**/*
       - node_modules/**/*
   customHeaders:
+    - pattern: '/palpit/**'
+      headers:
+        - key: 'X-Content-Type-Options'
+          value: 'nosniff'
+        - key: 'X-XSS-Protection'
+          value: '1; mode=block'
+        - key: 'Content-Security-Policy'
+          value: "frame-ancestors 'self'"
     - pattern: '**/*'
       headers:
         - key: 'X-Content-Type-Options'
