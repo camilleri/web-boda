@@ -21,7 +21,7 @@ const VideoPage = () => {
   useTranslation();
 
   // Cambia esta URL por la ruta de tu HTML
-  const iframeSrc = "palpit/palpit.html";
+  const iframeSrc = "/palpit/palpit.html";
 
   return (
     <FlexContainer
