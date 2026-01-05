@@ -3,7 +3,7 @@ import FlexContainer from "./style_components/FlexContainer";
 import Spacer from "./style_components/Spacer";
 import { Trans, useTranslation } from "react-i18next";
 import useIsMobile from "./hooks/useIsMobile";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useMatch } from "react-router-dom";
 import { useEffect } from "react";
 import Icon from "./style_components/Icon";
 import ArrowBackIcon from "/icons/arrow_back.svg";
@@ -50,7 +50,7 @@ type Props = {
 function Menu(props: Props) {
   const location = useLocation();
   const isMobile = useIsMobile();
-  const isHome = location.pathname === "/";
+  const isHome = useMatch("/");
   useTranslation();
 
   const navigate = useNavigate();
