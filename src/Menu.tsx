@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import Icon from "./style_components/Icon";
 import ArrowBackIcon from "/icons/arrow_back.svg";
 import { colorMenuText, colorDarkGreen } from "./style_components/constants";
-import { Link } from "react-router-dom";
 
 const IconContainer = styled(Icon)`
   background-color: ${colorDarkGreen};
