@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import FlexContainer from "./style_components/FlexContainer";
 import styled from "styled-components";
+import useIsMobile from "./hooks/useIsMobile";
 
 const IframeContainer = styled.div`
   width: 100%;
@@ -10,18 +11,20 @@ const IframeContainer = styled.div`
   align-items: center;
 `;
 
-const StyledIframe = styled.iframe`
-  width: 100%;
+const StyledIframe = styled.iframe<{ $zoom: number; $isMobile: boolean }>`
+  width: ${props => props.$isMobile ? '320px' : '100%'};
   height: 100%;
   border: none;
   display: block;
+  zoom: ${props => props.$zoom};
 `;
 
 const VideoPage = () => {
   useTranslation();
+  const isMobile = useIsMobile();
 
-  // Cambia esta URL por la ruta de tu HTML
-  const iframeSrc = "/palpit/palpit.html";
+  const iframeSrc = isMobile ? "/palpit/palpit_mobile.html" : "/palpit/palpit.html";
+  const zoom = isMobile ? (typeof window !== 'undefined' ? window.innerWidth / 320 : 1) : 1;
 
   return (
     <FlexContainer
@@ -32,6 +35,8 @@ const VideoPage = () => {
     >
       <IframeContainer>
         <StyledIframe
+          $zoom={zoom}
+          $isMobile={isMobile}
           src={iframeSrc}
           title="Video Content"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
